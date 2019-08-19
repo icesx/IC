@@ -1,0 +1,21 @@
+/*
+ * serial.h
+ *
+ *  Created on: 2015年8月11日
+ *      Author: i
+ */
+
+#ifndef SERIAL_H_
+#define SERIAL_H_
+class MySerial {
+public:
+	MySerial() {
+
+	}
+	~MySerial() {
+
+	}
+	void begin(int pin, long band);
+};
+
+#endif /* SERIAL_H_ */

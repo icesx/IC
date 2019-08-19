@@ -1,0 +1,39 @@
+/*
+ * serial.cpp
+ *
+ *  Created on: 2015年8月11日
+ *      Author: i
+ */
+
+#include "MySerial.h"
+
+#include <HardwareSerial.h>
+#include <SoftwareSerial.h>
+
+void MySerial::readFromSerial(long timeout) {
+	Serial.println("readFromSerial");
+	long previous = millis();
+	do {
+		if (mySerial->available()) {
+			Serial.print(mySerial->read(), HEX);
+		}
+	} while ((millis() - previous) < timeout);
+}
+void MySerial::readFromSerial() {
+}
+void MySerial::runCommand(char* command) {
+	Serial.print("sent command ");
+	for (int i = 0; i < 20; i++) {
+		this->mySerial->write(command[i]);
+		Serial.print(command[i]);
+	}
+	Serial.println("");
+}
+void MySerial::runCommand(byte command[]) {
+	Serial.print("sent command: ");
+	for (int i = 0; i < 10; i++) {
+		Serial.print(command[i],HEX);
+	}
+	Serial.print("\r\n");
+	mySerial->write(command, 10);
+}

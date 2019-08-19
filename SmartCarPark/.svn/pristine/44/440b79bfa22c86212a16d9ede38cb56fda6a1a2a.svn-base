@@ -1,0 +1,15 @@
+#include <Arduino.h>
+#include <gprs/Sim900a.h>
+int led = 11;
+Sim900aParam param = { 80, "42.94.142.145", "/", &Serial2 };
+Sim900a sim900a(&param);
+void setup() {
+	Serial.begin(115200);
+	delay(100);
+	Serial.println("setup ok!");
+	sim900a.prepare();
+}
+
+void loop() {
+	sim900a.httpPost("test post!");
+}

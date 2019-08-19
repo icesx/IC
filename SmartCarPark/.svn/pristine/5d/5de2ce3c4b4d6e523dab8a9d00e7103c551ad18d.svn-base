@@ -1,0 +1,44 @@
+#include "SmartCarPark.h"
+#include <Arduino.h>
+#include "../ethernet/w5100.h"
+#include "../gprs/Sim900a.h"
+#include "../sdcard/SdCard.h"
+SoftwareSerial softSerial(2, 3);
+Sim900a mySim900a(&softSerial);
+int sdcardPin = 4;
+SdCard sdcard(sdcardPin);
+W5100 w5100;
+int onModulePin = 5;
+void pownon() {
+	pinMode(onModulePin, OUTPUT);
+	digitalWrite(onModulePin, LOW);
+	delay(1000);
+	digitalWrite(onModulePin, HIGH);
+	delay(2000);
+	digitalWrite(onModulePin, LOW);
+	delay(3000);
+	Serial.println("pownon");
+}
+void setup() {
+	Serial.begin(115200);
+//	startSim900a();
+	startSd();
+	startW5100();
+}
+void startSim900a() {
+	Serial.println("Calling through GSM Modem");
+	pownon();
+	softSerial.begin(9600);
+	delay(2000);
+	mySim900a.prepare();
+}
+void startSd() {
+	sdcard.testSDCard();
+}
+void startW5100() {
+	w5100.httpGet("42.96.142.145", "/index.htm", 5000);
+}
+void loop() {
+	delay(10000);
+	mySim900a.transform();
+}

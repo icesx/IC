@@ -1,0 +1,41 @@
+0、参考文献：http://playground.arduino.cc/Code/Eclipse#Arduino_core_library
+1、参考归参考具体的还是要自己理解的按照实地的情况调整。
+2、本人搭建的与文献中的不同点：
+	A、文献中是一个project，而本人搭建的是多project，将通用的文件放到了一个project；适合多项目协调开发
+	B、本文以Ubuntu15.04为工作环境
+3、准备环境
+	A、ubuntu15.04、java7.x、eclipse4.4.2【luna】
+	B、arduino uno 3
+	C、安装eclipse插件：AVR Eclipse http://avr-eclipse.sourceforge.net/wiki/index.php/The_AVR_Eclipse_Plugin
+	D、sudo apt-get install avrdude binutils-avr gcc-avr avr-libc gdb-avr
+	E、install arduionIDE
+4、独立项目模式
+	A、建立eclipse项目ArduinoAIO
+		I、C++project
+		II、AVR Cross Target Application
+		III、create source folder “src”，“arduino”，“SoftwareSerial”,"standard"
+		IV、cp sourcecode from arduionIDE
+			a、cp ${arduinoIDE}/hardware/arduino/avr/cores/* ArduinoAIO/arduino/
+			b、cp ${arduinoIDE}/hardware/arduino/avr/libraries/SoftwareSerial/* ArduinoAIO/SoftwareSerial/
+			c、cp ${arduinoIDE}/hardware/arduino/avr/variants/standard/* ArduinoAIO/standard/
+		V、ArdunioAIO-properties-AVR-AVRDude-programmer-New：Configer Name ：ATMEGA328P_16MHZ;programmer-hardware:arduino-OK
+		VI、ArdunioAIO-properties-C/C++Build-ManageConfiger-New：ATMMEGA328P_16MHZ-SetActive
+		VII、ArdunioAIO-properties-C/C++Build-Settings-Addtion Tools in Toolchain-checkon Genner HEX file for Flash Memory
+		VIII、ArdunioAIO-properties-C/C++Build-Settings-AVR Compiler
+			a、Directores:and "${workspace_loc:/${ProjName}/arduino}""${workspace_loc:/${ProjName}/standrad}""${workspace_loc:/${ProjName}/SoftwareSerial}"
+			b、debugging：No debug info
+			c、Optimization：Size Optimization；other Optimization:-ffunction-sections -fdata-sections
+			d、language Standara：un check all
+		IX、ArdunioAIO-properties-C/C++Build-Settings-AVR C++ Compiler
+			a-c、same above
+			d、language Standara：only check on  no not use exceptions
+5、多项目模式
+	A、建立eclipse项目ArduinoLib
+		所有的配置和ArduionAIO相似，区别的有如下两点
+		I、建立项目的时候，选择AVR Cross target statis Libaray
+		II、不要创建 source folder “src”
+		III、不要执行：ArdunioAIO-properties-C/C++Build-Settings-Addtion Tools in Toolchain-checkon Genner HEX file for Flash Memory
+	B、建立eclipse项目ArduinoProject
+		所有的配置和ArduionAIO相似，区别的有如下区别
+		I、不要创建sourcefolder “arduino”，“SoftwareSerial”,"standard"
+		II、ArduinoProject-properties-project Reference：check on ArduinoLib

@@ -1,0 +1,8 @@
+/*
+ * SmarkCarkPark.h
+ *
+ *  Created on: 2015年8月7日
+ *      Author: i
+ */
+#include <SoftwareSerial.h>
+extern SoftwareSerial mySerial;

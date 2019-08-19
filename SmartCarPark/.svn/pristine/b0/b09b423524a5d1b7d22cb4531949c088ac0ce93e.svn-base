@@ -1,0 +1,12 @@
+/*
+ * IdCardTransformer.h
+ *
+ *  Created on: 2015年8月12日
+ *      Author: i
+ */
+
+#ifndef IDCARDTRANSFORMER_H_
+#define IDCARDTRANSFORMER_H_
+
+#define GET_ARRAY_LEN(array){return (sizeof(array) / sizeof(array[0]));}
+#endif /* IDCARDTRANSFORMER_H_ */

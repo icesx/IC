@@ -1,0 +1,35 @@
+/*
+ * IdCardTransformer.cpp
+ *
+ *  Created on: 2015年8月12日
+ *      Author: i
+ */
+
+#include <Arduino.h>
+#include "../IDReader/IDReader.h"
+#include <gprs/Sim900a.h>
+#include "IdCardTransformer.h"
+IDReader idReader(&Serial1, 115200);
+Sim900aParam param = { 80, "42.94.142.145", "/", &Serial2 };
+Sim900a sim900a(&param);
+void setup() {
+	Serial.begin(115200);
+	delay(1000);
+	Serial.println("serial begin at 115200");
+	delay(1000);
+	Serial2.begin(9600);
+	Serial.println("setup ok!");
+//	sim900a.prepare();
+}
+
+void loop() {
+	Serial.println("loop start!");
+	char* info = idReader.heartbit();
+	Serial.print("isreaded is ");
+	Serial.print(info);
+	if (info != NULL) {
+		sim900a.transform(info);
+	}
+	delay(500);
+}
+

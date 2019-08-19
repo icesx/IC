@@ -1,0 +1,187 @@
+/*
+ * Sim900.c
+ *
+ *  Created on: 2015年8月6日
+ *      Author: i
+ */
+#include "Sim900a.h"
+
+#include <Arduino.h>
+#include <HardwareSerial.h>
+#include <base/util.h>
+void Sim900a::prepare() {
+	Serial.println("sim900a prepare >>>");
+	this->mySerial->begin(this->band);
+	this->poweron();
+	delay(500);
+	sendATcommandTimeout("AT", defaultOk, 3000, true);
+	delay(2000);
+	sendATcommandTimeout("AT+CIPSHUT", defaultOk, 3000, true);
+	delay(2000);
+	sendATcommandTimeout("AT+CIPMUX=0", defaultOk, 15000, true);
+	delay(2000);
+	sendATcommandTimeout("AT+CGATT=1", defaultOk, 15000, true);
+	delay(3000);
+	sendATcommandTimeout("AT+CSTT=\"www.scp\",\"\",\"\"", defaultOk, 15000,
+	true);
+	delay(2000);
+	sendATcommandTimeout("AT+CIPSPRT=1", defaultOk, 15000, true);
+	delay(2000);
+	sendATcommandTimeout("AT+CIICR", defaultOk, 15000, true);
+	delay(2000);
+	sendATcommandTimeout("AT+CIFSR", ".", 15000, true);
+	Serial.println("sim900a prepared <<<");
+}
+void Sim900a::prepareHttp() {
+	prepare();
+	delay(1000);
+	sendATcommandTimeout("AT+SAPBR=3,1,\"CONTYPE\",\"GPRS\"", defaultOk, 15000,
+	true);
+	delay(1000);
+	sendATcommandTimeout("AT+SAPBR=3,1,\"APN\",\"internet.com\"", defaultOk,
+			15000,
+			true);
+	delay(1000);
+	sendATcommandTimeout("AT+SAPBR=3,1,\"APN\",\"internet.com\"", defaultOk,
+			15000,
+			true);
+}
+void Sim900a::poweron() {
+	Serial.println("sim900a poweron");
+	pinMode(SIM900A_PIN, OUTPUT);
+	digitalWrite(SIM900A_PIN, HIGH);
+}
+void Sim900a::runCommand(char* ATcommand) {
+	this->mySerial->println(ATcommand);
+	Serial.print("try:");
+	Serial.print(ATcommand);
+	Serial.println();
+}
+void Sim900a::sendATcommandTimeout(char* ATcommand, char* okFlag, long timeout,
+		boolean retry) {
+	runCommand(ATcommand);
+	boolean isOk = readFromMySerial(timeout, okFlag);
+	Serial.println();
+	if (isOk) {
+		return;
+	} else {
+		if (retry == true) {
+			delay(2000);
+			Serial.print("retrytimeout:");
+			Serial.println(ATcommand);
+			sendATcommandTimeout(ATcommand, okFlag, timeout, retry);
+		}
+	}
+	Serial.println();
+}
+void Sim900a::reconnect(char* host) {
+	char* command = append("AT+CIPSTART=\"TCP\",\"", host);
+	command = append(command, "\",80");
+	Serial.println(">>>>>>>>>>>>>>>>>>>");
+	sendATcommandTimeout(command, "CONNECT OK", 15000, true);
+	delete command;
+}
+void Sim900a::close_connect() {
+	Serial.println("close_connect >>>");
+	sendATcommandTimeout("AT+CIPCLOSE", "CLOSE OK", 15000, false);
+	Serial.println("close_connect >>>");
+}
+char* Sim900a::tcp(char *code) {
+	sendATcommandTimeout("AT+CIPSEND", ">", 15000, false);
+	this->mySerial->println(code);
+	readFromServer(15000, "scp");
+	Serial.println();
+	return response;
+}
+void Sim900a::readFromServer(long timeout, char* okFlag) {
+	while (this->mySerial->available()) {
+		char c = this->mySerial->read();
+		Serial.print(c);
+	}
+}
+char* Sim900a::httpGet(HttpParam* param) {
+	Serial.println("http Get >>>");
+	return requestOnTcp(param->code, HTTP_METHOD_GET, param);
+}
+char* Sim900a::httpPost(HttpParam* param) {
+	Serial.println("http Post >>>");
+	return requestOnTcp(param->code, HTTP_METHOD_POST, param);
+}
+char* Sim900a::requestOnHttp(char* code, char* method, HttpParam* param) {
+	Serial.println("requestOnHttp >>>");
+	sendATcommandTimeout("AT+HTTPPARA=\"CID\",1", defaultOk, 15000, true);
+	sendATcommandTimeout(
+			"AT+HTTPPARA=\"URL\",\"postcatcher.in/catchers/55e4f62ef89ff7030000149a",
+			defaultOk, 15000, true);
+	sendATcommandTimeout("AT+HTTPDATA=\10,1000", defaultOk, 15000,
+	true);
+	sendCode("test data!");
+	sendATcommandTimeout("AT+HTTPACTION=1", defaultOk, 15000, true);
+}
+void Sim900a::sendCode(char* code) {
+	Serial.print(code);
+	this->mySerial->print(code);
+}
+void Sim900a::sendCodeln(char*code) {
+	Serial.println(code);
+	this->mySerial->println(code);
+}
+void Sim900a::sendCodeln(int i) {
+	Serial.println(i);
+	this->mySerial->println(i);
+}
+void Sim900a::sendCode(int i) {
+	Serial.print(i);
+	this->mySerial->print(i);
+}
+char* Sim900a::requestOnTcp(char* code, char* method, HttpParam* param) {
+	reconnect(param->host);
+	sendATcommandTimeout("AT+CIPSEND", ">", 15000, false);
+	Serial.println("do Request:");
+	sendCode(method);
+	sendCode(" ");
+	sendCode(param->url);
+	sendCodeln(HTTP_VERSION);
+	sendCode("HOST: ");
+	sendCodeln(param->host);
+	sendCode("Content-Type:");
+	sendCodeln(HTTP_CONTENTYPE);
+	sendCode("Content-Length: ");
+	sendCode(param->length);
+	sendCodeln(HTTP_NEW_LINE);
+	sendCode(code);
+	sendCode("\x1A");
+	readFromServer(10000, "scp");
+	Serial.println();
+	delay(1000);
+	close_connect();
+	Serial.println("request >>>");
+	return response;
+}
+
+char* Sim900a::readFromMySerial(long timeout, char* okFlag) {
+	memset(response, 0xFF, 100);
+	int x = 0;
+	boolean isOk = false;
+	previous = millis();
+	long usedTime = 0;
+	do {
+		if (this->mySerial->available() != 0) {
+			response[x] = this->mySerial->read();
+			Serial.print(response[x]);
+			delay(2);
+			x++;
+		}
+		if (strstr(response, okFlag)) {
+			isOk = true;
+			break;
+		}
+		usedTime = (millis() - previous);
+	} while (usedTime < timeout);
+	if (isOk == false) {
+		Serial.println(usedTime);
+		Serial.println(" readFromMySerial timeout!");
+	}
+	return response;
+}
+

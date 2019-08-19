@@ -1,0 +1,28 @@
+/*
+ * SdCard.h
+ *
+ *  Created on: 2015年8月10日
+ *      Author: i
+ */
+
+#ifndef SDCARD_H_
+#define SDCARD_H_
+
+class SdCard {
+
+public:
+	SdCard(int pin) {
+		this->pin = pin;
+	}
+	~SdCard() {
+
+	}
+	void readFile(char* fileName);
+	void writeFile(char* fileName, char* code);
+	void testSDCard();
+private:
+	int pin;
+};
+
+#endif /* SDCARD_H_ */
+
