@@ -3,6 +3,8 @@
 	<name>GPRS2</name>
 	<comment></comment>
 	<projects>
+		<project>SmartCarParkFront-Lib</project>
+		<project>SmartCarParkFront-Lib-Mine</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
