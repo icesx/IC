@@ -65,7 +65,7 @@ all: NewRainBase.elf secondary-outputs
 NewRainBase.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C++ Linker'
-	avr-g++ -Wl,-Map,NewRainBase.map,--cref -mrelax -Wl,--gc-sections -L"/ICESX/workSpaceC/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/ATMEGA_LIB" -mmcu=atmega2560 -o "NewRainBase.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-g++ -Wl,-Map,NewRainBase.map,--cref -mrelax -Wl,--gc-sections -L"/ICESX/workSpaceC/IC/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/ATMEGA_LIB" -mmcu=atmega2560 -o "NewRainBase.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -4,8 +4,12 @@
  *  Created on: Feb 10, 2018
  *      Author: i
  */
-
-int ivoke(int x) {
-	return x*x;
+#include "python_c.h"
+struct info ivoke(int x) {
+	struct info i;
+	i.name = "name";
+	i.age = x + 2;
+	i.id=0001111l;
+	return i;
 }
 

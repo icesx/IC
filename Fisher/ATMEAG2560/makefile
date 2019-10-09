@@ -65,7 +65,7 @@ all: Fisher.elf secondary-outputs
 Fisher.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C++ Linker'
-	avr-gcc -Wl,-Map,Fisher.map,--cref -mrelax -Wl,--gc-sections -L"/ICESX/workSpaceC/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib-Mine/ATMEGA_LIB" -L"/ICESX/workSpaceC/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/ATMEGA_LIB" -mmcu=atmega2560 -o "Fisher.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,Fisher.map,--cref -mrelax -Wl,--gc-sections -L"/ICESX/workSpaceC/IC/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib-Mine/ATMEGA_LIB" -L"/ICESX/workSpaceC/IC/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/ATMEGA_LIB" -mmcu=atmega2560 -o "Fisher.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

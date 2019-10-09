@@ -65,7 +65,7 @@ all: NewRain-Smart-Car.elf secondary-outputs
 NewRain-Smart-Car.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C++ Linker'
-	avr-gcc -Wl,-Map,NewRain-Smart-Car.map,--cref -mrelax -Wl,--gc-sections -L"/ICESX/workSpaceC/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/ATMEGA_LIB" -mmcu=atmega2560 -o "NewRain-Smart-Car.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,NewRain-Smart-Car.map,--cref -mrelax -Wl,--gc-sections -L"/ICESX/workSpaceC/IC/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/ATMEGA_LIB" -mmcu=atmega2560 -o "NewRain-Smart-Car.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
