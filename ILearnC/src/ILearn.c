@@ -15,6 +15,8 @@
 #include "string/string.h"
 #include "integer/integer.h"
 #include "callback/callback.h"
+
+#include "callback/method_point.h"
 void print_back(int x){
 	printf("callback is %d",x);
 }
@@ -28,6 +30,8 @@ int main(void) {
 	call(1,&print_back);
 	printf("%d\n", i);
 	intAnd(100);
+	int a;
+	show(multi, 10, &a);
 	return EXIT_SUCCESS;
 }
 

@@ -8,4 +8,5 @@
 #ifndef MODULE_H_
 #define MODULE_H_
 extern void printme();
+//same with "void printme()"
 #endif /* MODULE_H_ */

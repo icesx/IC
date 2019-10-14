@@ -8,6 +8,7 @@
 //============================================================================
 
 extern "C" {
+// tell compiler this is c code
 #include "module.h"
 }
 int main() {
