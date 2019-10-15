@@ -32,6 +32,7 @@ int main(void) {
 	intAnd(100);
 	int a;
 	show(multi, 10, &a);
+	strcmp_test();
 	return EXIT_SUCCESS;
 }
 

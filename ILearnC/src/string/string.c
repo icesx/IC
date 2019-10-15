@@ -30,4 +30,12 @@ void string_test() {
 	printf("%s", "xxx\n" + 23);
 	printf("%s\n", c);
 }
+void strcmp_test() {
+	const char *output_type = "h264";
+	if (!strcmp(output_type, "h264")) {
+		printf("%s is h264", output_type);
+	} else {
+		printf("%s is not h264", output_type);
+	}
+}
 

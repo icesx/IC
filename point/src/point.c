@@ -15,7 +15,7 @@ int * temp2;
 int * chars() {
 	int x = 100;
 	temp = &x;
-	return &x;
+	return temp;
 }
 int * chars_malloc() {
 	int*p = (int*) malloc(sizeof(int) * 100);

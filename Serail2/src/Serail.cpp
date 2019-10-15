@@ -10,7 +10,6 @@
 #include <Arduino.h>
 
 void setup() {
-	// initialize the digital pin as an output.
 	Serial.begin(115200);
 }
 String append(String f, char*s) {

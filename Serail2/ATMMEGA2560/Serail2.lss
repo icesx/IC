@@ -306,7 +306,6 @@ void setup() {
      1d4:	df 93       	push	r29
      1d6:	cd b7       	in	r28, 0x3d	; 61
      1d8:	de b7       	in	r29, 0x3e	; 62
-	// initialize the digital pin as an output.
 	Serial.begin(115200);
      1da:	40 e0       	ldi	r20, 0x00	; 0
      1dc:	52 ec       	ldi	r21, 0xC2	; 194

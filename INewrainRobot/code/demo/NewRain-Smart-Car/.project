@@ -3,7 +3,6 @@
 	<name>NewRain-Smart-Car</name>
 	<comment></comment>
 	<projects>
-		<project>SmartCarParkFront-Lib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

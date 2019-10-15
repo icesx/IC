@@ -13,5 +13,5 @@ void print(char* b);
 char* append(char* first, char*second);
 
 void string_test();
-
+void strcmp_test();
 #endif /* STRING_STRING_H_ */
