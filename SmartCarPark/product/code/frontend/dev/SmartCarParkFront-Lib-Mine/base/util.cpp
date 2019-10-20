@@ -7,6 +7,8 @@
 
 #include "util.h"
 #include <Arduino.h>
+#include <string.h>
+#include <stdio.h>
 // BASE C
 char* charAppendChar(char* first, char*second) {
 	int len = strlen(second) + strlen(first);
