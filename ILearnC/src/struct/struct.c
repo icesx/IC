@@ -6,7 +6,7 @@
  */
 #include "struct.h"
 #include <stdio.h>
-void struct_test() {
+attWriteReq_t struct_test() {
 	attWriteReq_t req;
 	char value[ATT_MTU_SIZE - 3] = { 'I', ' ', 'a', 'm', ' ', 'h', 'a', 'p',
 			'p', 'y' };
@@ -15,5 +15,6 @@ void struct_test() {
 		req.value[i] = value[i];
 	}
 	printf("%s\n", req.value);
+	return req;
 }
 

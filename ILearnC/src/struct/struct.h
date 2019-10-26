@@ -13,7 +13,7 @@ typedef struct {
 	char value[ATT_MTU_SIZE - 3]; //!< Value of the attribute to be written
 } attWriteReq_t;
 
-
+attWriteReq_t struct_test();
 
 
 #endif /* STRUCT_STRUCT_H_ */
