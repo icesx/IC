@@ -80,7 +80,8 @@ void notify_dir(char *dir) {
 	/* Mark directories for events
 	 - file was opened
 	 - file was closed */
-	int wd = inotify_add_watch(fd, dir, IN_OPEN | IN_CLOSE | IN_CREATE);
+	int wd = inotify_add_watch(fd, dir,
+			IN_OPEN | IN_CLOSE | IN_CREATE | IN_DELETE);
 	/* Prepare for polling */
 	nfds_t nfds = 1;
 	/* Inotify input */
