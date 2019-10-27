@@ -4,5 +4,7 @@
  *  Created on: Oct 26, 2019
  *      Author: i
  */
-void handle_events(int fd, int wd, char *watched_dir);
-void notify_dir(char *argv);
+#include <sys/inotify.h>
+typedef void (*handler)(const struct inotify_event*,char *watched_dir);
+void handle_events(int fd, char *watched_dir, handler);
+void notify_dir(char *argv, handler);
