@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/inotify.h>
+#include <pthread.h>
 #include "notify.h"
 void handle_events(int fd, char *watched_dir, handler handler) {
 	/* Some systems cannot read integer variables if they are not

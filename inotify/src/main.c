@@ -9,7 +9,6 @@
 #include "notify.h"
 static void callback(const struct inotify_event *event, char *watched_dir) {
 	printf("callback\n");
-	printf("xxx\n");
 	/* Print event type */
 	if (event->mask & IN_OPEN)
 		printf("IN_OPEN: ");
@@ -22,7 +21,7 @@ static void callback(const struct inotify_event *event, char *watched_dir) {
 	if (event->mask & IN_DELETE)
 		printf("IN_DELETE: ");
 	/* Print the name of the watched directory */
-	printf("watched_dir:%s ,wd is %d\n", watched_dir, event->wd);
+	printf("watched_dir:%s ,wd is %d ", watched_dir, event->wd);
 	/* Print the name of the file */
 	if (event->len)
 		printf(" name:%s", event->name);
