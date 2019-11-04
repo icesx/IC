@@ -4,6 +4,8 @@
  *  Created on: Oct 26, 2019
  *      Author: i
  */
+#include "../c/notify.h"
+
 #include <errno.h>
 #include <unistd.h>
 #include <poll.h>
@@ -11,7 +13,7 @@
 #include <stdlib.h>
 #include <sys/inotify.h>
 #include <pthread.h>
-#include "notify.h"
+#include <string/istring.h>
 void handle_events(int fd, char *watched_dir, handler handler) {
 	/* Some systems cannot read integer variables if they are not
 	 properly aligned. On other systems, incorrect alignment may
@@ -40,11 +42,22 @@ void handle_events(int fd, char *watched_dir, handler handler) {
 		for (ptr = buf; ptr < buf + len;
 				ptr += sizeof(struct inotify_event) + event->len) {
 			event = (const struct inotify_event*) ptr;
-			handler(event, watched_dir);
+			handler(fd, event, watched_dir);
+			if (event->mask & IN_ISDIR) {
+				if (event->mask & IN_DELETE) {
+					printf("IN_DELETE DIR so close %d\n", fd);
+					close(fd);
+				}
+				if (event->mask & IN_CREATE) {
+					printf("IN_CREATE DIR %s ,so watch on it \n", watched_dir);
+//					notify_dir(str_append(str_append(watched_dir,"/"),event->name), handler);
+				}
+			} else {
+				printf("[file]\t");
+			}
 		}
 	}
 }
-
 void notify_dir(char *dir, handler handler) {
 	/* Create the file descriptor for accessing the inotify API */
 	printf("notify on %s.\n", dir);
@@ -56,16 +69,16 @@ void notify_dir(char *dir, handler handler) {
 	/* Allocate memory for watch descriptors */
 	// Mark directories for events
 	inotify_add_watch(fd, dir,
-			IN_OPEN | IN_CLOSE | IN_CREATE | IN_DELETE | IN_MODIFY);
+	IN_OPEN | IN_CLOSE | IN_CREATE | IN_DELETE | IN_MODIFY);
 	/* Inotify input */
-	struct pollfd fds[1];
-	fds[0].fd = fd;
-	fds[0].events = POLLIN;
+	struct pollfd pfd;
+	pfd.fd = fd;
+	pfd.events = POLLIN;
 	/* Wait for events and/or terminal input */
 	printf("Listening for events.\n");
 	nfds_t nfds = 1;
 	while (1) {
-		int poll_num = poll(fds, nfds, -1);
+		int poll_num = poll(&pfd, nfds, -1);
 		printf("poll_num is %d.\n", poll_num);
 		if (poll_num == -1) {
 			if (errno == EINTR)
@@ -73,9 +86,9 @@ void notify_dir(char *dir, handler handler) {
 			perror("poll");
 			exit(EXIT_FAILURE);
 		}
-		printf("fds[0].revents is %d \n", fds[0].revents);
-		printf("fds[0].revents & POLLIN %d\n", (fds[0].revents & POLLIN));
-		if (fds[0].revents & POLLIN) {
+		printf("pfd.revents is %d \n", pfd.revents);
+		printf("pfd.revents & POLLIN %d\n", (pfd.revents & POLLIN));
+		if (pfd.revents & POLLIN) {
 			/* Inotify events are available */
 			handle_events(fd, dir, handler);
 		}

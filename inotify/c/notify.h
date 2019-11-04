@@ -5,6 +5,6 @@
  *      Author: i
  */
 #include <sys/inotify.h>
-typedef void (*handler)(const struct inotify_event*,char *watched_dir);
+typedef void (*handler)(int fd,const struct inotify_event*,char *watched_dir);
 void handle_events(int fd, char *watched_dir, handler);
 void notify_dir(char *argv, handler);
