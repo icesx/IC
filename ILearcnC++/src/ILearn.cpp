@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include "clazz/child.h"
 #include "integer/BinaryInt.h"
+#include "lambda/lambda.h"
 #include "list/list_me.h"
 int main(void) {
 	BinaryInt bi;
@@ -24,6 +25,7 @@ int main(void) {
 	Child doing;
 	driver.doSome(doing);
 	test_list();
+	test_lambada();
 	test_list2();
 	return EXIT_SUCCESS;
 }

@@ -17,7 +17,7 @@ void test_list() {
 	// do whatever you wish but don't modify the list elements
 	for (std::list<Student>::iterator it = data.begin(); it != data.end();
 			++it) {
-		printf("name %s\n", it->name);
+		printf("list:name %s\n", it->name);
 	}
 }
 void test_list2() {
@@ -28,12 +28,12 @@ void test_list2() {
 	// do whatever you wish but don't modify the list elements
 	for (std::list<Student*>::iterator it = data->begin(); it != data->end();
 			it++) {
-		printf("name %s\n", (**it).name);
+		printf("list:name %s\n", (**it).name);
 	}
 	free(data);
 	for (std::list<Student*>::iterator it = data->begin(); it != data->end();
 			it++) {
-		printf("name %s\n", (**it).name);
+		printf("list:name %s\n", (**it).name);
 	}
 }
 
