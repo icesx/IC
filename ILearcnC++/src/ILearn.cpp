@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include "clazz/child.h"
 #include "integer/BinaryInt.h"
+#include "list/list_me.h"
 int main(void) {
 	BinaryInt bi;
 	bi.addChar(1);
@@ -22,6 +23,8 @@ int main(void) {
 	Driver driver;
 	Child doing;
 	driver.doSome(doing);
+	test_list();
+	test_list2();
 	return EXIT_SUCCESS;
 }
 
