@@ -14,6 +14,7 @@
 #include "integer/BinaryInt.h"
 #include "lambda/lambda.h"
 #include "list/list_me.h"
+#include "vector/test_vector.h"
 int main(void) {
 	BinaryInt bi;
 	bi.addChar(1);
@@ -25,8 +26,10 @@ int main(void) {
 	Child doing;
 	driver.doSome(doing);
 	test_list();
-	test_lambada();
+	test_lambda();
+	test_lambda2();
 	test_list2();
+	test_vector();
 	return EXIT_SUCCESS;
 }
 

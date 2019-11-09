@@ -7,7 +7,8 @@
 
 #ifndef LAMBDA_LAMBDA_H_
 #define LAMBDA_LAMBDA_H_
-
-void test_lambada();
+#include <functional>
+void test_lambda();
+void test_lambda2();
 
 #endif /* LAMBDA_LAMBDA_H_ */

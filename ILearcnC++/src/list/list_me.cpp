@@ -30,10 +30,5 @@ void test_list2() {
 			it++) {
 		printf("list:name %s\n", (**it).name);
 	}
-	free(data);
-	for (std::list<Student*>::iterator it = data->begin(); it != data->end();
-			it++) {
-		printf("list:name %s\n", (**it).name);
-	}
 }
 
