@@ -7,11 +7,12 @@
 
 #ifndef PYTHON_C_H_
 #define PYTHON_C_H_
-struct info{
+typedef struct {
 	long id;
-	char* name;
+	char *name;
 	int age;
-};
-struct info ivoke(int x);
-
+} info;
+info ivoke(int x);
+info ivoke_2(info x);
+int ivoke_base(int x);
 #endif /* PYTHON_C_H_ */
