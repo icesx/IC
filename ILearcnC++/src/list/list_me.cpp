@@ -28,7 +28,9 @@ void test_list2() {
 	// do whatever you wish but don't modify the list elements
 	for (std::list<Student*>::iterator it = data->begin(); it != data->end();
 			it++) {
-		printf("list:name %s\n", (**it).name);
+		printf("list:name %s\n", (*it)->name);
+		free(*it);
 	}
+	delete data;
 }
 

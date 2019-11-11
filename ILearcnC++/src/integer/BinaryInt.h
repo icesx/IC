@@ -15,8 +15,8 @@ public:
 	void addChar(char c);
 	int getInt();
 private:
-	int value;
-	int index;
+	int value=0;
+	int index=0;
 	void reset() {
 		value = 0;
 		index = 0;
