@@ -14,13 +14,14 @@
 pthread_t tid[2];
 static pthread_mutex_t worker_lock = PTHREAD_MUTEX_INITIALIZER;
 static pthread_cond_t worker_wait = PTHREAD_COND_INITIALIZER;
-void* do_some_thing() {
+void* do_some_thing(void* arg) {
 	pthread_t id = pthread_self();
 	if (pthread_equal(id, tid[0])) {
 		printf("\n First thread processing id is %ld \n", id);
 	} else {
 		printf("\n Second thread processing id is %ld \n", id);
 	}
+	printf("arg %s\n",(char*)arg);
 	sleep(3);
 	printf("broadcast...");
 	pthread_cond_broadcast(&worker_wait);
@@ -31,7 +32,7 @@ int sample_pthread(void) {
 	int i = 0;
 	int err;
 	while (i < 2) {
-		err = pthread_create(&(tid[i]), NULL, &do_some_thing, NULL);
+		err = pthread_create(&(tid[i]), NULL, &do_some_thing, "test");
 		if (err != 0)
 			printf("\ncan't create thread :[%s]", strerror(err));
 		else

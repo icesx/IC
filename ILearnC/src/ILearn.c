@@ -15,8 +15,8 @@
 #include "string/string.h"
 #include "integer/integer.h"
 #include "callback/callback.h"
-
 #include "callback/method_point.h"
+#include "method/method.h"
 void print_back(int x) {
 	printf("callback is %d", x);
 }
@@ -34,6 +34,8 @@ int main(void) {
 	int a;
 	show(multi, 10, &a);
 	strcmp_test();
+	person p=structReture(10);
+	printf("person.id=%d,person.name=%s\n",p.id,p.name);
 	return EXIT_SUCCESS;
 }
 
