@@ -11,8 +11,9 @@ typedef struct {
 	long id;
 	char *name;
 	int age;
+	void (*callback)(int age);
 } info;
 info ivoke(int x);
-info ivoke_2(info x);
+info ivoke_2(info x,void(*callback)());
 int ivoke_base(int x);
 #endif /* PYTHON_C_H_ */

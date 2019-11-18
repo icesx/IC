@@ -13,9 +13,10 @@ info ivoke(int x) {
 	i.id = 0001111l;
 	return i;
 }
-info ivoke_2(info x) {
+info ivoke_2(info x,void(*callback)()) {
 	printf("name=%s,age=%d,id=%ld\n",x.name,x.age,x.id);
 	x.age=10;
+	callback(x.age+1);
 	return x;
 }
 int ivoke_base(int x) {
