@@ -13,7 +13,7 @@ typedef struct {
 	int age;
 	void (*callback)(int age);
 } info;
-info ivoke(int x);
+info ivoke(int x,char*);
 info ivoke_2(info x,void(*callback)());
 int ivoke_base(int x);
 #endif /* PYTHON_C_H_ */

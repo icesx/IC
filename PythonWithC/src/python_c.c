@@ -6,9 +6,9 @@
  */
 #include "python_c.h"
 #include <stdio.h>
-info ivoke(int x) {
+info ivoke(int x,char* s) {
 	info i;
-	i.name = "name";
+	i.name = s;
 	i.age = x + 2;
 	i.id = 0001111l;
 	return i;

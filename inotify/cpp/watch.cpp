@@ -11,7 +11,7 @@
 // Keep going  while run == true, or, in other words, until user hits ctrl-c
 static bool run = true;
 
-void sig_callback(int sig) {
+void sig_exit(int sig) {
 	run = false;
 }
 void is_exits(const char *root) {
@@ -36,7 +36,7 @@ void watch(const char *root) {
 	int total_dir_events = 0;
 
 	// Call sig_callback if user hits ctrl-c
-	signal(SIGINT, sig_callback);
+	signal(SIGINT, sig_exit);
 
 	// creating the INOTIFY instance
 	// inotify_init1 not available with older kernels, consequently inotify reads block.
