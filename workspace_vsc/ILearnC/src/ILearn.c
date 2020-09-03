@@ -18,6 +18,7 @@
 #include "callback/method_point.h"
 #include "method/method.h"
 void print_back(int x) {
+	
 	printf("callback is %d", x);
 }
 int main(void) {
