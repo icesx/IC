@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/ICESX/workspace_vsc/ILearnC/src/array/array.c
+array.h
+/ICESX/workspace_vsc/ILearnC/src/array/array.h
+stdio.h
+-
+stdlib.h
+-
+
+/ICESX/workspace_vsc/ILearnC/src/array/array.h
+

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/ICESX/workspace_vsc/ILearnC/src/callback/callback.c
+callback.h
+/ICESX/workspace_vsc/ILearnC/src/callback/callback.h
+
+/ICESX/workspace_vsc/ILearnC/src/callback/callback.h
+
+/ICESX/workspace_vsc/ILearnC/src/callback/method_point.c
+stdio.h
+-
+method_point.h
+/ICESX/workspace_vsc/ILearnC/src/callback/method_point.h
+
+/ICESX/workspace_vsc/ILearnC/src/callback/method_point.h
+

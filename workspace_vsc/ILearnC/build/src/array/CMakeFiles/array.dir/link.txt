@@ -1,0 +1,2 @@
+/bin/ar qc libarray.a  CMakeFiles/array.dir/array.c.o
+/bin/ranlib libarray.a

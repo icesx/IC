@@ -1,0 +1,206 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "src/array",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/array",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/callback",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/callback",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/integer",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/integer",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/method",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/method",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "src/string",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/string",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/struct",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/struct",
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"name" : "ILC",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ILC::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ILC-Debug-855443d726b1c146d49a.json",
+					"name" : "ILC",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "array::@df52709fb7e09bf9fbd1",
+					"jsonFile" : "target-array-Debug-5ae728d0ff501bc0ebc0.json",
+					"name" : "array",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "callback::@5c04905ea52e00a9dda5",
+					"jsonFile" : "target-callback-Debug-6ae7e9aadbf20de5f23c.json",
+					"name" : "callback",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "integer::@055ba1b9a901963a764d",
+					"jsonFile" : "target-integer-Debug-c54931a328651d0e9a61.json",
+					"name" : "integer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "method::@33b6eafd977eb41e6a80",
+					"jsonFile" : "target-method-Debug-9846f289f1dd2b9de185.json",
+					"name" : "method",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "string::@5af23a2a39de66f01357",
+					"jsonFile" : "target-string-Debug-fdae6ab74eef779c5470.json",
+					"name" : "string",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "struct::@7f001eb39ba21473eb37",
+					"jsonFile" : "target-struct-Debug-53e92850d869834ac2b3.json",
+					"name" : "struct",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/ICESX/workspace_vsc/ILearnC/build",
+		"source" : "/ICESX/workspace_vsc/ILearnC"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

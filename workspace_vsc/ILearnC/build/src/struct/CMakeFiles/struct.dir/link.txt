@@ -1,0 +1,2 @@
+/bin/ar qc libstruct.a  CMakeFiles/struct.dir/struct.c.o
+/bin/ranlib libstruct.a

@@ -1,0 +1,2 @@
+/bin/ar qc libcallback.a  CMakeFiles/callback.dir/callback.c.o CMakeFiles/callback.dir/method_point.c.o
+/bin/ranlib libcallback.a

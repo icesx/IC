@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/ICESX/workspace_vsc/ILearnC/src/struct/struct.c
+struct.h
+/ICESX/workspace_vsc/ILearnC/src/struct/struct.h
+stdio.h
+-
+
+/ICESX/workspace_vsc/ILearnC/src/struct/struct.h
+
