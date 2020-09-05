@@ -6,7 +6,12 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#include "proxy_module.h"
+#include <cpp_module.h>
+extern "C" void cppsayhello();
+void cppsayhello() {
+	PrintMe pm;
+	pm.printme();
+}
 int main() {
 	cppsayhello();
 	return 0;

@@ -20,11 +20,11 @@ else()
     set(LIB cpp_shard)
     set(EXE_PATH c_i_cpp)
 endif()
-find_library(
+link_directories(
     ${PROJECT_BINARY_DIR}/lib_cpp_shard
     ${PROJECT_BINARY_DIR}/lib_c_shard
 )
 message("SHARD_PATH=${SHARD_PATH}")
 add_subdirectory(${SHARD_PATH})
 add_subdirectory(${EXE_PATH})
-message("DIR_SRCS=${DIR_SRCS}")
+

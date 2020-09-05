@@ -6,14 +6,12 @@ aux_source_directory(src DIR_LIB_SRCS)
 
 set_source_files_properties(src/c_ivoke_cpp.c PROPERTIES LANGUAGE CXX )
 
-set(MAIN src/c_ivoke_cpp.c
-src/proxy_module.cpp)
+set(MAIN src/c_ivoke_cpp.c)
 
 message("LIB==========${LIB}")
-
+message("PROJECT_BINARY_DIR====${PROJECT_BINARY_DIR}")
 add_executable(${PROJECT_NAME} ${MAIN})
-
-target_link_libraries(${LIB})
+target_link_libraries(${PROJECT_NAME} cpp_shard)
 
 
 
