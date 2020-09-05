@@ -9,9 +9,9 @@ set_source_files_properties(src/c_ivoke_cpp.c PROPERTIES LANGUAGE CXX )
 set(MAIN src/c_ivoke_cpp.c)
 
 message("LIB==========${LIB}")
-message("PROJECT_BINARY_DIR====${PROJECT_BINARY_DIR}")
+
 add_executable(${PROJECT_NAME} ${MAIN})
-target_link_libraries(${PROJECT_NAME} cpp_shard)
+target_link_libraries(${PROJECT_NAME} ${LIB})
 
 
 

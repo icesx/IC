@@ -1,12 +1,15 @@
 cmake_minimum_required(VERSION 3.0.0)
+set( CMAKE_VERBOSE_MAKEFILE on )
 project(cpp_i_c VERSION 0.1.0)
+
+aux_source_directory(src DIR_LIB_SRCS)
 
 set(MAIN src/cpp_ivoke_c.cpp)
 
-add_executable(${PROJECT_NAME} ${MAIN} ${DIR_ROOT_SRCS})
+message("LIB==========${LIB}")
 
-aux_source_directory(. DIR_SRCS)
+add_executable(${PROJECT_NAME} ${MAIN})
+target_link_libraries(${PROJECT_NAME} ${LIB})
 
-target_link_libraries(cpp_shard)
 
-target_link_libraries(${PROJECT_NAME} array callback integer method string struct)
+

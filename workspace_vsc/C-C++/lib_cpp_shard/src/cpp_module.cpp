@@ -10,6 +10,3 @@
 void PrintMe::printme(){
 	printf("%s","i am cpp so");
 }
-
-
-
