@@ -9,7 +9,7 @@
 
 extern "C" {
 // tell compiler this is c code
-#include "module.h"
+#include <c_module.h>
 }
 int main() {
 	printme();

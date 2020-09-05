@@ -6,7 +6,8 @@
  */
 
 #include "proxy_module.h"
-#include <module++.h>
+#include <cpp_module.h>
+
 void cppsayhello() {
 	PrintMe pm;
 	pm.printme();

@@ -7,7 +7,9 @@
 
 #ifndef PROXY_MODULE_H_
 #define PROXY_MODULE_H_
-extern "C" void cppsayhello();
+extern "C"{
+void cppsayhello();
+} 
 
 
 
