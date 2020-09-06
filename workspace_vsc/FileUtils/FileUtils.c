@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include  "I/file_util.h"
+#include  "fu/file_util.h"
 
 static char* HOME_I_TMP_TEST_TXT = "/home/i/tmp/test.txt";
 static char* HOME_I_TMP_TEST_TXT_2 = "/home/i/tmp/test2.txt";
