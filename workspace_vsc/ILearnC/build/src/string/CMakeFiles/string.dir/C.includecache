@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/ICESX/workspace_vsc/ILearnC/src/string/string.c
+/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/string/string.c
 stdio.h
 -
 stdlib.h
@@ -14,5 +14,5 @@ stdlib.h
 string.h
 -
 string.h
-/ICESX/workspace_vsc/ILearnC/src/string/string.h
+/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/string/string.h
 

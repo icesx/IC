@@ -23,6 +23,9 @@ SUFFIXES =
 .SUFFIXES: .hpux_make_needs_suffix_list
 
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -48,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /ICESX/workspace_vsc/ILearnC
+CMAKE_SOURCE_DIR = /ICESX/workSpaceC/IC/workspace_vsc/ILearnC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /ICESX/workspace_vsc/ILearnC/build
+CMAKE_BINARY_DIR = /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +83,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /ICESX/workspace_vsc/ILearnC/build && $(CMAKE_COMMAND) -E cmake_progress_start /ICESX/workspace_vsc/ILearnC/build/CMakeFiles /ICESX/workspace_vsc/ILearnC/build/src/method/CMakeFiles/progress.marks
-	cd /ICESX/workspace_vsc/ILearnC/build && $(MAKE) -f CMakeFiles/Makefile2 src/method/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /ICESX/workspace_vsc/ILearnC/build/CMakeFiles 0
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(CMAKE_COMMAND) -E cmake_progress_start /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/CMakeFiles /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/method/CMakeFiles/progress.marks
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(MAKE) -f CMakeFiles/Makefile2 src/method/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /ICESX/workspace_vsc/ILearnC/build && $(MAKE) -f CMakeFiles/Makefile2 src/method/clean
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(MAKE) -f CMakeFiles/Makefile2 src/method/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +100,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /ICESX/workspace_vsc/ILearnC/build && $(MAKE) -f CMakeFiles/Makefile2 src/method/preinstall
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(MAKE) -f CMakeFiles/Makefile2 src/method/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /ICESX/workspace_vsc/ILearnC/build && $(MAKE) -f CMakeFiles/Makefile2 src/method/preinstall
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(MAKE) -f CMakeFiles/Makefile2 src/method/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /ICESX/workspace_vsc/ILearnC/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/method/CMakeFiles/method.dir/rule:
-	cd /ICESX/workspace_vsc/ILearnC/build && $(MAKE) -f CMakeFiles/Makefile2 src/method/CMakeFiles/method.dir/rule
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(MAKE) -f CMakeFiles/Makefile2 src/method/CMakeFiles/method.dir/rule
 .PHONY : src/method/CMakeFiles/method.dir/rule
 
 # Convenience name for target.
@@ -122,7 +125,7 @@ method: src/method/CMakeFiles/method.dir/rule
 
 # fast build rule for target.
 method/fast:
-	cd /ICESX/workspace_vsc/ILearnC/build && $(MAKE) -f src/method/CMakeFiles/method.dir/build.make src/method/CMakeFiles/method.dir/build
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(MAKE) -f src/method/CMakeFiles/method.dir/build.make src/method/CMakeFiles/method.dir/build
 .PHONY : method/fast
 
 method.o: method.c.o
@@ -131,7 +134,7 @@ method.o: method.c.o
 
 # target to build an object file
 method.c.o:
-	cd /ICESX/workspace_vsc/ILearnC/build && $(MAKE) -f src/method/CMakeFiles/method.dir/build.make src/method/CMakeFiles/method.dir/method.c.o
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(MAKE) -f src/method/CMakeFiles/method.dir/build.make src/method/CMakeFiles/method.dir/method.c.o
 .PHONY : method.c.o
 
 method.i: method.c.i
@@ -140,7 +143,7 @@ method.i: method.c.i
 
 # target to preprocess a source file
 method.c.i:
-	cd /ICESX/workspace_vsc/ILearnC/build && $(MAKE) -f src/method/CMakeFiles/method.dir/build.make src/method/CMakeFiles/method.dir/method.c.i
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(MAKE) -f src/method/CMakeFiles/method.dir/build.make src/method/CMakeFiles/method.dir/method.c.i
 .PHONY : method.c.i
 
 method.s: method.c.s
@@ -149,7 +152,7 @@ method.s: method.c.s
 
 # target to generate assembly for a file
 method.c.s:
-	cd /ICESX/workspace_vsc/ILearnC/build && $(MAKE) -f src/method/CMakeFiles/method.dir/build.make src/method/CMakeFiles/method.dir/method.c.s
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(MAKE) -f src/method/CMakeFiles/method.dir/build.make src/method/CMakeFiles/method.dir/method.c.s
 .PHONY : method.c.s
 
 # Help Target
@@ -175,6 +178,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /ICESX/workspace_vsc/ILearnC/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

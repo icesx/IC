@@ -1,4 +1,4 @@
-# Install script for directory: /ICESX/workspace_vsc/ILearnC
+# Install script for directory: /ICESX/workSpaceC/IC/workspace_vsc/ILearnC
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,12 +39,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/ICESX/workspace_vsc/ILearnC/build/src/array/cmake_install.cmake")
-  include("/ICESX/workspace_vsc/ILearnC/build/src/callback/cmake_install.cmake")
-  include("/ICESX/workspace_vsc/ILearnC/build/src/integer/cmake_install.cmake")
-  include("/ICESX/workspace_vsc/ILearnC/build/src/method/cmake_install.cmake")
-  include("/ICESX/workspace_vsc/ILearnC/build/src/string/cmake_install.cmake")
-  include("/ICESX/workspace_vsc/ILearnC/build/src/struct/cmake_install.cmake")
+  include("/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/array/cmake_install.cmake")
+  include("/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback/cmake_install.cmake")
+  include("/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/integer/cmake_install.cmake")
+  include("/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/method/cmake_install.cmake")
+  include("/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/string/cmake_install.cmake")
+  include("/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/struct/cmake_install.cmake")
 
 endif()
 
@@ -56,5 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/ICESX/workspace_vsc/ILearnC/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

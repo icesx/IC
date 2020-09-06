@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/ICESX/workspace_vsc/ILearnC/src/array/array.c
+/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/array/array.c
 array.h
-/ICESX/workspace_vsc/ILearnC/src/array/array.h
+/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/array/array.h
 stdio.h
 -
 stdlib.h
 -
 
-/ICESX/workspace_vsc/ILearnC/src/array/array.h
+/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/array/array.h
 

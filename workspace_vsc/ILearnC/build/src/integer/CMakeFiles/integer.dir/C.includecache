@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/ICESX/workspace_vsc/ILearnC/src/integer/integer.c
+/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/integer/integer.c
 integer.h
-/ICESX/workspace_vsc/ILearnC/src/integer/integer.h
+/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/integer/integer.h
 
-/ICESX/workspace_vsc/ILearnC/src/integer/integer.h
+/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/integer/integer.h
 

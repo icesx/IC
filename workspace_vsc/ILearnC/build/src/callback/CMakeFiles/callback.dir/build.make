@@ -18,6 +18,9 @@ SUFFIXES =
 .SUFFIXES: .hpux_make_needs_suffix_list
 
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -43,10 +46,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /ICESX/workspace_vsc/ILearnC
+CMAKE_SOURCE_DIR = /ICESX/workSpaceC/IC/workspace_vsc/ILearnC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /ICESX/workspace_vsc/ILearnC/build
+CMAKE_BINARY_DIR = /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build
 
 # Include any dependencies generated for this target.
 include src/callback/CMakeFiles/callback.dir/depend.make
@@ -59,29 +62,29 @@ include src/callback/CMakeFiles/callback.dir/flags.make
 
 src/callback/CMakeFiles/callback.dir/callback.c.o: src/callback/CMakeFiles/callback.dir/flags.make
 src/callback/CMakeFiles/callback.dir/callback.c.o: ../src/callback/callback.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/ICESX/workspace_vsc/ILearnC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/callback/CMakeFiles/callback.dir/callback.c.o"
-	cd /ICESX/workspace_vsc/ILearnC/build/src/callback && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/callback.dir/callback.c.o   -c /ICESX/workspace_vsc/ILearnC/src/callback/callback.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/callback/CMakeFiles/callback.dir/callback.c.o"
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/callback.dir/callback.c.o   -c /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/callback/callback.c
 
 src/callback/CMakeFiles/callback.dir/callback.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/callback.dir/callback.c.i"
-	cd /ICESX/workspace_vsc/ILearnC/build/src/callback && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /ICESX/workspace_vsc/ILearnC/src/callback/callback.c > CMakeFiles/callback.dir/callback.c.i
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/callback/callback.c > CMakeFiles/callback.dir/callback.c.i
 
 src/callback/CMakeFiles/callback.dir/callback.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/callback.dir/callback.c.s"
-	cd /ICESX/workspace_vsc/ILearnC/build/src/callback && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /ICESX/workspace_vsc/ILearnC/src/callback/callback.c -o CMakeFiles/callback.dir/callback.c.s
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/callback/callback.c -o CMakeFiles/callback.dir/callback.c.s
 
 src/callback/CMakeFiles/callback.dir/method_point.c.o: src/callback/CMakeFiles/callback.dir/flags.make
 src/callback/CMakeFiles/callback.dir/method_point.c.o: ../src/callback/method_point.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/ICESX/workspace_vsc/ILearnC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/callback/CMakeFiles/callback.dir/method_point.c.o"
-	cd /ICESX/workspace_vsc/ILearnC/build/src/callback && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/callback.dir/method_point.c.o   -c /ICESX/workspace_vsc/ILearnC/src/callback/method_point.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/callback/CMakeFiles/callback.dir/method_point.c.o"
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/callback.dir/method_point.c.o   -c /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/callback/method_point.c
 
 src/callback/CMakeFiles/callback.dir/method_point.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/callback.dir/method_point.c.i"
-	cd /ICESX/workspace_vsc/ILearnC/build/src/callback && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /ICESX/workspace_vsc/ILearnC/src/callback/method_point.c > CMakeFiles/callback.dir/method_point.c.i
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/callback/method_point.c > CMakeFiles/callback.dir/method_point.c.i
 
 src/callback/CMakeFiles/callback.dir/method_point.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/callback.dir/method_point.c.s"
-	cd /ICESX/workspace_vsc/ILearnC/build/src/callback && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /ICESX/workspace_vsc/ILearnC/src/callback/method_point.c -o CMakeFiles/callback.dir/method_point.c.s
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/callback/method_point.c -o CMakeFiles/callback.dir/method_point.c.s
 
 # Object files for target callback
 callback_OBJECTS = \
@@ -95,9 +98,9 @@ src/callback/libcallback.a: src/callback/CMakeFiles/callback.dir/callback.c.o
 src/callback/libcallback.a: src/callback/CMakeFiles/callback.dir/method_point.c.o
 src/callback/libcallback.a: src/callback/CMakeFiles/callback.dir/build.make
 src/callback/libcallback.a: src/callback/CMakeFiles/callback.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/ICESX/workspace_vsc/ILearnC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libcallback.a"
-	cd /ICESX/workspace_vsc/ILearnC/build/src/callback && $(CMAKE_COMMAND) -P CMakeFiles/callback.dir/cmake_clean_target.cmake
-	cd /ICESX/workspace_vsc/ILearnC/build/src/callback && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/callback.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libcallback.a"
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback && $(CMAKE_COMMAND) -P CMakeFiles/callback.dir/cmake_clean_target.cmake
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/callback.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/callback/CMakeFiles/callback.dir/build: src/callback/libcallback.a
@@ -105,10 +108,10 @@ src/callback/CMakeFiles/callback.dir/build: src/callback/libcallback.a
 .PHONY : src/callback/CMakeFiles/callback.dir/build
 
 src/callback/CMakeFiles/callback.dir/clean:
-	cd /ICESX/workspace_vsc/ILearnC/build/src/callback && $(CMAKE_COMMAND) -P CMakeFiles/callback.dir/cmake_clean.cmake
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback && $(CMAKE_COMMAND) -P CMakeFiles/callback.dir/cmake_clean.cmake
 .PHONY : src/callback/CMakeFiles/callback.dir/clean
 
 src/callback/CMakeFiles/callback.dir/depend:
-	cd /ICESX/workspace_vsc/ILearnC/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /ICESX/workspace_vsc/ILearnC /ICESX/workspace_vsc/ILearnC/src/callback /ICESX/workspace_vsc/ILearnC/build /ICESX/workspace_vsc/ILearnC/build/src/callback /ICESX/workspace_vsc/ILearnC/build/src/callback/CMakeFiles/callback.dir/DependInfo.cmake --color=$(COLOR)
+	cd /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /ICESX/workSpaceC/IC/workspace_vsc/ILearnC /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/callback /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback/CMakeFiles/callback.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/callback/CMakeFiles/callback.dir/depend
 

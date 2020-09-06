@@ -1,1 +1,0 @@
-/bin/gcc-9 -g  -rdynamic CMakeFiles/CMakeTest.dir/src/ILearn.c.o  -o CMakeTest  src/array/libarray.a src/callback/libcallback.a src/integer/libinteger.a src/method/libmethod.a src/string/libstring.a src/struct/libstruct.a 

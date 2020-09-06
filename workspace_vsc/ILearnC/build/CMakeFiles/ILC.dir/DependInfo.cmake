@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/ICESX/workspace_vsc/ILearnC/src/ILearn.c" "/ICESX/workspace_vsc/ILearnC/build/CMakeFiles/ILC.dir/src/ILearn.c.o"
+  "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/ILearn.c" "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/CMakeFiles/ILC.dir/src/ILearn.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -14,12 +14,12 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/ICESX/workspace_vsc/ILearnC/build/src/array/CMakeFiles/array.dir/DependInfo.cmake"
-  "/ICESX/workspace_vsc/ILearnC/build/src/callback/CMakeFiles/callback.dir/DependInfo.cmake"
-  "/ICESX/workspace_vsc/ILearnC/build/src/integer/CMakeFiles/integer.dir/DependInfo.cmake"
-  "/ICESX/workspace_vsc/ILearnC/build/src/method/CMakeFiles/method.dir/DependInfo.cmake"
-  "/ICESX/workspace_vsc/ILearnC/build/src/string/CMakeFiles/string.dir/DependInfo.cmake"
-  "/ICESX/workspace_vsc/ILearnC/build/src/struct/CMakeFiles/struct.dir/DependInfo.cmake"
+  "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/array/CMakeFiles/array.dir/DependInfo.cmake"
+  "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback/CMakeFiles/callback.dir/DependInfo.cmake"
+  "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/integer/CMakeFiles/integer.dir/DependInfo.cmake"
+  "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/method/CMakeFiles/method.dir/DependInfo.cmake"
+  "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/string/CMakeFiles/string.dir/DependInfo.cmake"
+  "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/struct/CMakeFiles/struct.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

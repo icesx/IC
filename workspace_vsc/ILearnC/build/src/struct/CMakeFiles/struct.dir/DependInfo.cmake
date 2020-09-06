@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/ICESX/workspace_vsc/ILearnC/src/struct/struct.c" "/ICESX/workspace_vsc/ILearnC/build/src/struct/CMakeFiles/struct.dir/struct.c.o"
+  "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/struct/struct.c" "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/struct/CMakeFiles/struct.dir/struct.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

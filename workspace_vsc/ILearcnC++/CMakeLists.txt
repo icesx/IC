@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(learncpp VERSION 0.1.0)
+set( CMAKE_VERBOSE_MAKEFILE on )
+include(CTest)
+enable_testing()
+add_executable(learncpp src/ILearn.cpp)
+set(subs "clazz;lambda;list;my_integer;operator;vector")
+foreach(sub IN LISTS subs)
+    message("config subdirectory::: ${sub}")
+    add_subdirectory("src/${sub}")
+    link_directories(${PROJECT_BINARY_DIR}/src/${sub})
+    target_link_libraries(${PROJECT_NAME} ${sub})
+endforeach (sub)
+
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)

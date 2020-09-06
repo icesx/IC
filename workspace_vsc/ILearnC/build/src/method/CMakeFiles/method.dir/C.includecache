@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/ICESX/workspace_vsc/ILearnC/src/method/method.c
+/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/method/method.c
 method.h
-/ICESX/workspace_vsc/ILearnC/src/method/method.h
+/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/method/method.h
 
-/ICESX/workspace_vsc/ILearnC/src/method/method.h
+/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/method/method.h
 

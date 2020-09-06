@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/ICESX/workspace_vsc/ILearnC/src/callback/callback.c" "/ICESX/workspace_vsc/ILearnC/build/src/callback/CMakeFiles/callback.dir/callback.c.o"
-  "/ICESX/workspace_vsc/ILearnC/src/callback/method_point.c" "/ICESX/workspace_vsc/ILearnC/build/src/callback/CMakeFiles/callback.dir/method_point.c.o"
+  "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/callback/callback.c" "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback/CMakeFiles/callback.dir/callback.c.o"
+  "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/callback/method_point.c" "/ICESX/workSpaceC/IC/workspace_vsc/ILearnC/build/src/callback/CMakeFiles/callback.dir/method_point.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

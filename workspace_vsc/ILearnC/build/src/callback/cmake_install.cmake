@@ -1,4 +1,4 @@
-# Install script for directory: /ICESX/workspace_vsc/ILearnC/src/callback
+# Install script for directory: /ICESX/workSpaceC/IC/workspace_vsc/ILearnC/src/callback
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
