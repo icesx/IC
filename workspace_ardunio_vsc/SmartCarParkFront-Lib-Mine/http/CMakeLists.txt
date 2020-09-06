@@ -1,3 +1,3 @@
 set(SRC http.cpp)
 set(SO http)
-add_library($(SO) ${SRC})
+add_library(${SO} ${SRC})

@@ -10,8 +10,3 @@ foreach(sub IN LISTS subs)
     add_subdirectory("${sub}")
 endforeach (sub)
 
-
-message("SHARD_PATH=${SHARD_PATH}")
-add_subdirectory(${SHARD_PATH})
-add_subdirectory(${EXE_PATH})
-

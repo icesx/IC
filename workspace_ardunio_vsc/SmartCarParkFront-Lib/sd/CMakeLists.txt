@@ -1,3 +1,3 @@
 aux_source_directory(. SRC)
 set(SO sd)
-add_library($(SO) ${SRC})
+add_library(${SO} ${SRC})

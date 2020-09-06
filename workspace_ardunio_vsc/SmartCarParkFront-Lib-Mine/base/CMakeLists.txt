@@ -1,3 +1,3 @@
 set(SRC util.cpp)
 set(SO base)
-add_library($(SO) ${SRC})
+add_library(${SO} ${SRC})
