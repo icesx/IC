@@ -4,7 +4,7 @@
  *  Created on: Oct 26, 2019
  *      Author: i
  */
-#include "../c/notify.h"
+#include "notify.h"
 
 #include <errno.h>
 #include <unistd.h>
@@ -13,7 +13,6 @@
 #include <stdlib.h>
 #include <sys/inotify.h>
 #include <pthread.h>
-#include <string/istring.h>
 void handle_events(int fd, char *watched_dir, handler handler) {
 	/* Some systems cannot read integer variables if they are not
 	 properly aligned. On other systems, incorrect alignment may

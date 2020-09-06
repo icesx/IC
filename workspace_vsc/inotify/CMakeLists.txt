@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(inotify VERSION 0.1.0)
+set( CMAKE_VERBOSE_MAKEFILE on )
+include(CTest)
+enable_testing()
+# use cpp when iscpp is 1
+set(is_cpp 0)
+if(${is_cpp} EQUAL 1)
+    set(notify cpp_notify)
+    set(SRC ${notify}/main.cpp)
+else()
+    set(notify c_notify)
+    set(SRC ${notify}/main.c)
+endif()
+
+add_executable(${PROJECT_NAME} ${SRC})
+set(subs "c_notify;cpp_notify")
+foreach(sub IN LISTS subs)
+    message("config subdirectory::: ${sub}")
+    add_subdirectory("${sub}")
+    link_directories(${PROJECT_BINARY_DIR}/${sub})
+    target_link_libraries(${PROJECT_NAME} ${sub})
+endforeach (sub)
+
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)

@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../c/notify.h"
+#include "notify.h"
 void callback(int fd, const struct inotify_event *event, char *watched_dir) {
 	if (event->mask & IN_ISDIR) {
 		printf("[directory]\t");
@@ -33,14 +33,14 @@ void callback(int fd, const struct inotify_event *event, char *watched_dir) {
 	printf("\n");
 }
 
-//int main(int argc, char *argv[]) {
-//	if (argc < 2) {
-//		printf("Usage: %s PATH [PATH ...]\n", argv[0]);
-//		exit(EXIT_FAILURE);
-//	}
-//	for (int i = 1; i < argc; i++) {
-//		notify_dir(argv[i], callback);
-//	}
-//	exit(EXIT_SUCCESS);
-//}
+int main(int argc, char *argv[]) {
+	if (argc < 2) {
+		printf("Usage: %s PATH [PATH ...]\n", argv[0]);
+		exit(EXIT_FAILURE);
+	}
+	for (int i = 1; i < argc; i++) {
+		notify_dir(argv[i], callback);
+	}
+	exit(EXIT_SUCCESS);
+}
 
