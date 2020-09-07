@@ -10,9 +10,9 @@ set(CMAKE_CXX_FLAGS "-O2 -Wwrite-strings")
 message("CMAKE_CURRENT_LIST_DIR====${CMAKE_CURRENT_LIST_DIR}")
 INCLUDE_DIRECTORIES(
     ${CMAKE_CURRENT_LIST_DIR}/include
-    ${CMAKE_CURRENT_LIST_DIR}/SmartCarParkFront-Lib
-    ${CMAKE_CURRENT_LIST_DIR}/SmartCarParkFront-Lib-Mine
-    ${CMAKE_CURRENT_LIST_DIR}/SmartCarParkFront-Lib/arduino
+    ${CMAKE_CURRENT_LIST_DIR}/libavr-base
+    ${CMAKE_CURRENT_LIST_DIR}/libavr-mine
+    ${CMAKE_CURRENT_LIST_DIR}/libavr-base/arduino
     ${CMAKE_CURRENT_LIST_DIR}/include/variants/mega
     )
 
@@ -22,7 +22,7 @@ add_definitions(
     -D__AVR_ATmega2560__
     -DARDUINO_ARCH_AVR
 )
-set(subs "SmartCarParkFront-Lib-Mine;SmartCarParkFront-Lib")
+set(subs "libavr-base;libavr-mine")
 foreach(sub IN LISTS subs)
     message("config subdirectory::: ${sub}")
     add_subdirectory("${sub}")
