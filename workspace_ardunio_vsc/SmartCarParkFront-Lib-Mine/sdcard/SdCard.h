@@ -7,8 +7,8 @@
 
 #ifndef SDCARD_H_
 #define SDCARD_H_
-#include <SPI.h>
-#include <SD.h>
+#include <spi/SPI.h>
+#include <sd/SD.h>
 #define SPI_SD_CS 4
 class SdCard {
 

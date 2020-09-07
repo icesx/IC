@@ -5,7 +5,7 @@ message(STATUS "src This is SOURCE dir " ${PROJECT_SOURCE_DIR})
 project(ccp VERSION 0.1.0)
 #0 is c ivoke c++
 # set(IVOKE 0)
-set(IVOKE 1)
+set(IVOKE 0)
 include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
 if (${IVOKE} EQUAL 1)
     message("c++ ivoke c")

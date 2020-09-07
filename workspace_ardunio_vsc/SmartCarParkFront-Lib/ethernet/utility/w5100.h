@@ -10,7 +10,7 @@
 #ifndef	W5100_H_INCLUDED
 #define	W5100_H_INCLUDED
 
-#include <SPI.h>
+#include <spi/SPI.h>
 
 #define SPI_CS 10
 

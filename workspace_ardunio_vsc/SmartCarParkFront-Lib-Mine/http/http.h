@@ -4,7 +4,7 @@
  *  Created on: 2015年8月10日
  *      Author: i
  */
-#include <EthernetClient.h>
+#include <ethernet/EthernetClient.h>
 #ifndef W5100_H_
 #define W5100_H_
 class HttpClient {

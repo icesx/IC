@@ -3,8 +3,6 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/cpp_i_c/src",
-                "${workspaceFolder}/c_i_cpp/src",
                 "${workspaceFolder}/include"
             ],
             "defines": [],
