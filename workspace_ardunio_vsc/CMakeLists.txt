@@ -5,7 +5,7 @@ message(STATUS "src This is SOURCE dir " ${PROJECT_SOURCE_DIR})
 project(ardunio VERSION 0.1.0)
 set(CMAKE_C_COMPILER /TOOLS/software/arduino-1.8.11/hardware/tools/avr/bin/avr-gcc)
 set(CMAKE_CXX_COMPILER /TOOLS/software/arduino-1.8.11/hardware/tools/avr/bin/avr-g++)
-set(CMAKE_CXX_FLAGS "-O2")
+set(CMAKE_CXX_FLAGS "-O2 -Wwrite-strings")
 # include
 message("CMAKE_CURRENT_LIST_DIR====${CMAKE_CURRENT_LIST_DIR}")
 INCLUDE_DIRECTORIES(

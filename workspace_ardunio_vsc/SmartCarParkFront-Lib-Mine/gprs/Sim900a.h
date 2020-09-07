@@ -60,8 +60,8 @@ private:
 	char* HTTP_METHOD_POST;
 	char* HTTP_METHOD_GET;
 	char* HTTP_NEW_LINE;
-	char*HTTP_VERSION = " HTTP/1.1";
-	char*HTTP_CONTENTYPE = " application/x-www-form-urlencoded";
+	char* HTTP_VERSION = " HTTP/1.1";
+	char* HTTP_CONTENTYPE = " application/x-www-form-urlencoded";
 	//\x1A=ctrl+z
 	char* SEND_FLAG;
 	char serialResponse[SERIAL_RESPONSE_SIZE];
