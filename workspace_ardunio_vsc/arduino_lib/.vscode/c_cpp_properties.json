@@ -4,9 +4,9 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/include",
-                "${workspaceFolder}/SmartCarParkFront-Lib-Mine",
-                "${workspaceFolder}/SmartCarParkFront-Lib",
-                "${workspaceFolder}/SmartCarParkFront-Lib/arduino"
+                "${workspaceFolder}/libavr-mine",
+                "${workspaceFolder}/libavr-base",
+                "${workspaceFolder}/libavr-base/arduino"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
