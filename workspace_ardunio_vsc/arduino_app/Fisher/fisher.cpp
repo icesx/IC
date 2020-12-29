@@ -10,7 +10,6 @@ void prepareGprs() {
 	param.code = "FCMI";
 	param.host = "182.92.228.78";
 	param.length = 4;
-	param.port = 80;
 	param.url = "/zmhzx/app/fishing/send";
 	Serial.println("setup ok!");
 }
