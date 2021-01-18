@@ -1,2 +1,0 @@
-/bin/ar qc libinteger.a  CMakeFiles/integer.dir/integer.c.o
-/bin/ranlib libinteger.a

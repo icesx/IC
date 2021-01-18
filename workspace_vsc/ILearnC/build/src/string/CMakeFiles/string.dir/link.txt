@@ -1,2 +1,0 @@
-/bin/ar qc libstring.a  CMakeFiles/string.dir/string.c.o
-/bin/ranlib libstring.a
