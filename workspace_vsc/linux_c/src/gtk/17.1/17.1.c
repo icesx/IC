@@ -1,4 +1,4 @@
-﻿#include <gtk/gtk.h>
+﻿#include <gtk3/gtk3.h>
 int main(int argc, char *argv[])
 {
 	GtkWidget *window;
