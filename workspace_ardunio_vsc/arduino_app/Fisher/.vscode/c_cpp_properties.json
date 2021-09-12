@@ -3,17 +3,23 @@
         {
             "name": "Linux",
             "includePath": [
-                "/TOOLS/software/arduino-1.8.11/tools/**",
-                "/TOOLS/software/arduino-1.8.11/hardware/arduino/avr/**"
+                "/TOOLS/SDK/Arduino/libraries/**",
+                "/TOOLS/IDE/arduino/libraries/**",
+                "/TOOLS/IDE/arduino/hardware/tools/**",
+                "/TOOLS/IDE/arduino/tools/**",
+                "/TOOLS/IDE/arduino/hardware/arduino/avr/**"
             ],
             "forcedInclude": [
-                "/TOOLS/software/arduino-1.8.11/hardware/arduino/avr/cores/arduino/Arduino.h"
+                "/TOOLS/IDE/arduino/hardware/arduino/avr/cores/arduino/Arduino.h"
             ],
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu18",
             "cppStandard": "gnu++14",
-            "configurationProvider": "ms-vscode.cmake-tools"
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "defines": [
+                "USBCON"
+            ]
         }
     ],
     "version": 4

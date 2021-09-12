@@ -3,11 +3,12 @@
         {
             "name": "Linux",
             "includePath": [
-                "/TOOLS/software/arduino-1.8.11/tools/**",
-                "/TOOLS/software/arduino-1.8.11/hardware/arduino/avr/**"
+                "${workspaceFolder}",
+                "/TOOLS/IDE/arduino/tools/**",
+                "/TOOLS/IDE/arduino/hardware/arduino/avr/**"
             ],
             "forcedInclude": [
-                "/TOOLS/software/arduino-1.8.11/hardware/arduino/avr/cores/arduino/Arduino.h"
+                "/TOOLS/IDE/arduino/hardware/arduino/avr/cores/arduino/Arduino.h"
             ],
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/gcc",
