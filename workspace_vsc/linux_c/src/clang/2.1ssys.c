@@ -1,5 +1,4 @@
-﻿
-#include <stdio.h>
+﻿#include <stdio.h>
 int _main(void)
 {
 	int a = 2, b = 3, c = 6;
