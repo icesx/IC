@@ -11,7 +11,7 @@
  * published by the Free Software Foundation.
  */
 
-#include "SPI.h"
+#include <spi/SPI.h>
 
 SPIClass SPI;
 
