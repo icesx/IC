@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "clang.h": "c"
+        "clang.h": "c",
+        "string.h": "c",
+        "mymysql.h": "c"
     }
 }

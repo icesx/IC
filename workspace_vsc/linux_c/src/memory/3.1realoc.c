@@ -1,6 +1,6 @@
 ﻿#include <stdlib.h>
 #include <stdio.h>
-_main()
+main()
 {
     char *p;
     p = (char *)malloc(100);

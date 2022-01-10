@@ -1,0 +1,1 @@
+main:getdata.o putdata.o calc.o
