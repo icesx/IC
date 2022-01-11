@@ -153,6 +153,12 @@ foreach(lib_name IN LISTS LINK_LIBS_NAME)
         target_link_libraries(${elf_file} ${lib_name})        
 endforeach(lib_name)
 
+foreach(sub IN LISTS SUB_LIB)
+    message("add sub lib : ${sub}")
+    add_subdirectory("${sub}")
+    link_directories(${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${sub})
+    target_link_libraries(${elf_file} ${sub})
+endforeach (sub)
 
 
 set_target_properties(

@@ -19,20 +19,15 @@ INCLUDE_DIRECTORIES(
 SET(SOURCE_EXE
         main.c
 )
-
+SET(SUB_LIB 
+        blink
+)
 SET(LINK_LIB_PATH
         /ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/ATMEGA_LIB
 )
 SET(LINK_LIBS_NAME
         SmartCarParkFront-Lib
 )
-
-set(subs "blink")
-foreach(sub IN LISTS subs)
-    message("config subdirectory::: ${sub}")
-    add_subdirectory("${sub}")
-    link_directories(${PROJECT_BINARY_DIR}/${sub})
-endforeach (sub)
 
 
 ##########################################################################
@@ -49,7 +44,7 @@ add_definitions("-Werror")
 #add_definitions("-funsigned-bitfields")
 #add_definitions("-ffunction-sections")
 #add_definitions("-c")
-add_definitions("-std=gnu99")
+# add_definitions("-std=gnu99")
 add_definitions("-mmcu=${AVR_MCU}")
 
 ##########################################################################

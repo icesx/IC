@@ -5,7 +5,7 @@
  *
  * @param pin - pin number
  **/
-void blink_setup(uint8_t pin=13);
+void blink_setup(uint8_t pin);
 
 
 /**
@@ -14,4 +14,4 @@ void blink_setup(uint8_t pin=13);
  * @param duration - duration in miliseconds
  * @param pin      - pin number
  **/
-void blink(unsigned long duration, uint8_t pin=13);
+void blink(unsigned long duration, uint8_t pin);

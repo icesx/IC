@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "arduino.h": "c",
+        "stdlib.h": "c",
+        "pgmspace.h": "c",
+        "math.h": "c",
+        "string.h": "c",
+        "interrupt.h": "c",
+        "io.h": "c",
+        "blink_lib.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
+}
