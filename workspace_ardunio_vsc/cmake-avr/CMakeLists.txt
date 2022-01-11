@@ -15,17 +15,16 @@ INCLUDE_DIRECTORIES(
     ${ARDUINO_PATH}/hardware/tools/avr/avr/include
     )
 
-
-SET(SOURCE_EXE
+SET(CMAKE_AVR_SOURCE_EXE
         main.c
 )
-SET(SUB_LIB 
+SET(CMAKE_AVR_SUB_LIB 
         blink
 )
-SET(LINK_LIB_PATH
+SET(CMAKE_AVR_LINK_LIB_PATH
         /ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/ATMEGA_LIB
 )
-SET(LINK_LIBS_NAME
+SET(CMAKE_AVR_LINK_LIBS_NAME
         SmartCarParkFront-Lib
 )
 
@@ -44,7 +43,7 @@ add_definitions("-Werror")
 #add_definitions("-funsigned-bitfields")
 #add_definitions("-ffunction-sections")
 #add_definitions("-c")
-# add_definitions("-std=gnu99")
+add_definitions("-std=gnu99")
 add_definitions("-mmcu=${AVR_MCU}")
 
 ##########################################################################

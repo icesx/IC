@@ -142,18 +142,17 @@ set(hex_file ${MCU_TYPE_FOR_FILENAME}.hex)
 set(map_file ${MCU_TYPE_FOR_FILENAME}.map)
 set(eeprom_image ${MCU_TYPE_FOR_FILENAME}.eep)
 
-foreach(lib_path IN LISTS LINK_LIB_PATH)
+foreach(lib_path IN LISTS CMAKE_AVR_LINK_LIB_PATH)
         link_directories(${lib_path})
 endforeach(sub)
 
-ADD_EXECUTABLE(${elf_file} ${SOURCE_EXE})
+ADD_EXECUTABLE(${elf_file} ${CMAKE_AVR_SOURCE_EXE})
 
-
-foreach(lib_name IN LISTS LINK_LIBS_NAME)
+foreach(lib_name IN LISTS CMAKE_AVR_LINK_LIBS_NAME)
         target_link_libraries(${elf_file} ${lib_name})        
 endforeach(lib_name)
 
-foreach(sub IN LISTS SUB_LIB)
+foreach(sub IN LISTS CMAKE_AVR_SUB_LIB)
     message("add sub lib : ${sub}")
     add_subdirectory("${sub}")
     link_directories(${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${sub})
