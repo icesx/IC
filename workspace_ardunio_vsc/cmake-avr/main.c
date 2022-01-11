@@ -1,4 +1,3 @@
-#include <Arduino.h>
 #include "blink/blink_lib.h"
 void setup()
 {
