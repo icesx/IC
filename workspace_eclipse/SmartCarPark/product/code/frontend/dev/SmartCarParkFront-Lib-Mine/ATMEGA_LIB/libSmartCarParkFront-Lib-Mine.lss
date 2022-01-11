@@ -10,11 +10,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   2 .bss          00000000  00000000  00000000  00000034  2**0
                   ALLOC
-  3 .stab         00000318  00000000  00000000  00000034  2**2
+  3 .stab         00000330  00000000  00000000  00000034  2**2
                   CONTENTS, RELOC, READONLY, DEBUGGING
-  4 .stabstr      00000942  00000000  00000000  0000034c  2**0
+  4 .stabstr      0000098b  00000000  00000000  00000364  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .comment      00000012  00000000  00000000  00000c8e  2**0
+  5 .comment      00000012  00000000  00000000  00000cef  2**0
                   CONTENTS, READONLY
 
 SdCard.o:     file format elf32-avr
@@ -29,23 +29,29 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   3 .bss          00000000  00000000  00000000  0000003c  2**0
                   ALLOC
-  4 .stab         00001368  00000000  00000000  0000003c  2**2
+  4 .stab         00001410  00000000  00000000  0000003c  2**2
                   CONTENTS, RELOC, READONLY, DEBUGGING
-  5 .stabstr      0000386a  00000000  00000000  000013a4  2**0
+  5 .stabstr      00003939  00000000  00000000  0000144c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .rodata.str1.1 00000269  00000000  00000000  00004c0e  2**0
+  6 .rodata._ZN6SdCard11checkSdCardEv.str1.1 000001e2  00000000  00000000  00004d85  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  7 .text._ZN6SdCard11checkSdCardEv 000001ec  00000000  00000000  00004e77  2**0
+  7 .text._ZN6SdCard11checkSdCardEv 000001e2  00000000  00000000  00004f67  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  8 .text._ZN6SdCard4playEv 0000003e  00000000  00000000  00005063  2**0
+  8 .rodata._ZN6SdCard4playEv.str1.1 0000002f  00000000  00000000  00005149  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  9 .text._ZN6SdCard4playEv 0000003e  00000000  00000000  00005178  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  9 .text._ZN4FileaSERKS_ 00000062  00000000  00000000  000050a1  2**0
+ 10 .text._ZN4FileaSEOS_ 00000062  00000000  00000000  000051b6  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 10 .text._ZN6SdCard9writeFileEPcS0_ 000000da  00000000  00000000  00005103  2**0
+ 11 .rodata._ZN6SdCard9writeFileEPcS0_.str1.1 00000037  00000000  00000000  00005218  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 12 .text._ZN6SdCard9writeFileEPcS0_ 000000da  00000000  00000000  0000524f  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 11 .text._ZN6SdCard8readFileEPc 000000be  00000000  00000000  000051dd  2**0
+ 13 .rodata._ZN6SdCard8readFileEPc.str1.1 00000021  00000000  00000000  00005329  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 14 .text._ZN6SdCard8readFileEPc 000000be  00000000  00000000  0000534a  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 12 .comment      00000012  00000000  00000000  0000529b  2**0
+ 15 .comment      00000012  00000000  00000000  00005408  2**0
                   CONTENTS, READONLY
 
 Disassembly of section .text._ZN6SdCard11checkSdCardEv:
@@ -117,186 +123,190 @@ void SdCard::readFile(char* fileName) {
 			Serial.write(myFile.read());
   74:	60 e0       	ldi	r22, 0x00	; 0
   76:	70 e0       	ldi	r23, 0x00	; 0
-  78:	00 c0       	rjmp	.+0      	; 0x7a <_ZN6SdCard11checkSdCardEv+0x7a>
+  78:	80 e0       	ldi	r24, 0x00	; 0
     virtual void flush(void);
     virtual size_t write(uint8_t);
     inline size_t write(unsigned long n) { return write((uint8_t)n); }
     inline size_t write(long n) { return write((uint8_t)n); }
     inline size_t write(unsigned int n) { return write((uint8_t)n); }
     inline size_t write(int n) { return write((uint8_t)n); }
-  7a:	60 e0       	ldi	r22, 0x00	; 0
-  7c:	70 e0       	ldi	r23, 0x00	; 0
-  7e:	80 e0       	ldi	r24, 0x00	; 0
-  80:	90 e0       	ldi	r25, 0x00	; 0
-  82:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+  7a:	90 e0       	ldi	r25, 0x00	; 0
+  7c:	df 91       	pop	r29
+  7e:	cf 91       	pop	r28
+  80:	1f 91       	pop	r17
+  82:	0f 91       	pop	r16
+  84:	ff 90       	pop	r15
 		}
 		myFile.close();
-  86:	60 e0       	ldi	r22, 0x00	; 0
-  88:	70 e0       	ldi	r23, 0x00	; 0
-  8a:	80 e0       	ldi	r24, 0x00	; 0
-  8c:	90 e0       	ldi	r25, 0x00	; 0
+  86:	ef 90       	pop	r14
+  88:	df 90       	pop	r13
+  8a:	cf 90       	pop	r12
 	} else {
 		Serial.print("error opening to read ");
-  8e:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
-  92:	88 a5       	ldd	r24, Y+40	; 0x28
-  94:	82 30       	cpi	r24, 0x02	; 2
-  96:	01 f0       	breq	.+0      	; 0x98 <_ZN6SdCard11checkSdCardEv+0x98>
-  98:	83 30       	cpi	r24, 0x03	; 3
 		Serial.println(fileName);
-  9a:	01 f0       	breq	.+0      	; 0x9c <_ZN6SdCard11checkSdCardEv+0x9c>
-  9c:	81 30       	cpi	r24, 0x01	; 1
-  9e:	01 f4       	brne	.+0      	; 0xa0 <_ZN6SdCard11checkSdCardEv+0xa0>
-  a0:	60 e0       	ldi	r22, 0x00	; 0
-  a2:	70 e0       	ldi	r23, 0x00	; 0
 	}
 }
-  a4:	00 c0       	rjmp	.+0      	; 0xa6 <_ZN6SdCard11checkSdCardEv+0xa6>
-  a6:	60 e0       	ldi	r22, 0x00	; 0
-  a8:	70 e0       	ldi	r23, 0x00	; 0
-  aa:	00 c0       	rjmp	.+0      	; 0xac <_ZN6SdCard11checkSdCardEv+0xac>
-  ac:	60 e0       	ldi	r22, 0x00	; 0
-  ae:	70 e0       	ldi	r23, 0x00	; 0
-  b0:	00 c0       	rjmp	.+0      	; 0xb2 <_ZN6SdCard11checkSdCardEv+0xb2>
+  8c:	0c 94 00 00 	jmp	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+  90:	60 e0       	ldi	r22, 0x00	; 0
+  92:	70 e0       	ldi	r23, 0x00	; 0
+  94:	80 e0       	ldi	r24, 0x00	; 0
+  96:	90 e0       	ldi	r25, 0x00	; 0
+  98:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+  9c:	60 e0       	ldi	r22, 0x00	; 0
+  9e:	70 e0       	ldi	r23, 0x00	; 0
+  a0:	80 e0       	ldi	r24, 0x00	; 0
+  a2:	90 e0       	ldi	r25, 0x00	; 0
+  a4:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+		while (myFile.available()) {
+			Serial.write(myFile.read());
+		}
+		myFile.close();
+	} else {
+		Serial.print("error opening to read ");
+  a8:	88 a5       	ldd	r24, Y+40	; 0x28
+  aa:	60 e0       	ldi	r22, 0x00	; 0
+  ac:	70 e0       	ldi	r23, 0x00	; 0
+  ae:	82 30       	cpi	r24, 0x02	; 2
+  b0:	01 f0       	breq	.+0      	; 0xb2 <_ZN6SdCard11checkSdCardEv+0xb2>
+		Serial.println(fileName);
   b2:	60 e0       	ldi	r22, 0x00	; 0
   b4:	70 e0       	ldi	r23, 0x00	; 0
-  b6:	80 e0       	ldi	r24, 0x00	; 0
-  b8:	90 e0       	ldi	r25, 0x00	; 0
-  ba:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
-  be:	8e 01       	movw	r16, r28
-  c0:	07 5d       	subi	r16, 0xD7	; 215
-  c2:	1f 4f       	sbci	r17, 0xFF	; 255
-  c4:	41 e0       	ldi	r20, 0x01	; 1
-  c6:	b7 01       	movw	r22, r14
-  c8:	c8 01       	movw	r24, r16
+  b6:	83 30       	cpi	r24, 0x03	; 3
+  b8:	01 f0       	breq	.+0      	; 0xba <_ZN6SdCard11checkSdCardEv+0xba>
+  ba:	60 e0       	ldi	r22, 0x00	; 0
+	}
+}
+  bc:	70 e0       	ldi	r23, 0x00	; 0
+  be:	81 30       	cpi	r24, 0x01	; 1
+  c0:	01 f0       	breq	.+0      	; 0xc2 <_ZN6SdCard11checkSdCardEv+0xc2>
+  c2:	60 e0       	ldi	r22, 0x00	; 0
+  c4:	70 e0       	ldi	r23, 0x00	; 0
+  c6:	80 e0       	ldi	r24, 0x00	; 0
+  c8:	90 e0       	ldi	r25, 0x00	; 0
   ca:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
-  ce:	81 11       	cpse	r24, r1
-  d0:	00 c0       	rjmp	.+0      	; 0xd2 <_ZN6SdCard11checkSdCardEv+0xd2>
-  d2:	40 e0       	ldi	r20, 0x00	; 0
-  d4:	b7 01       	movw	r22, r14
-  d6:	c8 01       	movw	r24, r16
-  d8:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
-  dc:	81 11       	cpse	r24, r1
-  de:	00 c0       	rjmp	.+0      	; 0xe0 <_ZN6SdCard11checkSdCardEv+0xe0>
-  e0:	60 e0       	ldi	r22, 0x00	; 0
-  e2:	70 e0       	ldi	r23, 0x00	; 0
-  e4:	80 e0       	ldi	r24, 0x00	; 0
-  e6:	90 e0       	ldi	r25, 0x00	; 0
-  e8:	df 91       	pop	r29
-  ea:	cf 91       	pop	r28
-  ec:	1f 91       	pop	r17
-  ee:	0f 91       	pop	r16
-  f0:	ff 90       	pop	r15
-  f2:	ef 90       	pop	r14
-  f4:	df 90       	pop	r13
-  f6:	cf 90       	pop	r12
-  f8:	0c 94 00 00 	jmp	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
-  fc:	60 e0       	ldi	r22, 0x00	; 0
-  fe:	70 e0       	ldi	r23, 0x00	; 0
- 100:	80 e0       	ldi	r24, 0x00	; 0
- 102:	90 e0       	ldi	r25, 0x00	; 0
- 104:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
- 108:	fe 01       	movw	r30, r28
- 10a:	e0 5c       	subi	r30, 0xC0	; 192
- 10c:	ff 4f       	sbci	r31, 0xFF	; 255
- 10e:	4a e0       	ldi	r20, 0x0A	; 10
- 110:	50 e0       	ldi	r21, 0x00	; 0
- 112:	60 81       	ld	r22, Z
- 114:	80 e0       	ldi	r24, 0x00	; 0
- 116:	90 e0       	ldi	r25, 0x00	; 0
- 118:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
- 11c:	80 e0       	ldi	r24, 0x00	; 0
- 11e:	90 e0       	ldi	r25, 0x00	; 0
- 120:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
- 124:	ad a5       	ldd	r26, Y+45	; 0x2d
- 126:	4a a9       	ldd	r20, Y+50	; 0x32
- 128:	5b a9       	ldd	r21, Y+51	; 0x33
- 12a:	6c a9       	ldd	r22, Y+52	; 0x34
- 12c:	7d a9       	ldd	r23, Y+53	; 0x35
- 12e:	9a 01       	movw	r18, r20
- 130:	ab 01       	movw	r20, r22
- 132:	89 e0       	ldi	r24, 0x09	; 9
- 134:	22 0f       	add	r18, r18
- 136:	33 1f       	adc	r19, r19
- 138:	44 1f       	adc	r20, r20
- 13a:	55 1f       	adc	r21, r21
- 13c:	8a 95       	dec	r24
- 13e:	01 f4       	brne	.+0      	; 0x140 <_ZN6SdCard11checkSdCardEv+0x140>
- 140:	b0 e0       	ldi	r27, 0x00	; 0
- 142:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
- 146:	6b 01       	movw	r12, r22
- 148:	7c 01       	movw	r14, r24
- 14a:	60 e0       	ldi	r22, 0x00	; 0
- 14c:	70 e0       	ldi	r23, 0x00	; 0
- 14e:	80 e0       	ldi	r24, 0x00	; 0
- 150:	90 e0       	ldi	r25, 0x00	; 0
- 152:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
- 156:	2a e0       	ldi	r18, 0x0A	; 10
- 158:	30 e0       	ldi	r19, 0x00	; 0
- 15a:	b7 01       	movw	r22, r14
- 15c:	a6 01       	movw	r20, r12
- 15e:	80 e0       	ldi	r24, 0x00	; 0
- 160:	90 e0       	ldi	r25, 0x00	; 0
- 162:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
- 166:	60 e0       	ldi	r22, 0x00	; 0
- 168:	70 e0       	ldi	r23, 0x00	; 0
- 16a:	80 e0       	ldi	r24, 0x00	; 0
- 16c:	90 e0       	ldi	r25, 0x00	; 0
- 16e:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
- 172:	b7 01       	movw	r22, r14
- 174:	a6 01       	movw	r20, r12
- 176:	9a e0       	ldi	r25, 0x0A	; 10
- 178:	76 95       	lsr	r23
- 17a:	67 95       	ror	r22
- 17c:	57 95       	ror	r21
- 17e:	47 95       	ror	r20
- 180:	9a 95       	dec	r25
- 182:	01 f4       	brne	.+0      	; 0x184 <_ZN6SdCard11checkSdCardEv+0x184>
- 184:	2a e0       	ldi	r18, 0x0A	; 10
- 186:	30 e0       	ldi	r19, 0x00	; 0
- 188:	80 e0       	ldi	r24, 0x00	; 0
- 18a:	90 e0       	ldi	r25, 0x00	; 0
- 18c:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
- 190:	60 e0       	ldi	r22, 0x00	; 0
- 192:	70 e0       	ldi	r23, 0x00	; 0
- 194:	80 e0       	ldi	r24, 0x00	; 0
- 196:	90 e0       	ldi	r25, 0x00	; 0
- 198:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
- 19c:	b7 01       	movw	r22, r14
- 19e:	a6 01       	movw	r20, r12
- 1a0:	24 e1       	ldi	r18, 0x14	; 20
- 1a2:	76 95       	lsr	r23
- 1a4:	67 95       	ror	r22
- 1a6:	57 95       	ror	r21
- 1a8:	47 95       	ror	r20
- 1aa:	2a 95       	dec	r18
- 1ac:	01 f4       	brne	.+0      	; 0x1ae <_ZN6SdCard11checkSdCardEv+0x1ae>
- 1ae:	2a e0       	ldi	r18, 0x0A	; 10
- 1b0:	30 e0       	ldi	r19, 0x00	; 0
- 1b2:	80 e0       	ldi	r24, 0x00	; 0
- 1b4:	90 e0       	ldi	r25, 0x00	; 0
- 1b6:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
- 1ba:	60 e0       	ldi	r22, 0x00	; 0
- 1bc:	70 e0       	ldi	r23, 0x00	; 0
- 1be:	80 e0       	ldi	r24, 0x00	; 0
- 1c0:	90 e0       	ldi	r25, 0x00	; 0
- 1c2:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
- 1c6:	c9 5b       	subi	r28, 0xB9	; 185
- 1c8:	df 4f       	sbci	r29, 0xFF	; 255
- 1ca:	b8 01       	movw	r22, r16
+  ce:	8e 01       	movw	r16, r28
+  d0:	07 5d       	subi	r16, 0xD7	; 215
+  d2:	1f 4f       	sbci	r17, 0xFF	; 255
+  d4:	41 e0       	ldi	r20, 0x01	; 1
+  d6:	b7 01       	movw	r22, r14
+  d8:	c8 01       	movw	r24, r16
+  da:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+  de:	81 11       	cpse	r24, r1
+  e0:	00 c0       	rjmp	.+0      	; 0xe2 <_ZN6SdCard11checkSdCardEv+0xe2>
+  e2:	40 e0       	ldi	r20, 0x00	; 0
+  e4:	b7 01       	movw	r22, r14
+  e6:	c8 01       	movw	r24, r16
+  e8:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+  ec:	81 11       	cpse	r24, r1
+  ee:	00 c0       	rjmp	.+0      	; 0xf0 <_ZN6SdCard11checkSdCardEv+0xf0>
+  f0:	60 e0       	ldi	r22, 0x00	; 0
+  f2:	70 e0       	ldi	r23, 0x00	; 0
+  f4:	00 c0       	rjmp	.+0      	; 0xf6 <_ZN6SdCard11checkSdCardEv+0xf6>
+  f6:	60 e0       	ldi	r22, 0x00	; 0
+  f8:	70 e0       	ldi	r23, 0x00	; 0
+  fa:	80 e0       	ldi	r24, 0x00	; 0
+  fc:	90 e0       	ldi	r25, 0x00	; 0
+  fe:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 102:	fe 01       	movw	r30, r28
+ 104:	e0 5c       	subi	r30, 0xC0	; 192
+ 106:	ff 4f       	sbci	r31, 0xFF	; 255
+ 108:	4a e0       	ldi	r20, 0x0A	; 10
+ 10a:	50 e0       	ldi	r21, 0x00	; 0
+ 10c:	60 81       	ld	r22, Z
+ 10e:	80 e0       	ldi	r24, 0x00	; 0
+ 110:	90 e0       	ldi	r25, 0x00	; 0
+ 112:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 116:	80 e0       	ldi	r24, 0x00	; 0
+ 118:	90 e0       	ldi	r25, 0x00	; 0
+ 11a:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 11e:	ad a5       	ldd	r26, Y+45	; 0x2d
+ 120:	2a a9       	ldd	r18, Y+50	; 0x32
+ 122:	3b a9       	ldd	r19, Y+51	; 0x33
+ 124:	4c a9       	ldd	r20, Y+52	; 0x34
+ 126:	5d a9       	ldd	r21, Y+53	; 0x35
+ 128:	89 e0       	ldi	r24, 0x09	; 9
+ 12a:	22 0f       	add	r18, r18
+ 12c:	33 1f       	adc	r19, r19
+ 12e:	44 1f       	adc	r20, r20
+ 130:	55 1f       	adc	r21, r21
+ 132:	8a 95       	dec	r24
+ 134:	01 f4       	brne	.+0      	; 0x136 <_ZN6SdCard11checkSdCardEv+0x136>
+ 136:	b0 e0       	ldi	r27, 0x00	; 0
+ 138:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 13c:	6b 01       	movw	r12, r22
+ 13e:	7c 01       	movw	r14, r24
+ 140:	60 e0       	ldi	r22, 0x00	; 0
+ 142:	70 e0       	ldi	r23, 0x00	; 0
+ 144:	80 e0       	ldi	r24, 0x00	; 0
+ 146:	90 e0       	ldi	r25, 0x00	; 0
+ 148:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 14c:	2a e0       	ldi	r18, 0x0A	; 10
+ 14e:	30 e0       	ldi	r19, 0x00	; 0
+ 150:	b7 01       	movw	r22, r14
+ 152:	a6 01       	movw	r20, r12
+ 154:	80 e0       	ldi	r24, 0x00	; 0
+ 156:	90 e0       	ldi	r25, 0x00	; 0
+ 158:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 15c:	60 e0       	ldi	r22, 0x00	; 0
+ 15e:	70 e0       	ldi	r23, 0x00	; 0
+ 160:	80 e0       	ldi	r24, 0x00	; 0
+ 162:	90 e0       	ldi	r25, 0x00	; 0
+ 164:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 168:	b7 01       	movw	r22, r14
+ 16a:	a6 01       	movw	r20, r12
+ 16c:	9a e0       	ldi	r25, 0x0A	; 10
+ 16e:	76 95       	lsr	r23
+ 170:	67 95       	ror	r22
+ 172:	57 95       	ror	r21
+ 174:	47 95       	ror	r20
+ 176:	9a 95       	dec	r25
+ 178:	01 f4       	brne	.+0      	; 0x17a <_ZN6SdCard11checkSdCardEv+0x17a>
+ 17a:	2a e0       	ldi	r18, 0x0A	; 10
+ 17c:	30 e0       	ldi	r19, 0x00	; 0
+ 17e:	80 e0       	ldi	r24, 0x00	; 0
+ 180:	90 e0       	ldi	r25, 0x00	; 0
+ 182:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 186:	60 e0       	ldi	r22, 0x00	; 0
+ 188:	70 e0       	ldi	r23, 0x00	; 0
+ 18a:	80 e0       	ldi	r24, 0x00	; 0
+ 18c:	90 e0       	ldi	r25, 0x00	; 0
+ 18e:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 192:	b7 01       	movw	r22, r14
+ 194:	a6 01       	movw	r20, r12
+ 196:	24 e1       	ldi	r18, 0x14	; 20
+ 198:	76 95       	lsr	r23
+ 19a:	67 95       	ror	r22
+ 19c:	57 95       	ror	r21
+ 19e:	47 95       	ror	r20
+ 1a0:	2a 95       	dec	r18
+ 1a2:	01 f4       	brne	.+0      	; 0x1a4 <_ZN6SdCard11checkSdCardEv+0x1a4>
+ 1a4:	2a e0       	ldi	r18, 0x0A	; 10
+ 1a6:	30 e0       	ldi	r19, 0x00	; 0
+ 1a8:	80 e0       	ldi	r24, 0x00	; 0
+ 1aa:	90 e0       	ldi	r25, 0x00	; 0
+ 1ac:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 1b0:	60 e0       	ldi	r22, 0x00	; 0
+ 1b2:	70 e0       	ldi	r23, 0x00	; 0
+ 1b4:	80 e0       	ldi	r24, 0x00	; 0
+ 1b6:	90 e0       	ldi	r25, 0x00	; 0
+ 1b8:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 1bc:	c9 5b       	subi	r28, 0xB9	; 185
+ 1be:	df 4f       	sbci	r29, 0xFF	; 255
+ 1c0:	b8 01       	movw	r22, r16
+ 1c2:	ce 01       	movw	r24, r28
+ 1c4:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 1c8:	40 e0       	ldi	r20, 0x00	; 0
+ 1ca:	67 e0       	ldi	r22, 0x07	; 7
  1cc:	ce 01       	movw	r24, r28
- 1ce:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
- 1d2:	40 e0       	ldi	r20, 0x00	; 0
- 1d4:	67 e0       	ldi	r22, 0x07	; 7
- 1d6:	ce 01       	movw	r24, r28
- 1d8:	df 91       	pop	r29
- 1da:	cf 91       	pop	r28
- 1dc:	1f 91       	pop	r17
- 1de:	0f 91       	pop	r16
- 1e0:	ff 90       	pop	r15
- 1e2:	ef 90       	pop	r14
- 1e4:	df 90       	pop	r13
- 1e6:	cf 90       	pop	r12
- 1e8:	0c 94 00 00 	jmp	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
+ 1ce:	df 91       	pop	r29
+ 1d0:	cf 91       	pop	r28
+ 1d2:	1f 91       	pop	r17
+ 1d4:	0f 91       	pop	r16
+ 1d6:	ff 90       	pop	r15
+ 1d8:	ef 90       	pop	r14
+ 1da:	df 90       	pop	r13
+ 1dc:	cf 90       	pop	r12
+ 1de:	0c 94 00 00 	jmp	0	; 0x0 <_ZN6SdCard11checkSdCardEv>
 
 Disassembly of section .text._ZN6SdCard4playEv:
 
@@ -338,9 +348,9 @@ void SdCard::readFile(char* fileName) {
   3a:	cf 91       	pop	r28
   3c:	08 95       	ret
 
-Disassembly of section .text._ZN4FileaSERKS_:
+Disassembly of section .text._ZN4FileaSEOS_:
 
-00000000 <_ZN4FileaSERKS_>:
+00000000 <_ZN4FileaSEOS_>:
 	if (!SD.begin(chipSelect)) {
 		Serial.println("initialization failed!");
 		return;
@@ -390,7 +400,7 @@ void SdCard::readFile(char* fileName) {
   4a:	4d 93       	st	X+, r20
   4c:	a2 17       	cp	r26, r18
   4e:	b3 07       	cpc	r27, r19
-  50:	01 f4       	brne	.+0      	; 0x52 <_ZN4FileaSERKS_+0x52>
+  50:	01 f4       	brne	.+0      	; 0x52 <_ZN4FileaSEOS_+0x52>
   52:	21 8d       	ldd	r18, Z+25	; 0x19
   54:	32 8d       	ldd	r19, Z+26	; 0x1a
 	if (myFile) {
@@ -482,45 +492,54 @@ void SdCard::readFile(char* fileName) {
 		myFile.close();
   88:	b6 01       	movw	r22, r12
   8a:	80 e0       	ldi	r24, 0x00	; 0
-  8c:	90 e0       	ldi	r25, 0x00	; 0
 	} else {
 		Serial.print("error opening to read ");
+		Serial.println(fileName);
+	}
+}
+  8c:	90 e0       	ldi	r25, 0x00	; 0
   8e:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard9writeFileEPcS0_>
   92:	b6 01       	movw	r22, r12
   94:	c8 01       	movw	r24, r16
   96:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard9writeFileEPcS0_>
-		Serial.println(fileName);
   9a:	c8 01       	movw	r24, r16
   9c:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard9writeFileEPcS0_>
   a0:	60 e0       	ldi	r22, 0x00	; 0
   a2:	70 e0       	ldi	r23, 0x00	; 0
+  a4:	80 e0       	ldi	r24, 0x00	; 0
+		while (myFile.available()) {
+			Serial.write(myFile.read());
+		}
+		myFile.close();
+	} else {
+		Serial.print("error opening to read ");
+  a6:	90 e0       	ldi	r25, 0x00	; 0
+  a8:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard9writeFileEPcS0_>
+  ac:	6b 96       	adiw	r28, 0x1b	; 27
+  ae:	0f b6       	in	r0, 0x3f	; 63
+  b0:	f8 94       	cli
+		Serial.println(fileName);
+  b2:	de bf       	out	0x3e, r29	; 62
+  b4:	0f be       	out	0x3f, r0	; 63
+  b6:	cd bf       	out	0x3d, r28	; 61
+  b8:	df 91       	pop	r29
+  ba:	cf 91       	pop	r28
 	}
 }
-  a4:	00 c0       	rjmp	.+0      	; 0xa6 <_ZN6SdCard9writeFileEPcS0_+0xa6>
-  a6:	60 e0       	ldi	r22, 0x00	; 0
-  a8:	70 e0       	ldi	r23, 0x00	; 0
-  aa:	80 e0       	ldi	r24, 0x00	; 0
-  ac:	90 e0       	ldi	r25, 0x00	; 0
-  ae:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard9writeFileEPcS0_>
-  b2:	b7 01       	movw	r22, r14
-  b4:	80 e0       	ldi	r24, 0x00	; 0
-  b6:	90 e0       	ldi	r25, 0x00	; 0
-  b8:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard9writeFileEPcS0_>
-  bc:	6b 96       	adiw	r28, 0x1b	; 27
-  be:	0f b6       	in	r0, 0x3f	; 63
-  c0:	f8 94       	cli
-  c2:	de bf       	out	0x3e, r29	; 62
-  c4:	0f be       	out	0x3f, r0	; 63
-  c6:	cd bf       	out	0x3d, r28	; 61
-  c8:	df 91       	pop	r29
-  ca:	cf 91       	pop	r28
-  cc:	1f 91       	pop	r17
-  ce:	0f 91       	pop	r16
-  d0:	ff 90       	pop	r15
-  d2:	ef 90       	pop	r14
-  d4:	df 90       	pop	r13
-  d6:	cf 90       	pop	r12
-  d8:	08 95       	ret
+  bc:	1f 91       	pop	r17
+  be:	0f 91       	pop	r16
+  c0:	ff 90       	pop	r15
+  c2:	ef 90       	pop	r14
+  c4:	df 90       	pop	r13
+  c6:	cf 90       	pop	r12
+  c8:	08 95       	ret
+  ca:	60 e0       	ldi	r22, 0x00	; 0
+  cc:	70 e0       	ldi	r23, 0x00	; 0
+  ce:	80 e0       	ldi	r24, 0x00	; 0
+  d0:	90 e0       	ldi	r25, 0x00	; 0
+  d2:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard9writeFileEPcS0_>
+  d6:	b7 01       	movw	r22, r14
+  d8:	00 c0       	rjmp	.+0      	; 0xda <__SREG__+0x9b>
 
 Disassembly of section .text._ZN6SdCard8readFileEPc:
 
@@ -600,34 +619,43 @@ void SdCard::readFile(char* fileName) {
 		myFile.close();
   86:	c8 01       	movw	r24, r16
   88:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard8readFileEPc>
-  8c:	00 c0       	rjmp	.+0      	; 0x8e <_ZN6SdCard8readFileEPc+0x8e>
 	} else {
 		Serial.print("error opening to read ");
-  8e:	60 e0       	ldi	r22, 0x00	; 0
-  90:	70 e0       	ldi	r23, 0x00	; 0
-  92:	80 e0       	ldi	r24, 0x00	; 0
-  94:	90 e0       	ldi	r25, 0x00	; 0
-  96:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard8readFileEPc>
 		Serial.println(fileName);
-  9a:	b7 01       	movw	r22, r14
-  9c:	80 e0       	ldi	r24, 0x00	; 0
-  9e:	90 e0       	ldi	r25, 0x00	; 0
-  a0:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard8readFileEPc>
 	}
 }
-  a4:	6b 96       	adiw	r28, 0x1b	; 27
-  a6:	0f b6       	in	r0, 0x3f	; 63
-  a8:	f8 94       	cli
-  aa:	de bf       	out	0x3e, r29	; 62
-  ac:	0f be       	out	0x3f, r0	; 63
-  ae:	cd bf       	out	0x3d, r28	; 61
-  b0:	df 91       	pop	r29
-  b2:	cf 91       	pop	r28
-  b4:	1f 91       	pop	r17
-  b6:	0f 91       	pop	r16
-  b8:	ff 90       	pop	r15
-  ba:	ef 90       	pop	r14
-  bc:	08 95       	ret
+  8c:	6b 96       	adiw	r28, 0x1b	; 27
+  8e:	0f b6       	in	r0, 0x3f	; 63
+  90:	f8 94       	cli
+  92:	de bf       	out	0x3e, r29	; 62
+  94:	0f be       	out	0x3f, r0	; 63
+  96:	cd bf       	out	0x3d, r28	; 61
+  98:	df 91       	pop	r29
+  9a:	cf 91       	pop	r28
+  9c:	1f 91       	pop	r17
+  9e:	0f 91       	pop	r16
+  a0:	ff 90       	pop	r15
+  a2:	ef 90       	pop	r14
+  a4:	08 95       	ret
+		while (myFile.available()) {
+			Serial.write(myFile.read());
+		}
+		myFile.close();
+	} else {
+		Serial.print("error opening to read ");
+  a6:	60 e0       	ldi	r22, 0x00	; 0
+  a8:	70 e0       	ldi	r23, 0x00	; 0
+  aa:	80 e0       	ldi	r24, 0x00	; 0
+  ac:	90 e0       	ldi	r25, 0x00	; 0
+  ae:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard8readFileEPc>
+		Serial.println(fileName);
+  b2:	b7 01       	movw	r22, r14
+  b4:	80 e0       	ldi	r24, 0x00	; 0
+  b6:	90 e0       	ldi	r25, 0x00	; 0
+  b8:	0e 94 00 00 	call	0	; 0x0 <_ZN6SdCard8readFileEPc>
+	}
+}
+  bc:	00 c0       	rjmp	.+0      	; 0xbe <__SREG__+0x7f>
 
 Sim900aHTTP.o:     file format elf32-avr
 
@@ -641,49 +669,75 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   3 .bss          00000000  00000000  00000000  0000003c  2**0
                   ALLOC
-  4 .stab         00001434  00000000  00000000  0000003c  2**2
+  4 .stab         00001494  00000000  00000000  0000003c  2**2
                   CONTENTS, RELOC, READONLY, DEBUGGING
-  5 .stabstr      00001b03  00000000  00000000  00001470  2**0
+  5 .stabstr      00001be0  00000000  00000000  000014d0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .rodata.str1.1 0000026f  00000000  00000000  00002f73  2**0
+  6 .rodata._ZN7Sim900a7poweronEv.str1.1 00000010  00000000  00000000  000030b0  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  7 .text._ZN7Sim900a7poweronEv 0000001c  00000000  00000000  000031e2  2**0
+  7 .text._ZN7Sim900a7poweronEv 0000001c  00000000  00000000  000030c0  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  8 .text._ZN7Sim900a16readFromMySerialElPc 0000014e  00000000  00000000  000031fe  2**0
+  8 .rodata._ZN7Sim900a16readFromMySerialElPc.str1.1 0000004c  00000000  00000000  000030dc  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  9 .text._ZN7Sim900a16readFromMySerialElPc 00000148  00000000  00000000  00003128  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  9 .text._ZN7Sim900a20sendATcommandTimeoutEPcS0_lb 000000ec  00000000  00000000  0000334c  2**0
+ 10 .rodata._ZN7Sim900a20sendATcommandTimeoutEPcS0_lb.str1.1 00000013  00000000  00000000  00003270  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 11 .text._ZN7Sim900a20sendATcommandTimeoutEPcS0_lb 000000ec  00000000  00000000  00003283  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 10 .text._ZN7Sim900a7prepareEv 00000178  00000000  00000000  00003438  2**0
+ 12 .rodata._ZN7Sim900a7prepareEv.str1.1 00000085  00000000  00000000  0000336f  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 13 .text._ZN7Sim900a7prepareEv 00000178  00000000  00000000  000033f4  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 11 .text._ZN7Sim900a11prepareHttpEv 000000ae  00000000  00000000  000035b0  2**0
+ 14 .rodata._ZN7Sim900a11prepareHttpEv.str1.1 00000044  00000000  00000000  0000356c  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 15 .text._ZN7Sim900a11prepareHttpEv 000000ae  00000000  00000000  000035b0  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 12 .text._ZN7Sim900a9reconnectEPci 0000010e  00000000  00000000  0000365e  2**0
+ 16 .rodata._ZN7Sim900a9reconnectEPci.str1.1 00000022  00000000  00000000  0000365e  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 17 .text._ZN7Sim900a9reconnectEPci 0000010e  00000000  00000000  00003680  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 13 .text._ZN7Sim900a14readFromServerElPc 0000004c  00000000  00000000  0000376c  2**0
+ 18 .rodata._ZN7Sim900a14readFromServerElPc.str1.1 0000000f  00000000  00000000  0000378e  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 19 .text._ZN7Sim900a14readFromServerElPc 0000004c  00000000  00000000  0000379d  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 14 .text._ZN7Sim900a3tcpEPc 00000060  00000000  00000000  000037b8  2**0
+ 20 .rodata._ZN7Sim900a3tcpEPc.str1.1 00000015  00000000  00000000  000037e9  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 21 .text._ZN7Sim900a3tcpEPc 00000060  00000000  00000000  000037fe  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 15 .text._ZN7Sim900a11runHttpParaEP9HttpParam 000001d6  00000000  00000000  00003818  2**0
+ 22 .rodata._ZN7Sim900a11runHttpParaEP9HttpParam.str1.1 00000016  00000000  00000000  0000385e  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 23 .text._ZN7Sim900a11runHttpParaEP9HttpParam 000001d6  00000000  00000000  00003874  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 16 .text._ZN7Sim900a11runHttpDataEP9HttpParam 00000156  00000000  00000000  000039ee  2**0
+ 24 .rodata._ZN7Sim900a11runHttpDataEP9HttpParam.str1.1 00000034  00000000  00000000  00003a4a  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 25 .text._ZN7Sim900a11runHttpDataEP9HttpParam 00000156  00000000  00000000  00003a7e  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 17 .text._ZN7Sim900a13requestOnHttpEPcS0_P9HttpParam 000000b6  00000000  00000000  00003b44  2**0
+ 26 .rodata._ZN7Sim900a13requestOnHttpEPcS0_P9HttpParam.str1.1 00000031  00000000  00000000  00003bd4  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 27 .text._ZN7Sim900a13requestOnHttpEPcS0_P9HttpParam 000000b6  00000000  00000000  00003c05  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 18 .text._ZN7Sim900a7httpGetEP9HttpParam 00000032  00000000  00000000  00003bfa  2**0
+ 28 .rodata._ZN7Sim900a7httpGetEP9HttpParam.str1.1 0000000d  00000000  00000000  00003cbb  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 29 .text._ZN7Sim900a7httpGetEP9HttpParam 00000032  00000000  00000000  00003cc8  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 19 .text._ZN7Sim900a8httpPostEP9HttpParam 00000032  00000000  00000000  00003c2c  2**0
+ 30 .rodata._ZN7Sim900a8httpPostEP9HttpParam.str1.1 0000000e  00000000  00000000  00003cfa  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 31 .text._ZN7Sim900a8httpPostEP9HttpParam 00000032  00000000  00000000  00003d08  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 20 .text._ZN7Sim900a8sendCodeEPc 00000028  00000000  00000000  00003c5e  2**0
+ 32 .text._ZN7Sim900a8sendCodeEPc 00000028  00000000  00000000  00003d3a  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 21 .text._ZN7Sim900a10sendCodelnEPc 00000028  00000000  00000000  00003c86  2**0
+ 33 .text._ZN7Sim900a10sendCodelnEPc 00000028  00000000  00000000  00003d62  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 22 .text._ZN7Sim900a10sendCodelnEi 00000030  00000000  00000000  00003cae  2**0
+ 34 .text._ZN7Sim900a10sendCodelnEi 00000030  00000000  00000000  00003d8a  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 23 .text._ZN7Sim900a8sendCodeEi 00000030  00000000  00000000  00003cde  2**0
+ 35 .text._ZN7Sim900a8sendCodeEi 00000030  00000000  00000000  00003dba  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 24 .text._ZN7Sim900a12requestOnTcpEPcS0_P9HttpParam 0000014e  00000000  00000000  00003d0e  2**0
+ 36 .rodata._ZN7Sim900a12requestOnTcpEPcS0_P9HttpParam.str1.1 0000005b  00000000  00000000  00003dea  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 37 .text._ZN7Sim900a12requestOnTcpEPcS0_P9HttpParam 0000014e  00000000  00000000  00003e45  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 25 .comment      00000012  00000000  00000000  00003e5c  2**0
+ 38 .comment      00000012  00000000  00000000  00003f93  2**0
                   CONTENTS, READONLY
 
 Disassembly of section .text._ZN7Sim900a7poweronEv:
@@ -758,147 +812,144 @@ Disassembly of section .text._ZN7Sim900a16readFromMySerialElPc:
   56:	c1 2c       	mov	r12, r1
   58:	d1 2c       	mov	r13, r1
   5a:	76 01       	movw	r14, r12
-  5c:	00 e0       	ldi	r16, 0x00	; 0
-  5e:	10 e0       	ldi	r17, 0x00	; 0
+  5c:	10 e0       	ldi	r17, 0x00	; 0
+  5e:	00 e0       	ldi	r16, 0x00	; 0
   60:	c4 14       	cp	r12, r4
 	sendCodeln(HTTP_VERSION);
   62:	d5 04       	cpc	r13, r5
   64:	e6 04       	cpc	r14, r6
   66:	f7 04       	cpc	r15, r7
-  68:	04 f0       	brlt	.+0      	; 0x6a <_ZN7Sim900a16readFromMySerialElPc+0x6a>
-  6a:	00 c0       	rjmp	.+0      	; 0x6c <_ZN7Sim900a16readFromMySerialElPc+0x6c>
+  68:	04 f4       	brge	.+0      	; 0x6a <_ZN7Sim900a16readFromMySerialElPc+0x6a>
+  6a:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
 	sendCode("HOST: ");
-  6c:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
-  70:	c8 84       	ldd	r12, Y+8	; 0x08
-  72:	d9 84       	ldd	r13, Y+9	; 0x09
-  74:	ea 84       	ldd	r14, Y+10	; 0x0a
+  6e:	c8 84       	ldd	r12, Y+8	; 0x08
+  70:	d9 84       	ldd	r13, Y+9	; 0x09
+  72:	ea 84       	ldd	r14, Y+10	; 0x0a
+  74:	fb 84       	ldd	r15, Y+11	; 0x0b
 	sendCodeln(param->host);
-  76:	fb 84       	ldd	r15, Y+11	; 0x0b
-  78:	9b 01       	movw	r18, r22
-  7a:	ac 01       	movw	r20, r24
-  7c:	2c 19       	sub	r18, r12
-  7e:	3d 09       	sbc	r19, r13
-  80:	4e 09       	sbc	r20, r14
+  76:	9b 01       	movw	r18, r22
+  78:	ac 01       	movw	r20, r24
+  7a:	2c 19       	sub	r18, r12
+  7c:	3d 09       	sbc	r19, r13
+  7e:	4e 09       	sbc	r20, r14
+  80:	5f 09       	sbc	r21, r15
 	sendCode("Content-Type:");
-  82:	5f 09       	sbc	r21, r15
-  84:	69 01       	movw	r12, r18
-  86:	7a 01       	movw	r14, r20
-  88:	04 36       	cpi	r16, 0x64	; 100
-  8a:	11 05       	cpc	r17, r1
+  82:	69 01       	movw	r12, r18
+  84:	7a 01       	movw	r14, r20
+  86:	04 36       	cpi	r16, 0x64	; 100
+  88:	11 05       	cpc	r17, r1
+  8a:	04 f0       	brlt	.+0      	; 0x8c <_ZN7Sim900a16readFromMySerialElPc+0x8c>
 	sendCodeln(HTTP_CONTENTYPE);
-  8c:	04 f0       	brlt	.+0      	; 0x8e <_ZN7Sim900a16readFromMySerialElPc+0x8e>
-  8e:	60 e0       	ldi	r22, 0x00	; 0
-  90:	70 e0       	ldi	r23, 0x00	; 0
-  92:	80 e0       	ldi	r24, 0x00	; 0
-  94:	90 e0       	ldi	r25, 0x00	; 0
+  8c:	60 e0       	ldi	r22, 0x00	; 0
+  8e:	70 e0       	ldi	r23, 0x00	; 0
+  90:	80 e0       	ldi	r24, 0x00	; 0
+  92:	90 e0       	ldi	r25, 0x00	; 0
+  94:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
 	sendCode("Content-Length: ");
-  96:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
-  9a:	00 c0       	rjmp	.+0      	; 0x9c <_ZN7Sim900a16readFromMySerialElPc+0x9c>
-  9c:	88 81       	ld	r24, Y
-  9e:	99 81       	ldd	r25, Y+1	; 0x01
+  98:	60 e0       	ldi	r22, 0x00	; 0
+  9a:	70 e0       	ldi	r23, 0x00	; 0
+  9c:	80 e0       	ldi	r24, 0x00	; 0
+  9e:	90 e0       	ldi	r25, 0x00	; 0
 	sendCode(param->length);
-  a0:	dc 01       	movw	r26, r24
-  a2:	ed 91       	ld	r30, X+
-  a4:	fc 91       	ld	r31, X
-  a6:	06 80       	ldd	r0, Z+6	; 0x06
-  a8:	f7 81       	ldd	r31, Z+7	; 0x07
-  aa:	e0 2d       	mov	r30, r0
+  a0:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
+  a4:	2a e0       	ldi	r18, 0x0A	; 10
+  a6:	30 e0       	ldi	r19, 0x00	; 0
+  a8:	b7 01       	movw	r22, r14
+  aa:	a6 01       	movw	r20, r12
 	sendCodeln(HTTP_NEW_LINE);
-  ac:	19 95       	eicall
-  ae:	8f 3f       	cpi	r24, 0xFF	; 255
-  b0:	bf ef       	ldi	r27, 0xFF	; 255
-  b2:	9b 07       	cpc	r25, r27
-  b4:	01 f4       	brne	.+0      	; 0xb6 <_ZN7Sim900a16readFromMySerialElPc+0xb6>
+  ac:	80 e0       	ldi	r24, 0x00	; 0
+  ae:	90 e0       	ldi	r25, 0x00	; 0
+  b0:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
+  b4:	c0 e0       	ldi	r28, 0x00	; 0
 	sendCode(code);
-  b6:	60 e0       	ldi	r22, 0x00	; 0
-  b8:	70 e0       	ldi	r23, 0x00	; 0
-  ba:	80 e0       	ldi	r24, 0x00	; 0
-  bc:	90 e0       	ldi	r25, 0x00	; 0
+  b6:	00 c0       	rjmp	.+0      	; 0xb8 <_ZN7Sim900a16readFromMySerialElPc+0xb8>
+  b8:	88 81       	ld	r24, Y
+  ba:	99 81       	ldd	r25, Y+1	; 0x01
+  bc:	dc 01       	movw	r26, r24
 	sendCode(SEND_FLAG);
-  be:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
-  c2:	62 e0       	ldi	r22, 0x02	; 2
-  c4:	70 e0       	ldi	r23, 0x00	; 0
-  c6:	80 e0       	ldi	r24, 0x00	; 0
+  be:	ed 91       	ld	r30, X+
+  c0:	fc 91       	ld	r31, X
+  c2:	06 80       	ldd	r0, Z+6	; 0x06
+  c4:	f7 81       	ldd	r31, Z+7	; 0x07
+  c6:	e0 2d       	mov	r30, r0
 	sendCodeln(HTTP_NEW_LINE);
-  c8:	90 e0       	ldi	r25, 0x00	; 0
-  ca:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
-  ce:	00 c0       	rjmp	.+0      	; 0xd0 <_ZN7Sim900a16readFromMySerialElPc+0xd0>
-  d0:	fe 01       	movw	r30, r28
+  c8:	19 95       	eicall
+  ca:	8f 3f       	cpi	r24, 0xFF	; 255
+  cc:	98 07       	cpc	r25, r24
+  ce:	01 f4       	brne	.+0      	; 0xd0 <_ZN7Sim900a16readFromMySerialElPc+0xd0>
+  d0:	60 e0       	ldi	r22, 0x00	; 0
 	readFromServer(10000, "scp");
-  d2:	e0 0f       	add	r30, r16
-  d4:	f1 1f       	adc	r31, r17
-  d6:	80 8f       	std	Z+24, r24	; 0x18
-  d8:	68 2f       	mov	r22, r24
-  da:	80 e0       	ldi	r24, 0x00	; 0
-  dc:	90 e0       	ldi	r25, 0x00	; 0
-  de:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
-  e2:	0f 5f       	subi	r16, 0xFF	; 255
+  d2:	70 e0       	ldi	r23, 0x00	; 0
+  d4:	80 e0       	ldi	r24, 0x00	; 0
+  d6:	90 e0       	ldi	r25, 0x00	; 0
+  d8:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
+  dc:	62 e0       	ldi	r22, 0x02	; 2
+  de:	70 e0       	ldi	r23, 0x00	; 0
+  e0:	80 e0       	ldi	r24, 0x00	; 0
+  e2:	90 e0       	ldi	r25, 0x00	; 0
 	Serial.println();
-  e4:	1f 4f       	sbci	r17, 0xFF	; 255
-  e6:	b4 01       	movw	r22, r8
-  e8:	c5 01       	movw	r24, r10
-  ea:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
+  e4:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
+  e8:	00 c0       	rjmp	.+0      	; 0xea <_ZN7Sim900a16readFromMySerialElPc+0xea>
+  ea:	fe 01       	movw	r30, r28
 	delay(1000);
-  ee:	89 2b       	or	r24, r25
-  f0:	01 f4       	brne	.+0      	; 0xf2 <_ZN7Sim900a16readFromMySerialElPc+0xf2>
-  f2:	00 c0       	rjmp	.+0      	; 0xf4 <_ZN7Sim900a16readFromMySerialElPc+0xf4>
-  f4:	60 e0       	ldi	r22, 0x00	; 0
-  f6:	70 e0       	ldi	r23, 0x00	; 0
+  ec:	e0 0f       	add	r30, r16
+  ee:	f1 1f       	adc	r31, r17
+  f0:	80 8f       	std	Z+24, r24	; 0x18
+  f2:	68 2f       	mov	r22, r24
+  f4:	80 e0       	ldi	r24, 0x00	; 0
+  f6:	90 e0       	ldi	r25, 0x00	; 0
 	char* _command;
 	command.toCharArray(_command, command.length());
 	sendATcommandTimeout(_command, "CONNECT OK", 15000, true);
 }
 void Sim900a::close_connect() {
 	Serial.println("close_connect >>>");
-  f8:	80 e0       	ldi	r24, 0x00	; 0
-  fa:	90 e0       	ldi	r25, 0x00	; 0
-  fc:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
- 100:	c1 e0       	ldi	r28, 0x01	; 1
- 102:	00 c0       	rjmp	.+0      	; 0x104 <_ZN7Sim900a16readFromMySerialElPc+0x104>
+  f8:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
+  fc:	0f 5f       	subi	r16, 0xFF	; 255
+  fe:	1f 4f       	sbci	r17, 0xFF	; 255
+ 100:	b4 01       	movw	r22, r8
+ 102:	c5 01       	movw	r24, r10
 	sendATcommandTimeout("AT+CIPCLOSE", "CLOSE OK", 15000, false);
- 104:	60 e0       	ldi	r22, 0x00	; 0
- 106:	70 e0       	ldi	r23, 0x00	; 0
- 108:	80 e0       	ldi	r24, 0x00	; 0
- 10a:	90 e0       	ldi	r25, 0x00	; 0
- 10c:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
- 110:	2a e0       	ldi	r18, 0x0A	; 10
- 112:	30 e0       	ldi	r19, 0x00	; 0
- 114:	b7 01       	movw	r22, r14
- 116:	a6 01       	movw	r20, r12
- 118:	80 e0       	ldi	r24, 0x00	; 0
+ 104:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
+ 108:	89 2b       	or	r24, r25
+ 10a:	01 f4       	brne	.+0      	; 0x10c <_ZN7Sim900a16readFromMySerialElPc+0x10c>
+ 10c:	00 c0       	rjmp	.+0      	; 0x10e <_ZN7Sim900a16readFromMySerialElPc+0x10e>
+ 10e:	60 e0       	ldi	r22, 0x00	; 0
+ 110:	70 e0       	ldi	r23, 0x00	; 0
+ 112:	80 e0       	ldi	r24, 0x00	; 0
+ 114:	90 e0       	ldi	r25, 0x00	; 0
+ 116:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
 	Serial.println("close_connect >>>");
- 11a:	90 e0       	ldi	r25, 0x00	; 0
- 11c:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
- 120:	c0 e0       	ldi	r28, 0x00	; 0
- 122:	80 e0       	ldi	r24, 0x00	; 0
- 124:	90 e0       	ldi	r25, 0x00	; 0
+ 11a:	c1 e0       	ldi	r28, 0x01	; 1
+ 11c:	80 e0       	ldi	r24, 0x00	; 0
+ 11e:	90 e0       	ldi	r25, 0x00	; 0
+ 120:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
+ 124:	8c 2f       	mov	r24, r28
 	sendCodeln(HTTP_NEW_LINE);
 	readFromServer(10000, "scp");
 	Serial.println();
 	delay(1000);
 	close_connect();
 	Serial.println("request >>>");
- 126:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a16readFromMySerialElPc>
- 12a:	8c 2f       	mov	r24, r28
- 12c:	df 91       	pop	r29
- 12e:	cf 91       	pop	r28
- 130:	1f 91       	pop	r17
+ 126:	df 91       	pop	r29
+ 128:	cf 91       	pop	r28
+ 12a:	1f 91       	pop	r17
+ 12c:	0f 91       	pop	r16
+ 12e:	ff 90       	pop	r15
+ 130:	ef 90       	pop	r14
 	return serialResponse;
 }
- 132:	0f 91       	pop	r16
- 134:	ff 90       	pop	r15
- 136:	ef 90       	pop	r14
- 138:	df 90       	pop	r13
- 13a:	cf 90       	pop	r12
- 13c:	bf 90       	pop	r11
- 13e:	af 90       	pop	r10
- 140:	9f 90       	pop	r9
- 142:	8f 90       	pop	r8
- 144:	7f 90       	pop	r7
- 146:	6f 90       	pop	r6
- 148:	5f 90       	pop	r5
- 14a:	4f 90       	pop	r4
- 14c:	08 95       	ret
+ 132:	df 90       	pop	r13
+ 134:	cf 90       	pop	r12
+ 136:	bf 90       	pop	r11
+ 138:	af 90       	pop	r10
+ 13a:	9f 90       	pop	r9
+ 13c:	8f 90       	pop	r8
+ 13e:	7f 90       	pop	r7
+ 140:	6f 90       	pop	r6
+ 142:	5f 90       	pop	r5
+ 144:	4f 90       	pop	r4
+ 146:	08 95       	ret
 
 Disassembly of section .text._ZN7Sim900a20sendATcommandTimeoutEPcS0_lb:
 
@@ -958,7 +1009,7 @@ char* Sim900a::requestOnTcp(char* code, char* method, HttpParam* param) {
   58:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a20sendATcommandTimeoutEPcS0_lb>
   5c:	95 01       	movw	r18, r10
   5e:	b3 01       	movw	r22, r6
-  60:	a2 01       	movw	r20, r4
+  60:	a8 01       	movw	r20, r16
 	sendCodeln(HTTP_VERSION);
   62:	ce 01       	movw	r24, r28
   64:	0e 94 00 00 	call	0	; 0x0 <_ZN7Sim900a20sendATcommandTimeoutEPcS0_lb>
@@ -1456,11 +1507,11 @@ char* Sim900a::requestOnTcp(char* code, char* method, HttpParam* param) {
 	sendCode(code);
   b8:	4d 8d       	ldd	r20, Y+29	; 0x1d
   ba:	5e 8d       	ldd	r21, Y+30	; 0x1e
-  bc:	20 e0       	ldi	r18, 0x00	; 0
+  bc:	30 e0       	ldi	r19, 0x00	; 0
 	sendCode(SEND_FLAG);
-  be:	30 e0       	ldi	r19, 0x00	; 0
-  c0:	c1 2c       	mov	r12, r1
-  c2:	d1 2c       	mov	r13, r1
+  be:	20 e0       	ldi	r18, 0x00	; 0
+  c0:	d1 2c       	mov	r13, r1
+  c2:	c1 2c       	mov	r12, r1
   c4:	b6 01       	movw	r22, r12
   c6:	ce 01       	movw	r24, r28
 	sendCodeln(HTTP_NEW_LINE);
@@ -2567,33 +2618,35 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   2 .bss          00000000  00000000  00000000  00000034  2**0
                   ALLOC
-  3 .stab         00000b04  00000000  00000000  00000034  2**2
+  3 .stab         00000b58  00000000  00000000  00000034  2**2
                   CONTENTS, RELOC, READONLY, DEBUGGING
-  4 .stabstr      00001dea  00000000  00000000  00000b38  2**0
+  4 .stabstr      00001ebb  00000000  00000000  00000b8c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .rodata.str1.1 00000072  00000000  00000000  00002922  2**0
+  5 .rodata._ZN10HttpClient8readHttpE14EthernetClienti.str1.1 0000000f  00000000  00000000  00002a47  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  6 .text._ZN10HttpClient8readHttpE14EthernetClienti 0000005c  00000000  00000000  00002994  2**0
+  6 .text._ZN10HttpClient8readHttpE14EthernetClienti 0000005c  00000000  00000000  00002a56  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  7 .text._ZN10HttpClient7httpGetEPcS0_i 00000160  00000000  00000000  000029f0  2**0
+  7 .rodata._ZN10HttpClient7httpGetEPcS0_i.str1.1 00000063  00000000  00000000  00002ab2  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  8 .text._ZN10HttpClient7httpGetEPcS0_i 00000160  00000000  00000000  00002b15  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  8 .text.startup._GLOBAL__sub_I_mac 0000002c  00000000  00000000  00002b50  2**0
+  9 .text.startup._GLOBAL__sub_I_mac 0000002c  00000000  00000000  00002c75  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  9 .ctors        00000002  00000000  00000000  00002b7c  2**1
+ 10 .ctors        00000002  00000000  00000000  00002ca2  2**1
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
- 10 .text.exit._GLOBAL__sub_D_mac 00000008  00000000  00000000  00002b7e  2**0
+ 11 .text.exit._GLOBAL__sub_D_mac 00000008  00000000  00000000  00002ca4  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 11 .dtors        00000002  00000000  00000000  00002b86  2**1
+ 12 .dtors        00000002  00000000  00000000  00002cac  2**1
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
- 12 .bss.client   0000000d  00000000  00000000  00002b88  2**0
+ 13 .bss.client   0000000d  00000000  00000000  00002cae  2**0
                   ALLOC
- 13 .bss.ip       00000006  00000000  00000000  00002b88  2**0
+ 14 .bss.ip       00000006  00000000  00000000  00002cae  2**0
                   ALLOC
- 14 .data.mac     00000006  00000000  00000000  00002b88  2**0
+ 15 .data.mac     00000006  00000000  00000000  00002cae  2**0
                   CONTENTS, ALLOC, LOAD, DATA
- 15 .bss._ZL11INADDR_NONE 00000006  00000000  00000000  00002b8e  2**0
+ 16 .bss._ZL11INADDR_NONE 00000006  00000000  00000000  00002cb4  2**0
                   ALLOC
- 16 .comment      00000012  00000000  00000000  00002b8e  2**0
+ 17 .comment      00000012  00000000  00000000  00002cb4  2**0
                   CONTENTS, READONLY
 
 Disassembly of section .text._ZN10HttpClient8readHttpE14EthernetClienti:
@@ -2773,29 +2826,29 @@ Disassembly of section .text._ZN10HttpClient7httpGetEPcS0_i:
  128:	01 96       	adiw	r24, 0x01	; 1
  12a:	0e 94 00 00 	call	0	; 0x0 <_ZN10HttpClient7httpGetEPcS0_i>
  12e:	c8 01       	movw	r24, r16
- 130:	00 c0       	rjmp	.+0      	; 0x132 <_ZN10HttpClient7httpGetEPcS0_i+0x132>
- 132:	60 e0       	ldi	r22, 0x00	; 0
- 134:	70 e0       	ldi	r23, 0x00	; 0
- 136:	80 e0       	ldi	r24, 0x00	; 0
- 138:	90 e0       	ldi	r25, 0x00	; 0
- 13a:	0e 94 00 00 	call	0	; 0x0 <_ZN10HttpClient7httpGetEPcS0_i>
- 13e:	2d 96       	adiw	r28, 0x0d	; 13
- 140:	0f b6       	in	r0, 0x3f	; 63
- 142:	f8 94       	cli
- 144:	de bf       	out	0x3e, r29	; 62
- 146:	0f be       	out	0x3f, r0	; 63
- 148:	cd bf       	out	0x3d, r28	; 61
- 14a:	df 91       	pop	r29
- 14c:	cf 91       	pop	r28
- 14e:	1f 91       	pop	r17
- 150:	0f 91       	pop	r16
- 152:	ff 90       	pop	r15
- 154:	ef 90       	pop	r14
- 156:	df 90       	pop	r13
- 158:	cf 90       	pop	r12
- 15a:	bf 90       	pop	r11
- 15c:	af 90       	pop	r10
- 15e:	08 95       	ret
+ 130:	2d 96       	adiw	r28, 0x0d	; 13
+ 132:	0f b6       	in	r0, 0x3f	; 63
+ 134:	f8 94       	cli
+ 136:	de bf       	out	0x3e, r29	; 62
+ 138:	0f be       	out	0x3f, r0	; 63
+ 13a:	cd bf       	out	0x3d, r28	; 61
+ 13c:	df 91       	pop	r29
+ 13e:	cf 91       	pop	r28
+ 140:	1f 91       	pop	r17
+ 142:	0f 91       	pop	r16
+ 144:	ff 90       	pop	r15
+ 146:	ef 90       	pop	r14
+ 148:	df 90       	pop	r13
+ 14a:	cf 90       	pop	r12
+ 14c:	bf 90       	pop	r11
+ 14e:	af 90       	pop	r10
+ 150:	08 95       	ret
+ 152:	60 e0       	ldi	r22, 0x00	; 0
+ 154:	70 e0       	ldi	r23, 0x00	; 0
+ 156:	80 e0       	ldi	r24, 0x00	; 0
+ 158:	90 e0       	ldi	r25, 0x00	; 0
+ 15a:	0e 94 00 00 	call	0	; 0x0 <_ZN10HttpClient7httpGetEPcS0_i>
+ 15e:	00 c0       	rjmp	.+0      	; 0x160 <__SREG__+0x121>
 
 Disassembly of section .text.startup._GLOBAL__sub_I_mac:
 
@@ -2837,112 +2890,119 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   2 .bss          00000000  00000000  00000000  00000034  2**0
                   ALLOC
-  3 .stab         00000a50  00000000  00000000  00000034  2**2
+  3 .stab         00000aa4  00000000  00000000  00000034  2**2
                   CONTENTS, RELOC, READONLY, DEBUGGING
-  4 .stabstr      0000171f  00000000  00000000  00000a84  2**0
+  4 .stabstr      000017f0  00000000  00000000  00000ad8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .text._Z14charAppendCharPcS_ 0000009c  00000000  00000000  000021a3  2**0
+  5 .text._Z14charAppendCharPcS_ 0000009a  00000000  00000000  000022c8  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  6 .text._Z13strAppendChar6StringPc 00000056  00000000  00000000  0000223f  2**0
+  6 .text._Z13strAppendChar6StringPc 00000056  00000000  00000000  00002362  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  7 .text._Z12strAppendStr6StringS_ 00000056  00000000  00000000  00002295  2**0
+  7 .text._Z12strAppendStr6StringS_ 00000056  00000000  00000000  000023b8  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  8 .text._Z12strAppendInt6Stringi 00000056  00000000  00000000  000022eb  2**0
+  8 .text._Z12strAppendInt6Stringi 00000056  00000000  00000000  0000240e  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  9 .rodata.str1.1 00000008  00000000  00000000  00002341  2**0
+  9 .rodata._Z15convertStrToHexPcPhi.str1.1 00000005  00000000  00000000  00002464  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
- 10 .text._Z15convertStrToHexPcPhi 0000006c  00000000  00000000  00002349  2**0
+ 10 .text._Z15convertStrToHexPcPhi 0000006c  00000000  00000000  00002469  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 11 .text._Z11intToStringiPc 00000022  00000000  00000000  000023b5  2**0
+ 11 .rodata._Z11intToStringiPc.str1.1 00000003  00000000  00000000  000024d5  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 12 .text._Z11intToStringiPc 00000022  00000000  00000000  000024d8  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 12 .text._Z9strToChar6StringPc 00000012  00000000  00000000  000023d7  2**0
+ 13 .text._Z9strToChar6StringPc 00000012  00000000  00000000  000024fa  2**0
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 13 .comment      00000012  00000000  00000000  000023e9  2**0
+ 14 .comment      00000012  00000000  00000000  0000250c  2**0
                   CONTENTS, READONLY
 
 Disassembly of section .text._Z14charAppendCharPcS_:
 
 00000000 <_Z14charAppendCharPcS_>:
+}
+void intToString(int n, char* buf) {
+	sprintf(buf, "%d", n);
+}
+void strToChar(String s, char* buf) {
+	s.toCharArray(buf, s.length() + 1);
+   0:	cf 92       	push	r12
+   2:	df 92       	push	r13
+   4:	ef 92       	push	r14
+   6:	ff 92       	push	r15
+   8:	0f 93       	push	r16
 	void setCharAt(unsigned int index, char c);
 	char operator [] (unsigned int index) const;
 	char& operator [] (unsigned int index);
 	void getBytes(unsigned char *buf, unsigned int bufsize, unsigned int index=0) const;
 	void toCharArray(char *buf, unsigned int bufsize, unsigned int index=0) const
 		{getBytes((unsigned char *)buf, bufsize, index);}
-   0:	cf 92       	push	r12
-   2:	df 92       	push	r13
-   4:	ef 92       	push	r14
-   6:	ff 92       	push	r15
-   8:	0f 93       	push	r16
    a:	1f 93       	push	r17
    c:	cf 93       	push	r28
    e:	df 93       	push	r29
-  10:	ec 01       	movw	r28, r24
-  12:	8b 01       	movw	r16, r22
+  10:	8c 01       	movw	r16, r24
+  12:	7b 01       	movw	r14, r22
   14:	db 01       	movw	r26, r22
   16:	0d 90       	ld	r0, X+
   18:	00 20       	and	r0, r0
   1a:	01 f4       	brne	.+0      	; 0x1c <_Z14charAppendCharPcS_+0x1c>
-  1c:	fc 01       	movw	r30, r24
-  1e:	01 90       	ld	r0, Z+
+  1c:	ec 01       	movw	r28, r24
+  1e:	09 90       	ld	r0, Y+
   20:	00 20       	and	r0, r0
   22:	01 f4       	brne	.+0      	; 0x24 <_Z14charAppendCharPcS_+0x24>
-  24:	31 97       	sbiw	r30, 0x01	; 1
-  26:	e8 1b       	sub	r30, r24
-  28:	f9 0b       	sbc	r31, r25
-  2a:	e6 1b       	sub	r30, r22
-  2c:	f7 0b       	sbc	r31, r23
-  2e:	6f 01       	movw	r12, r30
-  30:	ca 0e       	add	r12, r26
-  32:	db 1e       	adc	r13, r27
-  34:	c6 01       	movw	r24, r12
-  36:	0e 94 00 00 	call	0	; 0x0 <_Z14charAppendCharPcS_>
-  3a:	7c 01       	movw	r14, r24
-  3c:	a6 01       	movw	r20, r12
+  24:	21 97       	sbiw	r28, 0x01	; 1
+  26:	c8 1b       	sub	r28, r24
+  28:	d9 0b       	sbc	r29, r25
+  2a:	c6 1b       	sub	r28, r22
+  2c:	d7 0b       	sbc	r29, r23
+  2e:	ca 0f       	add	r28, r26
+  30:	db 1f       	adc	r29, r27
+  32:	ce 01       	movw	r24, r28
+  34:	0e 94 00 00 	call	0	; 0x0 <_Z14charAppendCharPcS_>
+  38:	6c 01       	movw	r12, r24
+  3a:	ae 01       	movw	r20, r28
+  3c:	70 e0       	ldi	r23, 0x00	; 0
   3e:	60 e0       	ldi	r22, 0x00	; 0
-  40:	70 e0       	ldi	r23, 0x00	; 0
-  42:	0e 94 00 00 	call	0	; 0x0 <_Z14charAppendCharPcS_>
-  46:	fe 01       	movw	r30, r28
-  48:	01 90       	ld	r0, Z+
-  4a:	00 20       	and	r0, r0
-  4c:	01 f4       	brne	.+0      	; 0x4e <_Z14charAppendCharPcS_+0x4e>
-  4e:	31 97       	sbiw	r30, 0x01	; 1
-  50:	af 01       	movw	r20, r30
-  52:	4c 1b       	sub	r20, r28
-  54:	5d 0b       	sbc	r21, r29
-  56:	be 01       	movw	r22, r28
-  58:	c7 01       	movw	r24, r14
-  5a:	0e 94 00 00 	call	0	; 0x0 <_Z14charAppendCharPcS_>
-  5e:	f8 01       	movw	r30, r16
-  60:	01 90       	ld	r0, Z+
-  62:	00 20       	and	r0, r0
-  64:	01 f4       	brne	.+0      	; 0x66 <_Z14charAppendCharPcS_+0x66>
-  66:	31 97       	sbiw	r30, 0x01	; 1
-  68:	af 01       	movw	r20, r30
-  6a:	40 1b       	sub	r20, r16
-  6c:	51 0b       	sbc	r21, r17
-  6e:	fe 01       	movw	r30, r28
-  70:	01 90       	ld	r0, Z+
-  72:	00 20       	and	r0, r0
-  74:	01 f4       	brne	.+0      	; 0x76 <_Z14charAppendCharPcS_+0x76>
-  76:	31 97       	sbiw	r30, 0x01	; 1
-  78:	cf 01       	movw	r24, r30
-  7a:	8c 1b       	sub	r24, r28
-  7c:	9d 0b       	sbc	r25, r29
-  7e:	b8 01       	movw	r22, r16
-  80:	8e 0d       	add	r24, r14
-  82:	9f 1d       	adc	r25, r15
-  84:	0e 94 00 00 	call	0	; 0x0 <_Z14charAppendCharPcS_>
-  88:	c7 01       	movw	r24, r14
-  8a:	df 91       	pop	r29
-  8c:	cf 91       	pop	r28
-  8e:	1f 91       	pop	r17
-  90:	0f 91       	pop	r16
-  92:	ff 90       	pop	r15
-  94:	ef 90       	pop	r14
-  96:	df 90       	pop	r13
-  98:	cf 90       	pop	r12
-  9a:	08 95       	ret
+  40:	0e 94 00 00 	call	0	; 0x0 <_Z14charAppendCharPcS_>
+  44:	f8 01       	movw	r30, r16
+  46:	01 90       	ld	r0, Z+
+  48:	00 20       	and	r0, r0
+  4a:	01 f4       	brne	.+0      	; 0x4c <_Z14charAppendCharPcS_+0x4c>
+  4c:	31 97       	sbiw	r30, 0x01	; 1
+  4e:	af 01       	movw	r20, r30
+  50:	40 1b       	sub	r20, r16
+  52:	51 0b       	sbc	r21, r17
+  54:	b8 01       	movw	r22, r16
+  56:	c6 01       	movw	r24, r12
+  58:	0e 94 00 00 	call	0	; 0x0 <_Z14charAppendCharPcS_>
+  5c:	f7 01       	movw	r30, r14
+  5e:	01 90       	ld	r0, Z+
+  60:	00 20       	and	r0, r0
+  62:	01 f4       	brne	.+0      	; 0x64 <_Z14charAppendCharPcS_+0x64>
+  64:	31 97       	sbiw	r30, 0x01	; 1
+  66:	af 01       	movw	r20, r30
+  68:	4e 19       	sub	r20, r14
+  6a:	5f 09       	sbc	r21, r15
+  6c:	f8 01       	movw	r30, r16
+  6e:	01 90       	ld	r0, Z+
+  70:	00 20       	and	r0, r0
+  72:	01 f4       	brne	.+0      	; 0x74 <_Z14charAppendCharPcS_+0x74>
+  74:	31 97       	sbiw	r30, 0x01	; 1
+  76:	cf 01       	movw	r24, r30
+  78:	80 1b       	sub	r24, r16
+  7a:	91 0b       	sbc	r25, r17
+  7c:	b7 01       	movw	r22, r14
+  7e:	8c 0d       	add	r24, r12
+  80:	9d 1d       	adc	r25, r13
+  82:	0e 94 00 00 	call	0	; 0x0 <_Z14charAppendCharPcS_>
+  86:	c6 01       	movw	r24, r12
+  88:	df 91       	pop	r29
+  8a:	cf 91       	pop	r28
+  8c:	1f 91       	pop	r17
+  8e:	0f 91       	pop	r16
+  90:	ff 90       	pop	r15
+  92:	ef 90       	pop	r14
+  94:	df 90       	pop	r13
+  96:	cf 90       	pop	r12
+  98:	08 95       	ret
 
 Disassembly of section .text._Z13strAppendChar6StringPc:
 
@@ -3158,6 +3218,6 @@ Disassembly of section .text._Z9strToChar6StringPc:
    4:	55 81       	ldd	r21, Z+5	; 0x05
    6:	4f 5f       	subi	r20, 0xFF	; 255
    8:	5f 4f       	sbci	r21, 0xFF	; 255
-   a:	20 e0       	ldi	r18, 0x00	; 0
-   c:	30 e0       	ldi	r19, 0x00	; 0
+   a:	30 e0       	ldi	r19, 0x00	; 0
+   c:	20 e0       	ldi	r18, 0x00	; 0
    e:	0c 94 00 00 	jmp	0	; 0x0 <_Z9strToChar6StringPc>

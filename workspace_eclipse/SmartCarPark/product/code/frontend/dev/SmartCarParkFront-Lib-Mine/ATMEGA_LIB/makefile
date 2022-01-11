@@ -75,7 +75,7 @@ libSmartCarParkFront-Lib-Mine.lss: libSmartCarParkFront-Lib-Mine.a
 
 sizedummy: libSmartCarParkFront-Lib-Mine.a
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=atmega2560 libSmartCarParkFront-Lib-Mine.a
+	-avr-size --format=berkeley -t libSmartCarParkFront-Lib-Mine.a
 	@echo 'Finished building: $@'
 	@echo ' '
 

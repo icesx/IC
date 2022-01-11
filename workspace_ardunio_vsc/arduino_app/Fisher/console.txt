@@ -1,0 +1,56 @@
+14:57:30 **** Build of configuration ATMEGA2560 for project NewRain-Smart-Car ****
+make all 
+Building file: ../ultrasonic/Ultrasonic.cpp
+Invoking: AVR C++ Compiler
+avr-gcc -I"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/arduino" -I"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/Servo" -I"/ICESX/workSpaceC/IC/workspace_eclipse/INewrainRobot/code/demo/NewRain-Smart-Car/AFMotor" -I"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/variants/mega" -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"ultrasonic/Ultrasonic.d" -MT"ultrasonic/Ultrasonic.o" -c -o "ultrasonic/Ultrasonic.o" "../ultrasonic/Ultrasonic.cpp"
+<command-line>:0:0: warning: "F_CPU" redefined
+<command-line>:0:0: note: this is the location of the previous definition
+Finished building: ../ultrasonic/Ultrasonic.cpp
+ 
+Building file: ../stepcounter/stepcounter.cpp
+Invoking: AVR C++ Compiler
+avr-gcc -I"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/arduino" -I"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/Servo" -I"/ICESX/workSpaceC/IC/workspace_eclipse/INewrainRobot/code/demo/NewRain-Smart-Car/AFMotor" -I"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/variants/mega" -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"stepcounter/stepcounter.d" -MT"stepcounter/stepcounter.o" -c -o "stepcounter/stepcounter.o" "../stepcounter/stepcounter.cpp"
+<command-line>:0:0: warning: "F_CPU" redefined
+<command-line>:0:0: note: this is the location of the previous definition
+Finished building: ../stepcounter/stepcounter.cpp
+
+Building file: ../src/NewRainSmartCar.cpp
+Invoking: AVR C++ Compiler
+avr-gcc -I"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/arduino" -I"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/Servo" -I"/ICESX/workSpaceC/IC/workspace_eclipse/INewrainRobot/code/demo/NewRain-Smart-Car/AFMotor" -I"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/variants/mega" -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"src/NewRainSmartCar.d" -MT"src/NewRainSmartCar.o" -c -o "src/NewRainSmartCar.o" "../src/NewRainSmartCar.cpp"
+<command-line>:0:0: warning: "F_CPU" redefined
+<command-line>:0:0: note: this is the location of the previous definition
+../src/NewRainSmartCar.cpp: In function 'void sameSpeed()':
+../src/NewRainSmartCar.cpp:129:6: warning: unused variable 'l' [-Wunused-variable]
+  int l = stepcounter_l.speed();
+      ^
+../src/NewRainSmartCar.cpp:130:6: warning: unused variable 'r' [-Wunused-variable]
+  int r = stepcounter_r.speed();
+      ^
+Finished building: ../src/NewRainSmartCar.cpp
+ 
+Building file: ../AFMotor/AFMotor.cpp
+Invoking: AVR C++ Compiler
+avr-gcc -I"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/arduino" -I"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/Servo" -I"/ICESX/workSpaceC/IC/workspace_eclipse/INewrainRobot/code/demo/NewRain-Smart-Car/AFMotor" -I"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/variants/mega" -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"AFMotor/AFMotor.d" -MT"AFMotor/AFMotor.o" -c -o "AFMotor/AFMotor.o" "../AFMotor/AFMotor.cpp"
+<command-line>:0:0: warning: "F_CPU" redefined
+<command-line>:0:0: note: this is the location of the previous definition
+Finished building: ../AFMotor/AFMotor.cpp
+ 
+Building target: NewRain-Smart-Car.elf
+Invoking: AVR C++ Linker
+avr-gcc -Wl,-Map,NewRain-Smart-Car.map,--cref -mrelax -Wl,--gc-sections -L"/ICESX/workSpaceC/IC/workspace_eclipse/SmartCarPark/product/code/frontend/dev/SmartCarParkFront-Lib/ATMEGA_LIB" -mmcu=atmega2560 -o "NewRain-Smart-Car.elf" ./ultrasonic/Ultrasonic.o  ./stepcounter/stepcounter.o  ./src/NewRainSmartCar.o  ./AFMotor/AFMotor.o   -lSmartCarParkFront-Lib
+Finished building target: NewRain-Smart-Car.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S NewRain-Smart-Car.elf  >"NewRain-Smart-Car.lss"
+Finished building: NewRain-Smart-Car.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex NewRain-Smart-Car.elf  "NewRain-Smart-Car.hex"
+Finished building: NewRain-Smart-Car.hex
+ 
+Invoking: Print Size
+avr-size --format=berkeley -t NewRain-Smart-Car.elf
+   text	   data	    bss	    dec	    hex	filename
+   8166	    208	    356	   8730	   221a	NewRain-Smart-Car.elf
+   8166	    208	    356	   8730	   221a	(TOTALS)
+Finished building: sizedummy

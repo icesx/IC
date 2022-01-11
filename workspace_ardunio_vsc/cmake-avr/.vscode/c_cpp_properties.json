@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/TOOLS/IDE/arduino/libraries/**",
+                "/TOOLS/IDE/arduino/hardware/tools/**",
+                "/TOOLS/IDE/arduino/tools/**",
+                "/TOOLS/IDE/arduino/hardware/arduino/avr/**",
+                "/TOOLS/IDE/arduino/hardware/arduino/avr/cores/arduino"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}
