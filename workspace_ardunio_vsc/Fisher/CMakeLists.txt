@@ -14,6 +14,7 @@ INCLUDE_DIRECTORIES(
     ${ARDUINO_PATH}/hardware/arduino/avr/variants/mega
     ${ARDUINO_PATH}/hardware/arduino/avr/cores/arduino
     ${ARDUINO_PATH}/hardware/tools/avr/avr/include
+    ${ARDUINO_PATH}/hardware/tools/avr/lib/gcc/avr/7.3.0/include
     ${ARDUINO_LIB_HOME}/libavr-mine
     ${ARDUINO_LIB_HOME}/libavr-base
     )

@@ -14,22 +14,22 @@ void Sim900a::prepare() {
 	this->mySerial->begin(this->band);
 	this->poweron();
 	delay(500);
-	sendATcommandTimeout("AT", defaultOk, 3000, true);
+	sendATcommandTimeout((char *)"AT", defaultOk, 3000, true);
 	delay(2000);
-	sendATcommandTimeout("AT+CIPSHUT", defaultOk, 3000, true);
+	sendATcommandTimeout((char *)"AT+CIPSHUT", defaultOk, 3000, true);
 	delay(2000);
-	sendATcommandTimeout("AT+CIPMUX=0", defaultOk, 15000, true);
+	sendATcommandTimeout((char *)"AT+CIPMUX=0", defaultOk, 15000, true);
 	delay(2000);
-	sendATcommandTimeout("AT+CGATT=1", defaultOk, 15000, true);
+	sendATcommandTimeout((char *)"AT+CGATT=1", defaultOk, 15000, true);
 	delay(3000);
-	sendATcommandTimeout("AT+CSTT=\"www.scp\",\"\",\"\"", defaultOk, 15000,
+	sendATcommandTimeout((char*)"AT+CSTT=\"www.scp\",\"\",\"\"", defaultOk, 15000,
 	true);
 	delay(2000);
-	sendATcommandTimeout("AT+CIPSPRT=1", defaultOk, 15000, true);
+	sendATcommandTimeout((char*)"AT+CIPSPRT=1", defaultOk, 15000, true);
 	delay(2000);
-	sendATcommandTimeout("AT+CIICR", defaultOk, 25000, true);
+	sendATcommandTimeout((char*)"AT+CIICR", defaultOk, 25000, true);
 	delay(2000);
-	sendATcommandTimeout("AT+CIFSR", ".", 15000, true);
+	sendATcommandTimeout((char*)"AT+CIFSR", ".", 15000, true);
 
 	Serial.println("sim900a prepared <<<");
 }

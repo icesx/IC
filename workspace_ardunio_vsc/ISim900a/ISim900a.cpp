@@ -1,42 +1,33 @@
 #include <Arduino.h>
 #include <gprs/Sim900a.h>
-int8_t answer;
+
+void sendATcommand(char *ATcommand);
+void power_on();
+void prepare();
+int8_t sendATcommandTimeout(char *ATcommand, char *expected_answer1,
+                            char *expected_answer2, unsigned int timeout);
 int onModulePin = 2;
 char aux_str[50];
 char ip_data[40] = "GET \\ \r\n";
-void setup() {
-  pinMode(onModulePin, OUTPUT);
-  Serial.begin(115200);
-  delay(5000);
-  Serial.println("Starting...");
-  power_on();
-  prepare();
-}
-void prepare() {
-  Serial.println("init sim900a...");
-  sendATcommand("AT");
-  Serial.println("init network...");
-  sendATcommand("AT+CIPSHUT");
-  delay(500);
-  sendATcommand("AT+CIPMUX=0");
-  delay(500);
-  sendATcommand("AT+CGATT=1");
+void power_on()
+{
   delay(1000);
-  sendATcommand("AT+CIFSR");
-  delay(500);
-  sendATcommand("AT+CSTT=\"www\",\"\",\"\"");
-  delay(500);
-  sendATcommand("AT+CIICR");
-  Serial.println("network inited!");
+  Serial.println("power_on...");
+  digitalWrite(onModulePin, HIGH);
+  delay(1000);
+  digitalWrite(onModulePin, LOW);
 }
-void sendATcommand(char* ATcommand) {
+void sendATcommand(char *ATcommand)
+{
   Serial.println(ATcommand);
   uint8_t x = 0, answer = 0;
   char response[100];
   memset(response, 0, 100);
-  do {
+  do
+  {
     // if there are data in the UART input buffer, reads it and checks for the asnwer
-    if (Serial.available() != 0) {
+    if (Serial.available() != 0)
+    {
       response[x] = Serial.read();
       delay(2);
       x++;
@@ -49,52 +40,50 @@ void sendATcommand(char* ATcommand) {
     }
   } while (answer == 0);
 }
-void reconnect() {
-  Serial.println("Openning TCP");
-  while (sendATcommandTimeout("AT+CIPSTART=\"TCP\",\"42.96.142.145\",\"80\"",
-                              "CONNECT OK", "CONNECT FAIL", 300) != 1);
-}
-void close_connect() {
-  while (sendATcommandTimeout("AT+CIPCLOSE", "CLOSE OK", "ERROR", 1000) != 1);
-}
-void transform() {
-  reconnect();
-  sprintf(aux_str, "AT+CIPSEND=%d", strlen(ip_data));
-  Serial.println(aux_str);
-  if (sendATcommandTimeout(aux_str, ">", "ERROR", 100) != 1)
-  {
-    sendATcommandTimeout(ip_data, "SEND OK", "ERROR", 100);
-  }
-  close_connect();
-}
-void loop() {
+void prepare()
+{
+  Serial.println("init sim900a...");
+  sendATcommand((char *)"AT");
+  Serial.println("init network...");
+  sendATcommand((char *)"AT+CIPSHUT");
+  delay(500);
+  sendATcommand((char *)"AT+CIPMUX=0");
+  delay(500);
+  sendATcommand((char *)"AT+CGATT=1");
   delay(1000);
-  //transform();
-  delay(10000);
+  sendATcommand((char *)"AT+CIFSR");
+  delay(500);
+  sendATcommand((char *)"AT+CSTT=\"www\",\"\",\"\"");
+  delay(500);
+  sendATcommand((char *)"AT+CIICR");
+  Serial.println("network inited!");
 }
-
-void power_on() {
-  delay(1000);
-  Serial.println("power_on...");
-  digitalWrite(onModulePin, HIGH);
-  delay(1000);
-  digitalWrite(onModulePin, LOW);
+void setup()
+{
+  pinMode(onModulePin, OUTPUT);
+  Serial.begin(115200);
+  delay(5000);
+  Serial.println("Starting...");
+  power_on();
+  prepare();
 }
-
-int8_t sendATcommandTimeout(char* ATcommand, char* expected_answer1,
-                            char* expected_answer2, unsigned int timeout) {
-  uint8_t x = 0,  answer = 0;
+int8_t sendATcommandTimeout(char *ATcommand, char *expected_answer1,
+                            char *expected_answer2, unsigned int timeout)
+{
+  uint8_t x = 0, answer = 0;
   char response[100];
   unsigned long previous;
-  memset(response, 0, 100);    // Initialize the string
+  memset(response, 0, 100); // Initialize the string
   delay(100);
-  Serial.println(ATcommand);    // Send the AT command
+  Serial.println(ATcommand); // Send the AT command
   x = 0;
   previous = millis();
   // this loop waits for the answer
-  do {
+  do
+  {
     // if there are data in the UART input buffer, reads it and checks for the asnwer
-    if (Serial.available() != 0) {
+    if (Serial.available() != 0)
+    {
       response[x] = Serial.read();
       delay(2);
       x++;
@@ -114,4 +103,43 @@ int8_t sendATcommandTimeout(char* ATcommand, char* expected_answer1,
   // Waits for the asnwer with time out
   while ((answer == 0) && ((millis() - previous) < timeout));
   return answer;
+}
+
+void reconnect()
+{
+  Serial.println("Openning TCP");
+  while (sendATcommandTimeout((char *)"AT+CIPSTART=\"TCP\",\"42.96.142.145\",\"80\"",
+                              (char *)"CONNECT OK",
+                              (char *)"CONNECT FAIL", 300) != 1)
+  {
+  }
+}
+void close_connect()
+{
+  while (sendATcommandTimeout((char *)"AT+CIPCLOSE",
+                              (char *)"CLOSE OK",
+                              (char *)"ERROR", 1000) != 1)
+  {
+  };
+}
+void transform()
+{
+  reconnect();
+  sprintf(aux_str, "AT+CIPSEND=%d", strlen(ip_data));
+  Serial.println(aux_str);
+  if (sendATcommandTimeout(aux_str,
+                           (char *)">",
+                           (char *)"ERROR", 100) != 1)
+  {
+    sendATcommandTimeout(ip_data,
+                         (char *)"SEND OK",
+                         (char *)"ERROR", 100);
+  }
+  close_connect();
+}
+void loop()
+{
+  delay(1000);
+  // transform();
+  delay(10000);
 }

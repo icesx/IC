@@ -10,62 +10,73 @@ Servo myservo;
 StepCounter stepcounter_l(INTERRUPT_NUM_0);
 StepCounter stepcounter_r(INTERRUPT_NUM_1);
 const int safeDistance = 20;
-void servoReset() {
+void servoReset()
+{
 	Serial.println("servoReset");
 	myservo.write(90);
 }
-void forward() {
+void forward()
+{
 	Serial.println("forward");
 	motor_r.run(BACKWARD);
 	motor_l.run(FORWARD);
 	delay(10);
 	servoReset();
 }
-void backward() {
+void backward()
+{
 	Serial.println("backward");
 	motor_r.run(FORWARD);
 	motor_l.run(BACKWARD);
 	delay(300);
 	servoReset();
 }
-void turnLeft() {
+void turnLeft()
+{
 	Serial.println("turnLeft");
 	motor_r.run(RELEASE);
 	motor_l.run(BACKWARD);
 	delay(300);
 	servoReset();
 }
-void turnRight() {
+void turnRight()
+{
 	Serial.println("turnRight");
 	motor_r.run(FORWARD);
 	motor_l.run(RELEASE);
 	delay(200);
 	servoReset();
 }
-void stop() {
+void stop()
+{
 	Serial.println("stop");
 	motor_r.run(RELEASE);
 	motor_l.run(RELEASE);
 }
-void turn(int angle) {
+void turn(int angle)
+{
 	Serial.print("to turn ");
 	Serial.println(angle);
-	if (angle > 90) {
+	if (angle > 90)
+	{
 		Serial.print("turn delay time is bigger than 90 ");
 		turnLeft();
 		stop();
-	} else {
+	}
+	else
+	{
 		Serial.print("turn delay time is smaller than 90 ");
 		turnRight();
 		stop();
 	}
-
 }
 int turnPos = 90;
 int distance = safeDistance;
-void changeDirection() {
+void changeDirection()
+{
 	Serial.println("changeDirection");
-	for (int pos = 0; pos <= 180; pos += 45) {
+	for (int pos = 0; pos <= 180; pos += 45)
+	{
 		myservo.write(pos);
 		delay(300);
 		int _distance = uc.distance();
@@ -73,65 +84,85 @@ void changeDirection() {
 		Serial.print(pos);
 		Serial.print(" distance is ");
 		Serial.println(_distance);
-		if (_distance < 10) {
+		if (_distance < 10)
+		{
 			backward();
 			break;
 		}
-		if (_distance > distance) {
+		if (_distance > distance)
+		{
 			distance = _distance;
 			turnPos = pos;
 			Serial.print("turnPos is ");
 			Serial.println(turnPos);
 		}
 	}
-	if (turnPos != 90) {
+	if (turnPos != 90)
+	{
 		turn(turnPos);
-	} else {
+	}
+	else
+	{
 		backward();
 	}
 	turnPos = 90;
 	distance = safeDistance;
 }
-void carRun() {
+void carRun()
+{
 	int distance = uc.distance();
 	Serial.print("distance is ");
 	Serial.print(distance);
 	Serial.println("cm");
-	if (distance > safeDistance) {
+	if (distance > safeDistance)
+	{
 		forward();
-	} else {
+	}
+	else
+	{
 		stop();
 		changeDirection();
 	}
 }
-void testAnglePrtSencond() {
+void testAnglePrtSencond()
+{
 	motor_r.run(FORWARD);
 	delay(1000);
 	motor_r.run(RELEASE);
 }
-void testTurnLeft() {
+void testTurnLeft()
+{
 	turnLeft();
 }
-void testTurnRight() {
+void testTurnRight()
+{
 	turnRight();
 }
-void ir() {
+void ir()
+{
 	attachInterrupt(2, changeDirection, LOW);
 }
-void setup() {
+void setup()
+{
 	Serial.begin(115200);
 	motor_r.setSpeed(180);
 	motor_l.setSpeed(200);
 	myservo.attach(9);
 	servoReset();
 }
-void sameSpeed() {
+void sameSpeed()
+{
 	int l = stepcounter_l.speed();
 	int r = stepcounter_r.speed();
+	Serial.print("left=");
+	Serial.print(l);
+	Serial.print("right=");
+	Serial.print(r);
 }
-void loop() {
+void loop()
+{
 	carRun();
 	sameSpeed();
 	delay(50);
-//	testTurnLeft();
+	//	testTurnLeft();
 }

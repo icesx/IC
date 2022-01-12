@@ -9,7 +9,7 @@ set(CMAKE_C_COMPILER ${AVR_PATH}/avr-gcc)
 set(CMAKE_CXX_COMPILER ${AVR_PATH}/avr-g++)
 set(CMAKE_CXX_FLAGS "-O2 -Wwrite-strings")
 
-# include
+SET(ARDUINO_LIB_HOME /ICESX/workSpaceC/IC/workspace_ardunio_vsc/arduino_lib)
 message("CMAKE_CURRENT_LIST_DIR====${CMAKE_CURRENT_LIST_DIR}")
 INCLUDE_DIRECTORIES(
     ${CMAKE_CURRENT_LIST_DIR}/include
@@ -17,6 +17,8 @@ INCLUDE_DIRECTORIES(
     ${CMAKE_CURRENT_LIST_DIR}/libavr-mine
     ${CMAKE_CURRENT_LIST_DIR}/libavr-base/arduino
     ${CMAKE_CURRENT_LIST_DIR}/include/variants/mega
+    ${ARDUINO_PATH}/hardware/tools/avr/lib/gcc/avr/7.3.0/include
+    ${ARDUINO_PATH}/hardware/tools/avr/avr/include
     )
 
 # 宏
