@@ -1,8 +1,8 @@
-#include <AFMotor.h>
+#include "AFMotor/AFMotor.h"
 #include <Arduino.h>
-#include <Servo.h>
-#include "../ultrasonic/Ultrasonic.h"
-#include "../stepcounter/stepcounter.h"
+#include <servo/Servo.h>
+#include "ultrasonic/Ultrasonic.h"
+#include "stepcounter/stepcounter.h"
 Ultrasonic uc(22, 23);
 AF_DCMotor motor_r(MOTOR2_B);
 AF_DCMotor motor_l(MOTOR1_A);
