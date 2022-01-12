@@ -7,11 +7,11 @@
                 "/TOOLS/IDE/arduino/hardware/tools/**",
                 "/TOOLS/IDE/arduino/tools/**",
                 "/TOOLS/IDE/arduino/hardware/arduino/avr/**",
-                "/TOOLS/IDE/arduino/hardware/arduino/avr/cores/arduino"
+                "/TOOLS/IDE/arduino/hardware/arduino/avr/cores/arduino",
+                "/ICESX/workSpaceC/IC/workspace_ardunio_vsc/arduino_lib/libavr-base",
+                "/ICESX/workSpaceC/IC/workspace_ardunio_vsc/arduino_lib/libavr-mine"
             ],
-            "forcedInclude": [
-                
-            ],
+            "forcedInclude": [],
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu18",
