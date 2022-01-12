@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-set(subs "base;http;gprs;sdcard;serialcamera")
+set(subs 
+base
+http
+gprs
+sdcard
+serialcamera)
 set(NAME libavr-mine)
 set(LIB avr-mine)
 set(MAIN_SRC lib.c)

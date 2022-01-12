@@ -1,6 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0.0)
 
-PROJECT(cmake-avr)
+PROJECT(fisher VERSION 0.1.0)
 SET(MCU_SPEED "16000000")
 SET(AVR_MCU "atmega2560")
 set(AVR_H_FUSE 0xd9)
@@ -19,10 +19,10 @@ INCLUDE_DIRECTORIES(
     )
 
 SET(CMAKE_AVR_SOURCE_EXE
-        main.c
+        fisher.cpp
 )
 SET(CMAKE_AVR_SUB_LIB 
-        blink
+        
 )
 SET(CMAKE_AVR_LINK_LIB_PATH
         ${ARDUINO_LIB_HOME}/build/libavr-base
@@ -33,24 +33,18 @@ SET(CMAKE_AVR_LINK_LIBS_NAME
         avr-base
 )
 
-
-##########################################################################
-# compiler options for all build types
-##########################################################################
 add_definitions("-DF_CPU=${MCU_SPEED}")
 #add_definitions("-fpack-struct")
 #add_definitions("-fshort-enums")
 add_definitions("-Wall")
-add_definitions("-Werror")
+# add_definitions("-Werror")
 #add_definitions("-pedantic")
 #add_definitions("-pedantic-errors")
 #add_definitions("-funsigned-char")
 #add_definitions("-funsigned-bitfields")
 #add_definitions("-ffunction-sections")
 #add_definitions("-c")
-add_definitions("-std=gnu99")
+# add_definitions("-std=gnu99")
 add_definitions("-mmcu=${AVR_MCU}")
-
-##########################################################################
 
 include(../avr-gcc.cmake)

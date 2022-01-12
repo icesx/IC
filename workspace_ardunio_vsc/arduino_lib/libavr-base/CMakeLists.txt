@@ -1,8 +1,14 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-set(subs "arduino;ethernet;sd;servo;software_serial;spi")
-#=================#
-set(NAME lib-avr-base)
+SET(subs
+    arduino
+    ethernet
+    sd
+    servo
+    software_serial
+    spi)
+
+set(NAME libavr-base)
 set(LIB avr-base)
 set(MAIN_SRC lib.c)
 add_library(${LIB} ${MAIN_SRC})

@@ -48,4 +48,4 @@ add_definitions("-mmcu=${AVR_MCU}")
 
 ##########################################################################
 
-include(avr-gcc.cmake)
+include(../avr-gcc.cmake)
