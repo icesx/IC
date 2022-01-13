@@ -22,13 +22,15 @@ INCLUDE_DIRECTORIES(
     )
 
 # 宏
+add_compile_options(
+    -mmcu=atmega2560
+    -g2
+    -gstabs
+)
 add_definitions(
     -DF_CPU=16000000L
     -D__AVR_ATmega2560__
     -DARDUINO_ARCH_AVR
-    -mmcu=atmega2560
-    -g2
-    -gstabs
 )
 set(subs 
     libavr-base

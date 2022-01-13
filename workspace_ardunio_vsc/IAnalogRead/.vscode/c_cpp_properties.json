@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "defines": [
+                "USBCON",
+                "F_CPU=8000000L",
+                "ARDUINO=10812",
+                "ARDUINO_AVR_PRO",
+                "ARDUINO_ARCH_AVR"
+            ]
+        }
+    ],
+    "version": 4
+}

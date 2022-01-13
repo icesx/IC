@@ -11,5 +11,5 @@ void loop()
   delay(500);
   digitalWrite(12, LOW);
   Serial.println(analogRead(5), DEC);
-   delay(500);
+  delay(500);
 }
