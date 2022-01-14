@@ -3,7 +3,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.0.0)
 PROJECT(fisher VERSION 0.1.0)
 
 
-SET(MCU_SPEED "16000000")
+SET(MCU_SPEED "16000000UL")
 SET(AVR_MCU "atmega2560")
 set(AVR_H_FUSE 0xd9)
 set(AVR_L_FUSE 0xc4)
@@ -39,15 +39,24 @@ SET(CMAKE_AVR_LINK_LIBS_NAME
 
 add_compile_options(
     -mmcu=${AVR_MCU}
-    -g2
-    -Wall
-    -gstabs
     -O2
+    -Wall
+    -g2
+    -gstabs
+    -fpack-struct
+    -fshort-enums
+    -ffunction-sections
+    -fdata-sections
+    -funsigned-char
+    -funsigned-bitfields
+    -fno-exceptions
+    -mmcu=atmega2560
 )
 add_definitions(
-    -DF_CPU=${MCU_SPEED}
-    -D__AVR_ATmega2560__
-    -DARDUINO_ARCH_AVR
+        -DF_CPU=${MCU_SPEED}
+        -D__AVR_ATmega2560__
+        -DARDUINO_AVR_MEGA2560
+        -DARDUINO_ARCH_AVR
 )
 
 include(../avr-gcc.cmake)

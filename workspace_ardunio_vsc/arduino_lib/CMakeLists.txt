@@ -7,7 +7,6 @@ message(STATUS "src This is SOURCE dir " ${PROJECT_SOURCE_DIR})
 set(AVR_PATH /TOOLS/IDE/arduino/hardware/tools/avr/bin)
 set(CMAKE_C_COMPILER ${AVR_PATH}/avr-gcc)
 set(CMAKE_CXX_COMPILER ${AVR_PATH}/avr-g++)
-set(CMAKE_CXX_FLAGS "-O2 -Wwrite-strings")
 
 SET(ARDUINO_LIB_HOME /ICESX/workSpaceC/IC/workspace_ardunio_vsc/arduino_lib)
 message("CMAKE_CURRENT_LIST_DIR====${CMAKE_CURRENT_LIST_DIR}")
@@ -21,17 +20,32 @@ INCLUDE_DIRECTORIES(
     ${ARDUINO_PATH}/hardware/tools/avr/avr/include
     )
 
-# 宏
+
+SET(MCU_SPEED "16000000UL")
+SET(AVR_MCU "atmega2560")
 add_compile_options(
-    -mmcu=atmega2560
+    -mmcu=${AVR_MCU}
+    -O2
+    -Wall
     -g2
     -gstabs
+    -fpack-struct
+    -fshort-enums
+    -ffunction-sections
+    -fdata-sections
+    -funsigned-char
+    -funsigned-bitfields
+    -fno-exceptions
+    -mmcu=atmega2560
+    -Wwrite-strings
 )
 add_definitions(
-    -DF_CPU=16000000L
-    -D__AVR_ATmega2560__
-    -DARDUINO_ARCH_AVR
+        -DF_CPU=${MCU_SPEED}
+        -D__AVR_ATmega2560__
+        -DARDUINO_AVR_MEGA2560
+        -DARDUINO_ARCH_AVR
 )
+
 set(subs 
     libavr-base
     libavr-mine
