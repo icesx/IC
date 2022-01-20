@@ -1,9 +1,8 @@
-﻿#include<stdio.h>
-#include<unistd.h>
-int main()
+﻿#include <stdio.h>
+#include <unistd.h>
+int rmdir(char *dir)
 {
-	char* dir="hello";
-	if(rmdir(dir)==-1)
+	if (rmdir(dir) == -1)
 	{
 		perror("failed!");
 		return 1;
