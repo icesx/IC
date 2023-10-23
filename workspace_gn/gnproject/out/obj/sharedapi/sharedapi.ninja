@@ -1,0 +1,16 @@
+defines =
+include_dirs = -I../sharedapi -I/home/i/Downloads/gn-demo-master/cmakeproject/add -I/home/i/Downloads/gn-demo-master/cmakeproject/sub
+cflags = -fPIC -Wall -Wno-format
+cflags_cc = -std=c++11
+target_out_dir = obj/sharedapi
+target_output_name = libsharedapi
+
+build obj/sharedapi/libsharedapi.sharedlib.o: cxx ../sharedapi/sharedlib.cpp
+
+build ./libsharedapi.so: solink obj/sharedapi/libsharedapi.sharedlib.o
+  ldflags = -lstdc++ -L/home/i/Downloads/gn-demo-master/cmakeproject/build/Lib
+  libs = -ljadd -ljsub
+  frameworks =
+  swiftmodules =
+  output_extension = .so
+  output_dir = .

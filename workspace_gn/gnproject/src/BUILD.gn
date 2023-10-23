@@ -1,0 +1,11 @@
+executable("hello") {
+    sources = [
+        "hello.cpp",
+    ]
+    include_dirs = [
+        "../sharedapi/",
+    ]
+    deps = [
+        "//sharedapi:sharedapi",
+    ]
+}

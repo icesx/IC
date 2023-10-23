@@ -1,0 +1,18 @@
+set(SRC main.cpp)
+add_executable(${PROJECT_NAME} ${SRC})
+
+set(subs "edge;")
+foreach(sub IN LISTS subs)
+    message("config subdirectory::: ${sub}")
+    add_subdirectory("${sub}")
+    link_directories(${PROJECT_BINARY_DIR}/${sub})
+    target_link_libraries(${PROJECT_NAME} ${sub})
+endforeach (sub)
+
+set(opencv_lib "opencv_core;opencv_imgcodecs;opencv_highgui")
+foreach(lib ${opencv_lib})
+    set(lib_name ${lib}_name)
+    find_library(${lib_name} ${lib} /TOOLS/SDK/opencv/lib)
+    message("find_library lib::: ${lib} target ${${lib_name}}")
+    target_link_libraries(${PROJECT_NAME} ${${lib_name}})
+endforeach(lib)

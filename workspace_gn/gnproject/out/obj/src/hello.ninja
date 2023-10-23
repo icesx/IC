@@ -1,0 +1,16 @@
+defines =
+include_dirs = -I../sharedapi
+cflags =
+cflags_cc = -std=c++11
+target_out_dir = obj/src
+target_output_name = hello
+
+build obj/src/hello.hello.o: cxx ../src/hello.cpp
+
+build hello: link obj/src/hello.hello.o ./libsharedapi.so
+  ldflags =
+  libs =
+  frameworks =
+  swiftmodules =
+  output_extension = 
+  output_dir = .

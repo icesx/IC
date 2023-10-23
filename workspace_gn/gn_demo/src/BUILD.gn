@@ -1,0 +1,10 @@
+executable("hello_world") {
+    sources = [
+        "test.cpp",
+    ]
+}
+executable("hello_world1") {
+    sources = [
+        "test1.c",
+    ]
+}

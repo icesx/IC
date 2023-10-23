@@ -1,0 +1,29 @@
+shared_library("sharedapi") {
+    sources = [
+        "sharedlib.h",
+        "sharedlib.cpp",
+    ]
+    include_dirs = [
+        "./",
+        #path to jadd.h jsub.h folder
+        "../../cmakeproject/add",
+        "../../cmakeproject/sub",
+    ]
+    lib_dirs = [
+        #path to jadd.a jsub.a folder
+        "../../cmakeproject/build/Lib",
+    ]
+    libs = [
+        "jadd",
+        "jsub",
+    ]
+    ldflags = [
+        "-lstdc++"
+    ]
+    cflags = [
+        "-fPIC",
+        "-Wall",
+        "-Wno-format",
+    ]
+    #cflags_cc = cflags
+}

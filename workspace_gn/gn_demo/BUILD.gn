@@ -1,0 +1,8 @@
+
+group("default") {
+    deps = [
+        "//src:hello_world",
+        "//src:hello_world1",
+    ]
+}
+

@@ -85,6 +85,10 @@ void changeDirection()
 		Serial.print(pos);
 		Serial.print(" distance is ");
 		Serial.println(_distance);
+		Serial.print("servo =");
+		int r = myservo.read();
+		Serial.print(r);
+		Serial.print("\n");
 		if (_distance < 10)
 		{
 			backward();
@@ -163,7 +167,7 @@ void sameSpeed()
 void loop()
 {
 	carRun();
-	sameSpeed();
+	// sameSpeed();
 	delay(50);
 	//	testTurnLeft();
 }

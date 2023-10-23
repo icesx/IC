@@ -1,0 +1,10 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "wm_include.h": "c",
+        "wm_osal.h": "c",
+        "wm_efuse.h": "c",
+        "wm_mem.h": "c",
+        "wm_demo.h": "c"
+    }
+}

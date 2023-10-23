@@ -1,0 +1,16 @@
+defines =
+include_dirs =
+cflags =
+cflags_cc = -std=c++11 -std=c99
+target_out_dir = obj/src
+target_output_name = hello_world
+
+build obj/src/hello_world.test.o: cxx ../src/test.cpp
+
+build hello_world: link obj/src/hello_world.test.o
+  ldflags =
+  libs =
+  frameworks =
+  swiftmodules =
+  output_extension = 
+  output_dir = .

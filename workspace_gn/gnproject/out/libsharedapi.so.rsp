@@ -1,0 +1,1 @@
+-Wl,--whole-archive obj/sharedapi/libsharedapi.sharedlib.o  -Wl,--no-whole-archive -ljadd -ljsub

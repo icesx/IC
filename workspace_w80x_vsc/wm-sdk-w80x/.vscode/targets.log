@@ -1,0 +1,1814 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# make[1]: Entering directory '/ICESX/workSpaceC/IC/workspace_w80x_vsc/wm-sdk-w80x/app'
+ 
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Tue Apr 12 08:53:24 2022
+
+# Variables
+
+# makefile (from '../tools/w800/.config', line 14)
+CONFIG_W800_PRIKEY_SEL = 0
+# makefile (from 'Makefile', line 14)
+PDIR := ../
+# environment
+GRADLE_USER_HOME = /TOOLS/gradle
+# environment
+JAVA_HOME = /TOOLS/JDK/openjdk-14+36_linux-x64
+# environment
+GDK_BACKEND = x11
+# makefile (from '../tools/w800/conf.mk', line 122)
+ARFLAGS := ru
+# environment
+LC_ALL = C
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+SSH_AGENT_LAUNCHER = gnome-keyring
+# makefile (from '../tools/w800/conf.mk', line 84)
+AR = @echo "AR       $(notdir $@)" 2>/dev/null; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-ar
+# makefile (from '../tools/w800/conf.mk', line 14)
+IMAGEODIR := ../bin/build/w801/image
+# makefile (from '../tools/w800/conf.mk', line 44)
+PRIKEY_SEL := 0
+# makefile (from '../tools/w800/rules.mk', line 27)
+OLIBS := ../bin/build/w801/lib/libuser.a
+# makefile (from '../tools/w800/conf.mk', line 72)
+TOOL_CHAIN_PATH = $(subst ",,$(CONFIG_W800_TOOLCHAIN_PATH))
+# makefile (from '../tools/w800/.config', line 10)
+CONFIG_W800_IMAGE_TYPE = 1
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
+IDF_PATH = /TOOLS/SDK/esp32/esp-idf/esp-idf
+# makefile (from '../tools/w800/conf.mk', line 88)
+LINK = @echo "LINK     $(notdir $(IMAGEODIR)/$(TARGET).elf)"; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-gcc
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-38ddcb8a-607a-465c-adb2-b2e15b8316ff.sock
+# environment
+PUB_HOSTED_URL = https://pub.flutter-io.cn
+# environment
+LC_NAME = zh_CN.UTF-8
+# makefile (from '../tools/w800/.config', line 29)
+CONFIG_W800_USE_NIMBLE = y
+# environment
+LC_NUMERIC = zh_CN.UTF-8
+# makefile (from '../tools/w800/conf.mk', line 110)
+ASMFLAGS := -Wall -DTLS_CONFIG_CPU_XT804=1 -DGCC_COMPILE=1 -mcpu=ck804ef -O2 -g -DWM_SWD_ENABLE=1 -DNIMBLE_FTR=1 -std=gnu99 -c -mhard-float -Wa,--gdwarf2 -fdata-sections -ffunction-sections
+# environment
+VSCODE_CWD = /home/i
+# makefile (from '../tools/w800/rules.mk', line 190)
+DEP_LIBS_libuser = $(foreach lib,$(filter %.a,$(COMPONENTS_libuser)),$(LIBODIR)/$(notdir $(lib)))
+# environment
+WINDOWPATH = 2
+# makefile (from '../tools/w800/conf.mk', line 96)
+LIB_EXT = .a
+# makefile (from '../tools/w800/conf.mk', line 64)
+VERBOSE = NO
+# makefile (from '../tools/w800/conf.mk', line 56)
+USE_NIMBLE = 1
+# makefile (from '../tools/w800/.config', line 36)
+CONFIG_W800_TOOLCHAIN_PATH = "/TOOLS/SDK/csky/csky-elfabiv2-tools-x86_64-minilibc-20210423/bin/"
+# environment
+NVM_DIR = /TOOLS/nvm
+# environment
+LC_ADDRESS = zh_CN.UTF-8
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# makefile (from '../tools/w800/conf.mk', line 126)
+LINKFLAGS := -mcpu=ck804ef -nostartfiles -mhard-float -lm -Wl,-T../ld/w800/gcc_csky.ld
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# makefile (from '../Makefile', line 82)
+CONFIGURATION_DEFINES = 
+# makefile (from '../tools/w800/rules.mk', line 15)
+CSRCS = $(wildcard *.c)
+# environment
+WINEPREFIX = /OTHER/wine
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# makefile (from '../tools/w800/conf.mk', line 4)
+CONFIG_ARCH_TYPE = w800
+# environment
+PWD = /ICESX/workSpaceC/IC/workspace_w80x_vsc/wm-sdk-w80x
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# makefile (from 'Makefile', line 5)
+GEN_LIBS = libuser$(LIB_EXT)
+# environment
+HOSTNAME = extreme
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# makefile (from '../tools/w800/conf.mk', line 18)
+CA_PATH := ../tools/w800/ca
+# makefile (from '../tools/w800/.config', line 30)
+CONFIG_W800_FIRMWARE_DEBUG = y
+# makefile (from '../tools/w800/conf.mk', line 42)
+UPD_ADDRESS := 8010000
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+NVM_INC = /TOOLS/nvm/versions/node/v16.13.1/include/node
+# environment
+VSCODE_CODE_CACHE_PATH = /home/i/.config/Code/CachedData/8dfae7a5cd50421d10cd99cb873990460525a898
+# environment
+LANG = C
+# makefile (from '../tools/w800/conf.mk', line 17)
+SDK_TOOLS := ../tools/w800
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+ZIPINFO = -O CP936
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile (from '../tools/w800/.config', line 13)
+CONFIG_W800_UPDATE_ADDRESS = 8010000
+# makefile
+MAKEFLAGS = pqrRw
+# makefile (from '../tools/w800/rules.mk', line 29)
+OIMAGES := 
+# environment
+INSTALLER_PATH = /home/i/Huawei/DevEco-Device-Tool
+# makefile (from '../tools/w800/conf.mk', line 13)
+LIBODIR := ../bin/build/w801/lib
+# makefile (from '../Makefile', line 32)
+COMPONENTS_w801 = $(TOP_DIR)/app/libuser$(LIB_EXT) $(TOP_DIR)/demo/libdemo$(LIB_EXT)
+# makefile
+CURDIR := /ICESX/workSpaceC/IC/workspace_w80x_vsc/wm-sdk-w80x/app
+# makefile (from '../tools/w800/conf.mk', line 85)
+ASM = @echo "ASM      $<"; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-gcc
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+UNZIP = -O CP936
+# makefile (from '../tools/w800/rules.mk', line 190)
+DEP_OBJS_libuser = $(foreach obj,$(filter %.o,$(COMPONENTS_libuser)),$(OBJODIR)/$(notdir $(obj)))
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# makefile (from '../tools/w800/conf.mk', line 46)
+CODE_ENCRYPT := 0
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# makefile (from '../tools/w800/conf.mk', line 71)
+TOOL_CHAIN_PREFIX = $(CONFIG_W800_TOOLCHAIN_PREFIX)
+# environment
+MFLAGS = -pqrRw
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+NVM_BIN = /TOOLS/nvm/versions/node/v16.13.1/bin
+# environment
+HISTSIZE = 1000
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from '../tools/w800/conf.mk', line 10)
+ODIR := ../bin/build
+# environment
+IDF_TOOLS_PATH = /TOOLS/SDK/esp32/espressif
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# makefile (from '../Makefile', line 1)
+MAKEFILE_LIST := Makefile ../tools/w800/conf.mk ../tools/w800/.config ../tools/w800/inc.mk ../tools/w800/rules.mk ../bin/build/w801/obj/app/main.o.d ../Makefile
+# automatic
+@F = $(notdir $@)
+# makefile (from '../tools/w800/conf.mk', line 26)
+SEC_BOOT := ../tools/w800/w800_secboot.img
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 2221
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+PYTHONUSERBASE = /TOOLS/PYTHON_PATH
+# makefile (from '../tools/w800/.config', line 9)
+CONFIG_W800_TARGET_NAME = "w801"
+# makefile (from '../tools/w800/conf.mk', line 98)
+CCFLAGS := -Wall -DTLS_CONFIG_CPU_XT804=1 -DGCC_COMPILE=1 -mcpu=ck804ef -O2 -g -DWM_SWD_ENABLE=1 -DNIMBLE_FTR=1 -std=gnu99 -c -mhard-float -Wall -fdata-sections -ffunction-sections
+# makefile (from '../Makefile', line 91)
+INCLUDES :=   -I include -I ../include -I ../include/app -I ../include/arch/xt804 -I ../include/arch/xt804/csi_core -I ../include/arch/xt804/csi_dsp -I ../include/driver -I ../include/net -I ../include/os -I ../include/platform -I ../include/wifi -I ../include/bt -I ../platform/common/params -I ../platform/inc -I ../platform/sys -I ../src/app/wm_atcmd -I ../src/app/dhcpserver -I ../src/app/dnsserver -I ../src/app/web -I ../src/app/cloud -I ../src/app/cJSON -I ../src/app/rmms -I ../src/app/ntp -I ../src/app/httpclient -I ../src/app/oneshotconfig -I ../src/app/iperf -I ../src/app/mqtt -I ../src/app/ping -I ../src/app/polarssl/include -I ../src/app/mDNS/mDNSPosix -I ../src/app/mDNS/mDNSCore -I ../src/app/ota -I ../src/app/libwebsockets-2.1-stable -I ../src/app/fatfs -I ../src/app/mbedtls/include -I ../src/app/mbedtls/ports -I ../src/network/api2.0.3 -I ../src/network/lwip2.0.3/include -I ../src/os/rtos/include -I ../src/app/factorycmd -I ../demo -I ../src/bt/blehost/ext/tinycrypt/include -I ../src/bt/blehost/nimble/host/include -I ../src/bt/blehost/nimble/host/mesh/include -I ../src/bt/blehost/nimble/host/porting/w800/include -I ../src/bt/blehost/nimble/host/services/gap/include -I ../src/bt/blehost/nimble/host/services/gatt/include -I ../src/bt/blehost/nimble/host/services/bas/include -I ../src/bt/blehost/nimble/host/services/dis/include -I ../src/bt/blehost/nimble/host/store/config/include -I ../src/bt/blehost/nimble/host/store/ram/include -I ../src/bt/blehost/nimble/host/util/include -I ../src/bt/blehost/nimble/include -I ../src/bt/blehost/nimble/transport/uart/include -I ../src/bt/blehost/porting/w800/include -I ../src/bt/host -I ../src/bt/host/main -I ../src/bt/host/include -I ../src/bt/host/stack -I ../src/bt/host/stack/include -I ../src/bt/host/gki/wm -I ../src/bt/host/gki/common -I ../src/bt/host/vnd/include -I ../src/bt/host/bta/include -I ../src/bt/host/osi/include -I ../src/bt/host/hci/include -I ../src/bt/host/btif/include -I ../src/bt/host/embdrv/sbc/encoder/include -I ../src/bt/host/embdrv/sbc/decoder/include -I ../src/bt/host/btcore/include -I include -I../include -I ./
+# environment
+SESSION_MANAGER = local/extreme:@/tmp/.ICE-unix/1737,unix/extreme:/tmp/.ICE-unix/1737
+# automatic
+*F = $(notdir $*)
+# makefile (from '../tools/w800/conf.mk', line 15)
+BINODIR := ../bin/build/w801/bin
+# makefile (from '../tools/w800/conf.mk', line 93)
+LDDIR = $(TOP_DIR)/ld/$(CONFIG_ARCH_TYPE)
+# makefile (from '../tools/w800/rules.mk', line 35)
+ShortcutRule = $(1): .subdirs $(2)/$(1)
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# makefile (from '../tools/w800/rules.mk', line 50)
+define MakeImage
+DEP_LIBS_$(1) = $$(foreach lib,$$(filter %$(LIB_EXT),$$(COMPONENTS_$(1))),$$(LIBODIR)/$$(notdir $$(lib)))
+DEP_OBJS_$(1) = $$(foreach obj,$$(filter %.o,$$(COMPONENTS_$(1))),$$(OBJODIR)/$$(notdir $$(obj)))
+$$(IMAGEODIR)/$(1).elf: $$(OBJS) $$(DEP_OBJS_$(1)) $$(DEP_LIBS_$(1)) $$(DEPENDS_$(1))
+	@mkdir -p $$(IMAGEODIR)
+	$(LINK) -Wl,--gc-sections -Wl,-zmax-page-size=1024 -Wl,--whole-archive $$(OBJS) $$(DEP_OBJS_$(1)) $$(DEP_LIBS_$(1)) $$(if $$(LINKFLAGS_$(1)),$$(LINKFLAGS_$(1))) -Wl,--no-whole-archive $(LINKFLAGS) $(MAP) -o $$@
+endef
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+ANDROID_SDK_ROOT = /TOOLS/SDK/android-sdk-linux
+# makefile (from '../tools/w800/conf.mk', line 132)
+MAP := -Wl,-ckmap=../bin/build/w801/image/w801.map
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from '../tools/w800/rules.mk', line 22)
+OBJS := ../bin/build/w801/obj/app/main.o 
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# makefile (from '../tools/w800/conf.mk', line 31)
+USE_LIB = 1
+# environment
+PLATFORMIO_CALLER = vscode
+# environment
+LD_LIBRARY_PATH = :/TOOLS/software/sqlplus:/TOOLS/software/sqlplus
+# environment
+XMODIFIERS = @im=fcitx
+# makefile (from '../Makefile', line 84)
+DEFINES = $(CONFIGURATION_DEFINES)
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+ 
+SHLVL = 0
+# makefile (from '../tools/w800/.config', line 11)
+CONFIG_W800_IMAGE_HEADER = 80D0000
+# environment
+MAKELEVEL := 1
+# makefile (from '../tools/w800/conf.mk', line 22)
+SECBOOT_HEADER_POS = 8002000
+# makefile (from '../tools/w800/conf.mk', line 90)
+OBJDUMP = @echo "OBJDUMP  $<"; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-objdump
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/i/Huawei/DevEco-Device-Tool/core/deveco-venv/bin:/home/i/Huawei/DevEco-Device-Tool/core/deveco-venv:/TOOLS/SDK/flutter_linux/bin:/TOOLS/SDK/android-sdk-linux/platform-tools::/TOOLS/PYTHON_PATH:/TOOLS/PYTHON_PATH/bin:/TOOLS/software/go/bin:/TOOLS/software/apache-maven-3.6.0/bin:/TOOLS/JDK/openjdk-14+36_linux-x64/bin:/TOOLS/nvm/versions/node/v16.13.1/bin:/TOOLS/SDK/flutter_linux/bin:/TOOLS/SDK/android-sdk-linux/platform-tools::/TOOLS/PYTHON_PATH/bin:/TOOLS/software/go/bin:/TOOLS/software/apache-maven-3.6.0/bin:/TOOLS/JDK/openjdk-14+36_linux-x64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# makefile (from '../tools/w800/conf.mk', line 20)
+WM_TOOL = $(SDK_TOOLS)/wm_tool
+# environment
+FLUTTERPATH = /TOOLS/SDK/flutter_linux
+# default
+MAKEFILES := 
+# makefile (from '../tools/w800/rules.mk', line 18)
+subdir_path := app
+# environment
+LC_MONETARY = zh_CN.UTF-8
+# automatic
+^F = $(notdir $^)
+# makefile (from '../tools/w800/.config', line 23)
+CONFIG_W800_DOWNLOAD_RATE = 115200
+# makefile (from '../tools/w800/rules.mk', line 31)
+OBINS := 
+# environment
+LC_TIME = zh_CN.UTF-8
+# makefile (from '../Makefile', line 87)
+DDEFINES = $(CONFIGURATION_DEFINES)
+# environment
+GOROOT = /TOOLS/software/go
+# environment
+INVOCATION_ID = a12f27dbfc164de0ba51ad2d9d5a2f5d
+# makefile (from '../tools/w800/conf.mk', line 87)
+CPP = @echo "CPP      $<"; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-g++
+# makefile (from '../tools/w800/conf.mk', line 11)
+OBJODIR := ../bin/build/w801/obj
+# makefile (from '../tools/w800/conf.mk', line 37)
+DL_BAUD = $(CONFIG_W800_DOWNLOAD_RATE)
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+USERNAME = i
+# environment
+LC_TELEPHONE = zh_CN.UTF-8
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# automatic
+?F = $(notdir $?)
+# environment
+GTK_IM_MODULE = fcitx
+# environment
+NO_PROXY = 127.0.0.1
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# makefile (from '../tools/w800/conf.mk', line 67)
+UNAME_S := Linux
+# makefile (from '../tools/w800/conf.mk', line 57)
+optimization = -O2 -g -DWM_SWD_ENABLE=1 -DNIMBLE_FTR=1
+# environment
+LS_COLORS = 
+# automatic
++F = $(notdir $+)
+# environment
+DESKTOP_SESSION = ubuntu
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# makefile (from '../tools/w800/conf.mk', line 39)
+IMG_TYPE := 1
+# 'override' directive
+GNUMAKEFLAGS := 
+# makefile (from '../tools/w800/conf.mk', line 16)
+FIRMWAREDIR := ../bin
+# environment
+CLUTTER_IM_MODULE = fcitx
+# environment
+LOGNAME = i
+# environment
+IDEA_JDK = /TOOLS/JDK/jbr-linux-x64
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# makefile (from '../tools/w800/conf.mk', line 12)
+UP_EXTRACT_DIR := ../../lib
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 1758
+# makefile (from '../tools/w800/.config', line 28)
+CONFIG_W800_USE_LIB = y
+# makefile (from '../tools/w800/conf.mk', line 25)
+SEC_BOOT_IMG := ../tools/w800/w800_secboot
+# environment
+DISPLAY = :1
+# environment
+USER = i
+# environment
+GTK_MODULES = gail:atk-bridge
+# makefile (from '../tools/w800/.config', line 17)
+CONFIG_W800_SIGN_PUBKEY_SRC = 0
+# default
+MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 0
+# makefile (from '../tools/w800/.config', line 35)
+CONFIG_W800_TOOLCHAIN_PREFIX = "csky-abiv2-elf"
+# makefile (from '../tools/w800/conf.mk', line 40)
+IMG_HEADER := 80D0000
+# environment
+MANAGERPID = 1530
+# makefile (from '../tools/w800/.config', line 15)
+CONFIG_W800_IMAGE_SIGNATURE = 0
+# environment
+LC_MEASUREMENT = zh_CN.UTF-8
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2221
+# makefile (from '../Makefile', line 79)
+LINKFLAGS_w801 = $(LINKLIB)
+# environment
+PYTHONPATH = :/TOOLS/PYTHON_PATH:/TOOLS/PYTHON_PATH
+# environment
+_ = /usr/share/code/code
+# makefile (from '../tools/w800/.config', line 12)
+CONFIG_W800_RUN_ADDRESS = 80D0400
+# environment
+LC_PAPER = zh_CN.UTF-8
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from '../tools/w800/rules.mk', line 33)
+CFLAGS = $(CCFLAGS) $(DEFINES) $(EXTRA_CCFLAGS) $(INCLUDES)
+# makefile (from '../tools/w800/rules.mk', line 20)
+SUBDIRS = $(patsubst %/,%,$(dir $(wildcard */Makefile)))
+# makefile (from '../Makefile', line 71)
+LINKLIB = $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libwlan$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libbtcontroller$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libdsp$(LIB_EXT)	 $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libapp$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libwmarch$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libwmcommon$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libdrivers$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libnetwork$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libos$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libwmsys$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libblehost$(LIB_EXT)
+# makefile (from '../tools/w800/conf.mk', line 36)
+DL_PORT = $(subst ",,$(CONFIG_W800_DOWNLOAD_PORT))
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# makefile (from '../tools/w800/conf.mk', line 23)
+SECBOOT_ADDRESS_POS = 8002400
+# makefile (from '../tools/w800/rules.mk', line 25)
+OBJS-DEPS :=  ../bin/build/w801/obj/app/main.o.d
+# environment
+NVM_CD_FLAGS = 
+# environment
+JOURNAL_STREAM = 8:24258
+# makefile (from '../tools/w800/conf.mk', line 45)
+SIGNATURE := 0
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# makefile (from '../tools/w800/.config', line 22)
+CONFIG_W800_DOWNLOAD_PORT = "ttyUSB0"
+# environment
+FLUTTER_STORAGE_BASE_URL = https://storage.flutter-io.cn
+# environment
+PLATFORMIO_IDE = 3.0.0
+# environment
+HOME = /home/i
+# environment
+QT_IM_MODULE = fcitx
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-75ce2240-1.66.1-main.sock
+# makefile (from '../tools/w800/rules.mk', line 16)
+ASRCS = $(wildcard *.S)
+# makefile (from '../tools/w800/conf.mk', line 19)
+VER_TOOL = $(SDK_TOOLS)/wm_getver
+# makefile (from '../tools/w800/conf.mk', line 47)
+SIGN_PUBKEY_SRC := 0
+# makefile (from '../tools/w800/conf.mk', line 24)
+SEC_BOOT_BIN := ../tools/w800/w800_secboot.bin
+# makefile (from '../tools/w800/rules.mk', line 39)
+define MakeLibrary
+DEP_LIBS_$(1) = $$(foreach lib,$$(filter %$(LIB_EXT),$$(COMPONENTS_$(1))),$$(LIBODIR)/$$(notdir $$(lib)))
+DEP_OBJS_$(1) = $$(foreach obj,$$(filter %.o,$$(COMPONENTS_$(1))),$$(OBJODIR)/$$(notdir $$(obj)))
+$$(LIBODIR)/$(1)$(LIB_EXT): $$(OBJS) $$(DEP_OBJS_$(1)) $$(DEP_LIBS_$(1)) $$(DEPENDS_$(1))
+	@mkdir -p $$(LIBODIR)
+	$$(if $$(filter %$(LIB_EXT),$$?),@mkdir -p $$(OBJODIR)/_$(1))
+	$$(if $$(filter %$(LIB_EXT),$$?),@cd $$(OBJODIR)/_$(1); $$(foreach lib,$$(filter %$(LIB_EXT),$$?),$$(AR) $(ARFLAGS_2) $$(UP_EXTRACT_DIR)/$$(notdir $$(lib));))
+	$$(AR) $(ARFLAGS) $$@ $$(filter %.o,$$?) $$(if $$(filter %$(LIB_EXT),$$?),$$(OBJODIR)/_$(1)/*.o)
+	$$(if $$(filter %$(LIB_EXT),$$?),@$$(RM) -r $$(OBJODIR)/_$(1))
+endef
+# environment
+IM_CONFIG_PHASE = 1
+# environment
+PUB_CACHE = /TOOLS/SDK/flutter_linux/.pub-cache
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# makefile (from '../tools/w800/.config', line 16)
+CONFIG_W800_CODE_ENCRYPT = 0
+# makefile (from '../tools/w800/conf.mk', line 66)
+UNAME_O := GNU/Linux
+# default
+SUFFIXES := 
+# makefile (from '../tools/w800/conf.mk', line 8)
+TARGET = $(subst ",,$(CONFIG_W800_TARGET_NAME))
+# makefile (from '../tools/w800/conf.mk', line 94)
+LD_FILE = $(LDDIR)/gcc_csky.ld
+# makefile (from '../Makefile', line 1)
+TOP_DIR := .
+# makefile (from '../tools/w800/conf.mk', line 41)
+RUN_ADDRESS := 80D0400
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from '../tools/w800/conf.mk', line 86)
+CC = @echo "CC       $<"; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-gcc
+# makefile (from '../tools/w800/conf.mk', line 89)
+OBJCOPY = @echo "OBJCOPY  $(notdir $(FIRMWAREDIR)/$(TARGET)/$(TARGET).bin)"; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-objcopy
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+GDMSESSION = ubuntu
+# environment
+LC_IDENTIFICATION = zh_CN.UTF-8
+# makefile (from '../tools/w800/conf.mk', line 124)
+ARFLAGS_2 = xo
+# variable set hash-table stats:
+# Load=229/1024=22%, Rehash=0, Collisions=178/699=25%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# ../bin/build/w801/image (device 66313, inode 18232934): No files, no impossibilities so far.
+# . (device 66313, inode 18223166): 4 files, no impossibilities.
+
+# 4 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+../bin/build/w801/bin/%.bin: ../bin/build/w801/image/%.elf
+#  recipe to execute (from '../tools/w800/rules.mk', line 59):
+	@mkdir -p $(FIRMWAREDIR)
+	@mkdir -p $(FIRMWAREDIR)/$(TARGET)
+	$(OBJCOPY) -O binary $(IMAGEODIR)/$(TARGET).elf $(FIRMWAREDIR)/$(TARGET)/$(TARGET).bin
+	@gcc $(SDK_TOOLS)/wm_tool.c -lpthread -o $(WM_TOOL)
+	@$(WM_TOOL) -b $(FIRMWAREDIR)/$(TARGET)/$(TARGET).bin -fc 0 -it $(IMG_TYPE) -ih $(IMG_HEADER) -ra $(RUN_ADDRESS) -ua $(UPD_ADDRESS) -nh 0 -un 0 -vs $(shell $(VER_TOOL) $(TOP_DIR)/platform/sys/wm_main.c) -o $(FIRMWAREDIR)/$(TARGET)/$(TARGET)
+	@cp $(IMAGEODIR)/$(TARGET).map $(FIRMWAREDIR)/$(TARGET)/$(TARGET).map
+	@$(WM_TOOL) -b  $(SEC_BOOT_BIN) -fc 0 -it 0 -ih $(SECBOOT_HEADER_POS) -ra $(SECBOOT_ADDRESS_POS) -ua $(UPD_ADDRESS) -nh $(IMG_HEADER) -un 0 -o $(SEC_BOOT_IMG)
+	@cat $(SEC_BOOT) $(FIRMWAREDIR)/$(TARGET)/$(TARGET).img > $(FIRMWAREDIR)/$(TARGET)/$(TARGET).fls
+	@$(WM_TOOL) -b $(FIRMWAREDIR)/$(TARGET)/$(TARGET).img -fc 1 -it $(IMG_TYPE) -ih $(IMG_HEADER) -ra $(RUN_ADDRESS) -ua $(UPD_ADDRESS) -nh 0 -un 0 -vs $(shell $(VER_TOOL) $(TOP_DIR)/platform/sys/wm_main.c) -o $(FIRMWAREDIR)/$(TARGET)/$(TARGET)
+	@mv $(FIRMWAREDIR)/$(TARGET)/$(TARGET)_gz.img $(FIRMWAREDIR)/$(TARGET)/$(TARGET)_ota.img
+	@echo "build finished!"
+
+../bin/build/w801/obj/app/%.o: %.c
+#  recipe to execute (from '../tools/w800/rules.mk', line 177):
+	@mkdir -p $(OBJODIR)/$(subdir_path)
+	$(CC) $(if $(findstring $<,$(DSRCS)),$(DFLAGS),$(CFLAGS)) $(COPTS_$(*F)) $(INCLUDES) $(CMACRO) -c "$<" -o "$@" -MMD -MD -MF "$(@:$(OBJODIR)/$(subdir_path)/%.o=$(OBJODIR)/$(subdir_path)/%.o.d)" -MT "$(@)"
+
+../bin/build/w801/obj/app/%.o: %.S
+#  recipe to execute (from '../tools/w800/rules.mk', line 181):
+	@mkdir -p $(OBJODIR)/$(subdir_path)
+	$(ASM) $(ASMFLAGS) $(INCLUDES) $(CMACRO) -c "$<" -o "$@"
+
+# 3 implicit rules, 0 (0.0%) terminal.
+# Files
+
+# Not a target:
+tools/w800/rules.mk:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+FORCE:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+distclean: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '../tools/w800/rules.mk', line 142):
+	$(RM) -r $(FIRMWAREDIR)/$(CONFIG_ARCH_TYPE)
+	$(RM) -r $(SDK_TOOLS)/.config.old
+
+# Not a target:
+../include/wm_wifi_config.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.119907321
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/platform/wm_params.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/wm_ram_config.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.119907321
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/driver/wm_hostspi.h:
+ 
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/wm_config.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.119907321
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.099907441
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/os/wm_osal.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+lib: .subdirs ../bin/build/w801/obj/app/main.o ../bin/build/w801/lib/libuser.a
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '../tools/w800/rules.mk', line 125):
+	@cp $(LIBODIR)/libapp$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@cp $(LIBODIR)/libwmarch$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@cp $(LIBODIR)/libwmcommon$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@cp $(LIBODIR)/libdrivers$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@cp $(LIBODIR)/libnetwork$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@cp $(LIBODIR)/libos$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@cp $(LIBODIR)/libwmsys$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@echo "libs has been updated."
+
+# Not a target:
+../include/os/wm_os_config.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+../bin/build/w801/obj/app/main.o: main.c main.c ../include/wm_include.h ../include/wm_type_def.h ../include/driver/wm_uart.h ../include/list.h ../include/wm_type_def.h ../include/os/wm_osal.h ../include/wm_config.h ../include/arch/xt804/csi_config.h ../include/os/wm_os_config.h ../include/wm_wifi_config.h ../include/wm_ram_config.h ../include/wm_config.h ../include/arch/xt804/csi_core/core_804.h ../include/arch/xt804/csi_core/csi_gcc.h ../include/driver/wm_gpio.h ../include/driver/wm_io.h ../include/driver/wm_hostspi.h ../include/wm_ram_config.h ../include/net/wm_socket.h ../include/net/wm_socket2.0.3.h ../include/app/wm_netif.h ../include/app/wm_netif2.0.3.h ../include/net/wm_sockets.h ../include/net/wm_sockets2.0.3.h ../include/wifi/wm_wifi.h ../include/platform/wm_params.h ../include/driver/wm_hspi.h ../include/driver/wm_pwm.h ../include/driver/wm_efuse.h ../include/platform/wm_mem.h ../demo/wm_demo.h ../include/wm_regs.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2022-02-12 21:05:36.721827353
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := ../bin/build/w801/obj/app/main.o
+# automatic
+# * := main
+# automatic
+# < := main.c
+# automatic
+# + := main.c main.c ../include/wm_include.h ../include/wm_type_def.h ../include/driver/wm_uart.h ../include/list.h ../include/wm_type_def.h ../include/os/wm_osal.h ../include/wm_config.h ../include/arch/xt804/csi_config.h ../include/os/wm_os_config.h ../include/wm_wifi_config.h ../include/wm_ram_config.h ../include/wm_config.h ../include/arch/xt804/csi_core/core_804.h ../include/arch/xt804/csi_core/csi_gcc.h ../include/driver/wm_gpio.h ../include/driver/wm_io.h ../include/driver/wm_hostspi.h ../include/wm_ram_config.h ../include/net/wm_socket.h ../include/net/wm_socket2.0.3.h ../include/app/wm_netif.h ../include/app/wm_netif2.0.3.h ../include/net/wm_sockets.h ../include/net/wm_sockets2.0.3.h ../include/wifi/wm_wifi.h ../include/platform/wm_params.h ../include/driver/wm_hspi.h ../include/driver/wm_pwm.h ../include/driver/wm_efuse.h ../include/platform/wm_mem.h ../demo/wm_demo.h ../include/wm_regs.h
+# automatic
+# % := 
+# automatic
+# ^ := main.c ../include/wm_include.h ../include/wm_type_def.h ../include/driver/wm_uart.h ../include/list.h ../include/os/wm_osal.h ../include/wm_config.h ../include/arch/xt804/csi_config.h ../include/os/wm_os_config.h ../include/wm_wifi_config.h ../include/wm_ram_config.h ../include/arch/xt804/csi_core/core_804.h ../include/arch/xt804/csi_core/csi_gcc.h ../include/driver/wm_gpio.h ../include/driver/wm_io.h ../include/driver/wm_hostspi.h ../include/net/wm_socket.h ../include/net/wm_socket2.0.3.h ../include/app/wm_netif.h ../include/app/wm_netif2.0.3.h ../include/net/wm_sockets.h ../include/net/wm_sockets2.0.3.h ../include/wifi/wm_wifi.h ../include/platform/wm_params.h ../include/driver/wm_hspi.h ../include/driver/wm_pwm.h ../include/driver/wm_efuse.h ../include/platform/wm_mem.h ../demo/wm_demo.h ../include/wm_regs.h
+# automatic
+# ? := ../include/arch/xt804/csi_config.h
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=21/40=52%
+#  recipe to execute (from '../tools/w800/rules.mk', line 177):
+	@mkdir -p $(OBJODIR)/$(subdir_path)
+	$(CC) $(if $(findstring $<,$(DSRCS)),$(DFLAGS),$(CFLAGS)) $(COPTS_$(*F)) $(INCLUDES) $(CMACRO) -c "$<" -o "$@" -MMD -MD -MF "$(@:$(OBJODIR)/$(subdir_path)/%.o=$(OBJODIR)/$(subdir_path)/%.o.d)" -MT "$(@)"
+
+# Not a target:
+../include/driver/wm_io.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/arch/xt804/csi_config.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-17 10:53:40.652600298
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/platform/wm_mem.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../tools/w800/.config:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:03:18.019348575
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/driver/wm_uart.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+flash: all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '../tools/w800/rules.mk', line 158):
+	@$(WM_TOOL) -c $(DL_PORT) -rs at -ds $(DL_BAUD) -dl $(FIRMWAREDIR)/$(TARGET)/$(TARGET).fls
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '../tools/w800/rules.mk', line 139):
+	$(RM) -r $(ODIR)
+
+# Not a target:
+../include/net/wm_sockets.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../tools/w800/inc.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.319906117
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/list.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../demo/wm_demo.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:05:29.777717847
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/net/wm_socket2.0.3.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+.subdirs:
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+# automatic
+# @ := .subdirs
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
+#  recipe to execute (from '../tools/w800/rules.mk', line 164):
+	@set -e; $(foreach d, $(SUBDIRS), $(MAKE) -C $(d);)
+
+menuconfig:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '../tools/w800/rules.mk', line 135):
+	@$(SDK_TOOLS)/mconfig.sh
+
+# Not a target:
+../tools/w800/conf.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.319906117
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../tools/w800/rules.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.323906093
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/net/wm_socket.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/driver/wm_gpio.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+../include/wm_include.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.119907321
+#  File has been updated.
+#  Successfully updated.
+
+all: .subdirs ../bin/build/w801/obj/app/main.o ../bin/build/w801/lib/libuser.a
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/29=0%
+
+run: all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '../tools/w800/rules.mk', line 146):
+	@$(WM_TOOL) -c $(DL_PORT) -rs at -ds $(DL_BAUD) -dl $(FIRMWAREDIR)/$(TARGET)/$(TARGET).fls -sl str -ws 115200
+
+help:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '../tools/w800/rules.mk', line 102):
+	@echo  'Cleaning targets:'
+	@echo  '  clean      - Remove most generated files'
+	@echo  '  distclean  - Remove all generated files'
+	@echo  ''
+	@echo  'Configuration targets:'
+	@echo  '  menuconfig - Update current config utilising a menu based program'
+	@echo  ''
+	@echo  'Compiling targets:'
+	@echo  '  all	     - Build firmware'
+	@echo  '  lib	     - Build library'
+	@echo  ''
+	@echo  'Programming targets:'
+	@echo  '  image	     - Flash img firmware to device'
+	@echo  '  flash      - Flash fls firmware to the device'
+	@echo  '  erase      - Erase device flash'
+	@echo  '  down       - Flash fls firmware to the device (without compile)'
+	@echo  ''
+	@echo  'Other targets:'
+	@echo  '  list       - List locally available serial ports'
+	@echo  '  run        - Flash the firmware to the device after compilation'
+	@echo  '               and capture the log output by the device'
+
+# Not a target:
+../include/wifi/wm_wifi.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.119907321
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+main.c:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-02-12 21:01:45.099907441
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/driver/wm_efuse.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+tools/w800/conf.mk:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+../include/driver/wm_pwm.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+image: all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '../tools/w800/rules.mk', line 155):
+	@$(WM_TOOL) -c $(DL_PORT) -rs at -ds $(DL_BAUD) -dl $(FIRMWAREDIR)/$(TARGET)/$(TARGET).img
+
+# Not a target:
+../include/app/wm_netif.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.111907369
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/arch/xt804/csi_core/csi_gcc.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/app/wm_netif2.0.3.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.111907369
+#  File has been updated.
+#  Successfully updated.
+
+list:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '../tools/w800/rules.mk', line 149):
+	@$(WM_TOOL) -l
+
+# Not a target:
+../Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.099907441
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../bin/build/w801/obj/app/main.o.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:05:36.713827227
+#  File has been updated.
+#  Successfully updated.
+
+libuser.a: .subdirs ../bin/build/w801/lib/libuser.a
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+../include/driver/wm_hspi.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+../include/arch/xt804/csi_core/core_804.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.111907369
+#  File has been updated.
+#  Successfully updated.
+
+erase:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '../tools/w800/rules.mk', line 161):
+	@$(WM_TOOL) -c $(DL_PORT) -rs at -eo all
+
+# Not a target:
+../include/net/wm_sockets2.0.3.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.115907345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+../include/wm_type_def.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.119907321
+#  File has been updated.
+#  Successfully updated.
+
+../bin/build/w801/lib/libuser.a: ../bin/build/w801/obj/app/main.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '../tools/w800/rules.mk', line 190):
+	@mkdir -p $(LIBODIR)
+	$(if $(filter %.a,$?),@mkdir -p $(OBJODIR)/_libuser)
+	$(if $(filter %.a,$?),@cd $(OBJODIR)/_libuser; $(foreach lib,$(filter %.a,$?),$(AR) xo $(UP_EXTRACT_DIR)/$(notdir $(lib));))
+	$(AR) ru $@ $(filter %.o,$?) $(if $(filter %.a,$?),$(OBJODIR)/_libuser/*.o)
+	$(if $(filter %.a,$?),@$(RM) -r $(OBJODIR)/_libuser)
+
+.PHONY: FORCE
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+down:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from '../tools/w800/rules.mk', line 152):
+	@$(WM_TOOL) -c $(DL_PORT) -rs at -ds $(DL_BAUD) -dl $(FIRMWAREDIR)/$(TARGET)/$(TARGET).fls
+
+# Not a target:
+../include/wm_regs.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.119907321
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=59/1024=6%, Rehash=0, Collisions=4/132=3%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 71 / storage = 1360 B / avg = 19 B
+# current buf: size = 8162 B / used = 1360 B / count = 71 / avg = 19 B
+
+# strcache performance: lookups = 122 / hit rate = 41%
+# hash-table stats:
+# Load=71/8192=1%, Rehash=0, Collisions=0/122=0%
+# Finished Make data base on Tue Apr 12 08:53:24 2022
+
+# make[1]: Leaving directory '/ICESX/workSpaceC/IC/workspace_w80x_vsc/wm-sdk-w80x/app'
+ 
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Tue Apr 12 08:53:24 2022
+
+# Variables
+
+# makefile (from 'tools/w800/.config', line 14)
+CONFIG_W800_PRIKEY_SEL = 0
+# environment
+GRADLE_USER_HOME = /TOOLS/gradle
+# environment
+JAVA_HOME = /TOOLS/JDK/openjdk-14+36_linux-x64
+# environment
+GDK_BACKEND = x11
+# makefile (from 'tools/w800/conf.mk', line 122)
+ARFLAGS := ru
+# environment
+LC_ALL = C
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+SSH_AGENT_LAUNCHER = gnome-keyring
+# makefile (from 'tools/w800/conf.mk', line 84)
+AR = @echo "AR       $(notdir $@)" 2>/dev/null; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-ar
+# makefile (from 'tools/w800/conf.mk', line 14)
+IMAGEODIR := ./bin/build/w801/image
+# makefile (from 'tools/w800/conf.mk', line 44)
+PRIKEY_SEL := 0
+# makefile (from 'tools/w800/rules.mk', line 27)
+OLIBS := 
+# makefile (from 'tools/w800/conf.mk', line 72)
+TOOL_CHAIN_PATH = $(subst ",,$(CONFIG_W800_TOOLCHAIN_PATH))
+# makefile (from 'tools/w800/.config', line 10)
+CONFIG_W800_IMAGE_TYPE = 1
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
+IDF_PATH = /TOOLS/SDK/esp32/esp-idf/esp-idf
+# makefile (from 'tools/w800/conf.mk', line 88)
+LINK = @echo "LINK     $(notdir $(IMAGEODIR)/$(TARGET).elf)"; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-gcc
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-38ddcb8a-607a-465c-adb2-b2e15b8316ff.sock
+# environment
+PUB_HOSTED_URL = https://pub.flutter-io.cn
+# environment
+LC_NAME = zh_CN.UTF-8
+# makefile (from 'tools/w800/.config', line 29)
+CONFIG_W800_USE_NIMBLE = y
+# environment
+LC_NUMERIC = zh_CN.UTF-8
+# makefile (from 'tools/w800/conf.mk', line 110)
+ASMFLAGS := -Wall -DTLS_CONFIG_CPU_XT804=1 -DGCC_COMPILE=1 -mcpu=ck804ef -O2 -g -DWM_SWD_ENABLE=1 -DNIMBLE_FTR=1 -std=gnu99 -c -mhard-float -Wa,--gdwarf2 -fdata-sections -ffunction-sections
+# environment
+VSCODE_CWD = /home/i
+# makefile (from 'Makefile', line 5)
+GEN_IMAGES = $(TARGET).elf
+# environment
+WINDOWPATH = 2
+# makefile (from 'tools/w800/conf.mk', line 96)
+LIB_EXT = .a
+# makefile (from 'tools/w800/conf.mk', line 64)
+VERBOSE = NO
+# makefile (from 'tools/w800/conf.mk', line 56)
+USE_NIMBLE = 1
+# makefile (from 'tools/w800/.config', line 36)
+CONFIG_W800_TOOLCHAIN_PATH = "/TOOLS/SDK/csky/csky-elfabiv2-tools-x86_64-minilibc-20210423/bin/"
+# environment
+NVM_DIR = /TOOLS/nvm
+# environment
+LC_ADDRESS = zh_CN.UTF-8
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# makefile (from 'tools/w800/conf.mk', line 126)
+LINKFLAGS := -mcpu=ck804ef -nostartfiles -mhard-float -lm -Wl,-T./ld/w800/gcc_csky.ld
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# makefile (from 'Makefile', line 82)
+CONFIGURATION_DEFINES = 
+# makefile (from 'tools/w800/rules.mk', line 15)
+CSRCS = $(wildcard *.c)
+# environment
+WINEPREFIX = /OTHER/wine
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# makefile (from 'tools/w800/conf.mk', line 4)
+CONFIG_ARCH_TYPE = w800
+# environment
+PWD = /ICESX/workSpaceC/IC/workspace_w80x_vsc/wm-sdk-w80x
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+HOSTNAME = extreme
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# makefile (from 'tools/w800/conf.mk', line 18)
+CA_PATH := ./tools/w800/ca
+# makefile (from 'tools/w800/.config', line 30)
+CONFIG_W800_FIRMWARE_DEBUG = y
+# makefile (from 'tools/w800/conf.mk', line 42)
+UPD_ADDRESS := 8010000
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+NVM_INC = /TOOLS/nvm/versions/node/v16.13.1/include/node
+# environment
+VSCODE_CODE_CACHE_PATH = /home/i/.config/Code/CachedData/8dfae7a5cd50421d10cd99cb873990460525a898
+# makefile (from 'tools/w800/rules.mk', line 192)
+DEP_LIBS_w801 = $(foreach lib,$(filter %.a,$(COMPONENTS_w801)),$(LIBODIR)/$(notdir $(lib)))
+# environment
+LANG = C
+# makefile (from 'tools/w800/conf.mk', line 17)
+SDK_TOOLS := ./tools/w800
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+ZIPINFO = -O CP936
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile (from 'tools/w800/.config', line 13)
+CONFIG_W800_UPDATE_ADDRESS = 8010000
+# makefile
+MAKEFLAGS = pqrR
+# makefile (from 'tools/w800/rules.mk', line 29)
+OIMAGES := ./bin/build/w801/image/w801.elf
+# environment
+INSTALLER_PATH = /home/i/Huawei/DevEco-Device-Tool
+# makefile (from 'tools/w800/conf.mk', line 13)
+LIBODIR := ./bin/build/w801/lib
+# makefile (from 'Makefile', line 32)
+COMPONENTS_w801 = $(TOP_DIR)/app/libuser$(LIB_EXT) $(TOP_DIR)/demo/libdemo$(LIB_EXT)
+# makefile
+CURDIR := /ICESX/workSpaceC/IC/workspace_w80x_vsc/wm-sdk-w80x
+# makefile (from 'tools/w800/conf.mk', line 85)
+ASM = @echo "ASM      $<"; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-gcc
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+UNZIP = -O CP936
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# makefile (from 'tools/w800/conf.mk', line 46)
+CODE_ENCRYPT := 0
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# makefile (from 'tools/w800/conf.mk', line 71)
+TOOL_CHAIN_PREFIX = $(CONFIG_W800_TOOLCHAIN_PREFIX)
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+NVM_BIN = /TOOLS/nvm/versions/node/v16.13.1/bin
+# environment
+HISTSIZE = 1000
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from 'tools/w800/conf.mk', line 10)
+ODIR := ./bin/build
+# environment
+IDF_TOOLS_PATH = /TOOLS/SDK/esp32/espressif
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# makefile (from 'tools/w800/rules.mk', line 1)
+MAKEFILE_LIST := Makefile tools/w800/conf.mk tools/w800/.config tools/w800/inc.mk tools/w800/rules.mk
+# automatic
+@F = $(notdir $@)
+# makefile (from 'tools/w800/conf.mk', line 26)
+SEC_BOOT := ./tools/w800/w800_secboot.img
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 2221
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+PYTHONUSERBASE = /TOOLS/PYTHON_PATH
+# makefile (from 'tools/w800/.config', line 9)
+CONFIG_W800_TARGET_NAME = "w801"
+# makefile (from 'tools/w800/conf.mk', line 98)
+CCFLAGS := -Wall -DTLS_CONFIG_CPU_XT804=1 -DGCC_COMPILE=1 -mcpu=ck804ef -O2 -g -DWM_SWD_ENABLE=1 -DNIMBLE_FTR=1 -std=gnu99 -c -mhard-float -Wall -fdata-sections -ffunction-sections
+# makefile (from 'Makefile', line 91)
+INCLUDES :=   -I include -I ./include -I ./include/app -I ./include/arch/xt804 -I ./include/arch/xt804/csi_core -I ./include/arch/xt804/csi_dsp -I ./include/driver -I ./include/net -I ./include/os -I ./include/platform -I ./include/wifi -I ./include/bt -I ./platform/common/params -I ./platform/inc -I ./platform/sys -I ./src/app/wm_atcmd -I ./src/app/dhcpserver -I ./src/app/dnsserver -I ./src/app/web -I ./src/app/cloud -I ./src/app/cJSON -I ./src/app/rmms -I ./src/app/ntp -I ./src/app/httpclient -I ./src/app/oneshotconfig -I ./src/app/iperf -I ./src/app/mqtt -I ./src/app/ping -I ./src/app/polarssl/include -I ./src/app/mDNS/mDNSPosix -I ./src/app/mDNS/mDNSCore -I ./src/app/ota -I ./src/app/libwebsockets-2.1-stable -I ./src/app/fatfs -I ./src/app/mbedtls/include -I ./src/app/mbedtls/ports -I ./src/network/api2.0.3 -I ./src/network/lwip2.0.3/include -I ./src/os/rtos/include -I ./src/app/factorycmd -I ./demo -I ./src/bt/blehost/ext/tinycrypt/include -I ./src/bt/blehost/nimble/host/include -I ./src/bt/blehost/nimble/host/mesh/include -I ./src/bt/blehost/nimble/host/porting/w800/include -I ./src/bt/blehost/nimble/host/services/gap/include -I ./src/bt/blehost/nimble/host/services/gatt/include -I ./src/bt/blehost/nimble/host/services/bas/include -I ./src/bt/blehost/nimble/host/services/dis/include -I ./src/bt/blehost/nimble/host/store/config/include -I ./src/bt/blehost/nimble/host/store/ram/include -I ./src/bt/blehost/nimble/host/util/include -I ./src/bt/blehost/nimble/include -I ./src/bt/blehost/nimble/transport/uart/include -I ./src/bt/blehost/porting/w800/include -I ./src/bt/host -I ./src/bt/host/main -I ./src/bt/host/include -I ./src/bt/host/stack -I ./src/bt/host/stack/include -I ./src/bt/host/gki/wm -I ./src/bt/host/gki/common -I ./src/bt/host/vnd/include -I ./src/bt/host/bta/include -I ./src/bt/host/osi/include -I ./src/bt/host/hci/include -I ./src/bt/host/btif/include -I ./src/bt/host/embdrv/sbc/encoder/include -I ./src/bt/host/embdrv/sbc/decoder/include -I ./src/bt/host/btcore/include -Iinclude -I ./
+# environment
+SESSION_MANAGER = local/extreme:@/tmp/.ICE-unix/1737,unix/extreme:/tmp/.ICE-unix/1737
+# automatic
+*F = $(notdir $*)
+# makefile (from 'tools/w800/conf.mk', line 15)
+BINODIR := ./bin/build/w801/bin
+# makefile (from 'tools/w800/conf.mk', line 93)
+LDDIR = $(TOP_DIR)/ld/$(CONFIG_ARCH_TYPE)
+# makefile (from 'tools/w800/rules.mk', line 35)
+ShortcutRule = $(1): .subdirs $(2)/$(1)
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# makefile (from 'tools/w800/rules.mk', line 50)
+define MakeImage
+DEP_LIBS_$(1) = $$(foreach lib,$$(filter %$(LIB_EXT),$$(COMPONENTS_$(1))),$$(LIBODIR)/$$(notdir $$(lib)))
+DEP_OBJS_$(1) = $$(foreach obj,$$(filter %.o,$$(COMPONENTS_$(1))),$$(OBJODIR)/$$(notdir $$(obj)))
+$$(IMAGEODIR)/$(1).elf: $$(OBJS) $$(DEP_OBJS_$(1)) $$(DEP_LIBS_$(1)) $$(DEPENDS_$(1))
+	@mkdir -p $$(IMAGEODIR)
+	$(LINK) -Wl,--gc-sections -Wl,-zmax-page-size=1024 -Wl,--whole-archive $$(OBJS) $$(DEP_OBJS_$(1)) $$(DEP_LIBS_$(1)) $$(if $$(LINKFLAGS_$(1)),$$(LINKFLAGS_$(1))) -Wl,--no-whole-archive $(LINKFLAGS) $(MAP) -o $$@
+endef
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+ANDROID_SDK_ROOT = /TOOLS/SDK/android-sdk-linux
+# makefile (from 'tools/w800/conf.mk', line 132)
+MAP := -Wl,-ckmap=./bin/build/w801/image/w801.map
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'tools/w800/rules.mk', line 22)
+OBJS := $(subst ,, )
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# makefile (from 'tools/w800/conf.mk', line 31)
+USE_LIB = 1
+# default
+MAKECMDGOALS := all
+# environment
+PLATFORMIO_CALLER = vscode
+# environment
+LD_LIBRARY_PATH = :/TOOLS/software/sqlplus:/TOOLS/software/sqlplus
+# environment
+XMODIFIERS = @im=fcitx
+# makefile (from 'Makefile', line 84)
+DEFINES = $(CONFIGURATION_DEFINES)
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+SHLVL = 0
+# makefile (from 'tools/w800/.config', line 11)
+CONFIG_W800_IMAGE_HEADER = 80D0000
+# environment
+MAKELEVEL := 0
+# makefile (from 'tools/w800/conf.mk', line 22)
+SECBOOT_HEADER_POS = 8002000
+# makefile (from 'tools/w800/conf.mk', line 90)
+OBJDUMP = @echo "OBJDUMP  $<"; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-objdump
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/i/Huawei/DevEco-Device-Tool/core/deveco-venv/bin:/home/i/Huawei/DevEco-Device-Tool/core/deveco-venv:/TOOLS/SDK/flutter_linux/bin:/TOOLS/SDK/android-sdk-linux/platform-tools::/TOOLS/PYTHON_PATH:/TOOLS/PYTHON_PATH/bin:/TOOLS/software/go/bin:/TOOLS/software/apache-maven-3.6.0/bin:/TOOLS/JDK/openjdk-14+36_linux-x64/bin:/TOOLS/nvm/versions/node/v16.13.1/bin:/TOOLS/SDK/flutter_linux/bin:/TOOLS/SDK/android-sdk-linux/platform-tools::/TOOLS/PYTHON_PATH/bin:/TOOLS/software/go/bin:/TOOLS/software/apache-maven-3.6.0/bin:/TOOLS/JDK/openjdk-14+36_linux-x64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# makefile (from 'tools/w800/conf.mk', line 20)
+WM_TOOL = $(SDK_TOOLS)/wm_tool
+# environment
+FLUTTERPATH = /TOOLS/SDK/flutter_linux
+# default
+MAKEFILES := 
+# makefile (from 'tools/w800/rules.mk', line 18)
+subdir_path := /ICESX/workSpaceC/IC/workspace_w80x_vsc/wm-sdk-w80x
+# environment
+LC_MONETARY = zh_CN.UTF-8
+# automatic
+^F = $(notdir $^)
+# makefile (from 'tools/w800/.config', line 23)
+CONFIG_W800_DOWNLOAD_RATE = 115200
+# makefile (from 'tools/w800/rules.mk', line 31)
+OBINS := ./bin/build/w801/bin/w801.bin
+# environment
+LC_TIME = zh_CN.UTF-8
+# makefile (from 'Makefile', line 87)
+DDEFINES = $(CONFIGURATION_DEFINES)
+# environment
+GOROOT = /TOOLS/software/go
+# environment
+INVOCATION_ID = a12f27dbfc164de0ba51ad2d9d5a2f5d
+# makefile (from 'tools/w800/conf.mk', line 87)
+CPP = @echo "CPP      $<"; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-g++
+# makefile (from 'tools/w800/conf.mk', line 11)
+OBJODIR := ./bin/build/w801/obj
+# makefile (from 'tools/w800/conf.mk', line 37)
+DL_BAUD = $(CONFIG_W800_DOWNLOAD_RATE)
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+USERNAME = i
+# environment
+LC_TELEPHONE = zh_CN.UTF-8
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# automatic
+?F = $(notdir $?)
+# environment
+GTK_IM_MODULE = fcitx
+# environment
+NO_PROXY = 127.0.0.1
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# makefile (from 'tools/w800/conf.mk', line 67)
+UNAME_S := Linux
+# makefile (from 'tools/w800/conf.mk', line 57)
+optimization = -O2 -g -DWM_SWD_ENABLE=1 -DNIMBLE_FTR=1
+# environment
+LS_COLORS = 
+# automatic
++F = $(notdir $+)
+# environment
+DESKTOP_SESSION = ubuntu
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# makefile (from 'tools/w800/conf.mk', line 39)
+IMG_TYPE := 1
+# 'override' directive
+GNUMAKEFLAGS := 
+# makefile (from 'tools/w800/conf.mk', line 16)
+FIRMWAREDIR := ./bin
+# environment
+CLUTTER_IM_MODULE = fcitx
+# environment
+LOGNAME = i
+# environment
+IDEA_JDK = /TOOLS/JDK/jbr-linux-x64
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# makefile (from 'tools/w800/conf.mk', line 12)
+UP_EXTRACT_DIR := ../../lib
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 1758
+# makefile (from 'tools/w800/rules.mk', line 192)
+DEP_OBJS_w801 = $(foreach obj,$(filter %.o,$(COMPONENTS_w801)),$(OBJODIR)/$(notdir $(obj)))
+# makefile (from 'tools/w800/.config', line 28)
+CONFIG_W800_USE_LIB = y
+# makefile (from 'tools/w800/conf.mk', line 25)
+SEC_BOOT_IMG := ./tools/w800/w800_secboot
+# environment
+DISPLAY = :1
+# environment
+USER = i
+# environment
+GTK_MODULES = gail:atk-bridge
+# makefile (from 'tools/w800/.config', line 17)
+CONFIG_W800_SIGN_PUBKEY_SRC = 0
+# makefile (from 'Makefile', line 6)
+GEN_BINS = $(TARGET).bin
+# default
+MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 0
+# makefile (from 'tools/w800/.config', line 35)
+CONFIG_W800_TOOLCHAIN_PREFIX = "csky-abiv2-elf"
+# makefile (from 'tools/w800/conf.mk', line 40)
+IMG_HEADER := 80D0000
+# environment
+MANAGERPID = 1530
+# makefile (from 'tools/w800/.config', line 15)
+CONFIG_W800_IMAGE_SIGNATURE = 0
+# environment
+LC_MEASUREMENT = zh_CN.UTF-8
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2221
+# makefile (from 'Makefile', line 79)
+LINKFLAGS_w801 = $(LINKLIB)
+# environment
+PYTHONPATH = :/TOOLS/PYTHON_PATH:/TOOLS/PYTHON_PATH
+# environment
+_ = /usr/share/code/code
+# makefile (from 'tools/w800/.config', line 12)
+CONFIG_W800_RUN_ADDRESS = 80D0400
+# environment
+LC_PAPER = zh_CN.UTF-8
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'tools/w800/rules.mk', line 33)
+CFLAGS = $(CCFLAGS) $(DEFINES) $(EXTRA_CCFLAGS) $(INCLUDES)
+# makefile (from 'Makefile', line 7)
+SUBDIRS = $(TOP_DIR)/app $(TOP_DIR)/demo
+# makefile (from 'Makefile', line 71)
+LINKLIB = $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libwlan$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libbtcontroller$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libdsp$(LIB_EXT)	 $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libapp$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libwmarch$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libwmcommon$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libdrivers$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libnetwork$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libos$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libwmsys$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)/libblehost$(LIB_EXT)
+# makefile (from 'tools/w800/conf.mk', line 36)
+DL_PORT = $(subst ",,$(CONFIG_W800_DOWNLOAD_PORT))
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# makefile (from 'tools/w800/conf.mk', line 23)
+SECBOOT_ADDRESS_POS = 8002400
+# makefile (from 'tools/w800/rules.mk', line 25)
+OBJS-DEPS := 
+# environment
+NVM_CD_FLAGS = 
+# environment
+JOURNAL_STREAM = 8:24258
+# makefile (from 'tools/w800/conf.mk', line 45)
+SIGNATURE := 0
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# makefile (from 'tools/w800/.config', line 22)
+CONFIG_W800_DOWNLOAD_PORT = "ttyUSB0"
+# environment
+FLUTTER_STORAGE_BASE_URL = https://storage.flutter-io.cn
+# environment
+PLATFORMIO_IDE = 3.0.0
+# environment
+HOME = /home/i
+# environment
+QT_IM_MODULE = fcitx
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-75ce2240-1.66.1-main.sock
+# makefile (from 'tools/w800/rules.mk', line 16)
+ASRCS = $(wildcard *.S)
+# makefile (from 'tools/w800/conf.mk', line 19)
+VER_TOOL = $(SDK_TOOLS)/wm_getver
+# makefile (from 'tools/w800/conf.mk', line 47)
+SIGN_PUBKEY_SRC := 0
+# makefile (from 'tools/w800/conf.mk', line 24)
+SEC_BOOT_BIN := ./tools/w800/w800_secboot.bin
+# makefile (from 'tools/w800/rules.mk', line 39)
+define MakeLibrary
+ 
+DEP_LIBS_$(1) = $$(foreach lib,$$(filter %$(LIB_EXT),$$(COMPONENTS_$(1))),$$(LIBODIR)/$$(notdir $$(lib)))
+DEP_OBJS_$(1) = $$(foreach obj,$$(filter %.o,$$(COMPONENTS_$(1))),$$(OBJODIR)/$$(notdir $$(obj)))
+$$(LIBODIR)/$(1)$(LIB_EXT): $$(OBJS) $$(DEP_OBJS_$(1)) $$(DEP_LIBS_$(1)) $$(DEPENDS_$(1))
+	@mkdir -p $$(LIBODIR)
+	$$(if $$(filter %$(LIB_EXT),$$?),@mkdir -p $$(OBJODIR)/_$(1))
+	$$(if $$(filter %$(LIB_EXT),$$?),@cd $$(OBJODIR)/_$(1); $$(foreach lib,$$(filter %$(LIB_EXT),$$?),$$(AR) $(ARFLAGS_2) $$(UP_EXTRACT_DIR)/$$(notdir $$(lib));))
+	$$(AR) $(ARFLAGS) $$@ $$(filter %.o,$$?) $$(if $$(filter %$(LIB_EXT),$$?),$$(OBJODIR)/_$(1)/*.o)
+	$$(if $$(filter %$(LIB_EXT),$$?),@$$(RM) -r $$(OBJODIR)/_$(1))
+endef
+# environment
+IM_CONFIG_PHASE = 1
+# environment
+PUB_CACHE = /TOOLS/SDK/flutter_linux/.pub-cache
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'tools/w800/.config', line 16)
+CONFIG_W800_CODE_ENCRYPT = 0
+# makefile (from 'tools/w800/conf.mk', line 66)
+UNAME_O := GNU/Linux
+# default
+SUFFIXES := 
+# makefile (from 'tools/w800/conf.mk', line 8)
+TARGET = $(subst ",,$(CONFIG_W800_TARGET_NAME))
+# makefile (from 'tools/w800/conf.mk', line 94)
+LD_FILE = $(LDDIR)/gcc_csky.ld
+# makefile (from 'Makefile', line 1)
+TOP_DIR := .
+# makefile (from 'tools/w800/conf.mk', line 41)
+RUN_ADDRESS := 80D0400
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'tools/w800/conf.mk', line 86)
+CC = @echo "CC       $<"; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-gcc
+# makefile (from 'tools/w800/conf.mk', line 89)
+OBJCOPY = @echo "OBJCOPY  $(notdir $(FIRMWAREDIR)/$(TARGET)/$(TARGET).bin)"; $(TOOL_CHAIN_PATH)$(TOOL_CHAIN_PREFIX)-objcopy
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+GDMSESSION = ubuntu
+# environment
+LC_IDENTIFICATION = zh_CN.UTF-8
+# makefile (from 'tools/w800/conf.mk', line 124)
+ARFLAGS_2 = xo
+# variable set hash-table stats:
+# Load=230/1024=22%, Rehash=0, Collisions=173/689=25%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# bin/build/w801/image (device 66313, inode 18232934): No files, no impossibilities so far.
+# . (device 66313, inode 18222912): 152 files, no impossibilities.
+
+# 152 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+bin/build/w801/bin/%.bin: bin/build/w801/image/%.elf
+#  recipe to execute (from 'tools/w800/rules.mk', line 59):
+	@mkdir -p $(FIRMWAREDIR)
+	@mkdir -p $(FIRMWAREDIR)/$(TARGET)
+	$(OBJCOPY) -O binary $(IMAGEODIR)/$(TARGET).elf $(FIRMWAREDIR)/$(TARGET)/$(TARGET).bin
+	@gcc $(SDK_TOOLS)/wm_tool.c -lpthread -o $(WM_TOOL)
+	@$(WM_TOOL) -b $(FIRMWAREDIR)/$(TARGET)/$(TARGET).bin -fc 0 -it $(IMG_TYPE) -ih $(IMG_HEADER) -ra $(RUN_ADDRESS) -ua $(UPD_ADDRESS) -nh 0 -un 0 -vs $(shell $(VER_TOOL) $(TOP_DIR)/platform/sys/wm_main.c) -o $(FIRMWAREDIR)/$(TARGET)/$(TARGET)
+	@cp $(IMAGEODIR)/$(TARGET).map $(FIRMWAREDIR)/$(TARGET)/$(TARGET).map
+	@$(WM_TOOL) -b  $(SEC_BOOT_BIN) -fc 0 -it 0 -ih $(SECBOOT_HEADER_POS) -ra $(SECBOOT_ADDRESS_POS) -ua $(UPD_ADDRESS) -nh $(IMG_HEADER) -un 0 -o $(SEC_BOOT_IMG)
+	@cat $(SEC_BOOT) $(FIRMWAREDIR)/$(TARGET)/$(TARGET).img > $(FIRMWAREDIR)/$(TARGET)/$(TARGET).fls
+	@$(WM_TOOL) -b $(FIRMWAREDIR)/$(TARGET)/$(TARGET).img -fc 1 -it $(IMG_TYPE) -ih $(IMG_HEADER) -ra $(RUN_ADDRESS) -ua $(UPD_ADDRESS) -nh 0 -un 0 -vs $(shell $(VER_TOOL) $(TOP_DIR)/platform/sys/wm_main.c) -o $(FIRMWAREDIR)/$(TARGET)/$(TARGET)
+	@mv $(FIRMWAREDIR)/$(TARGET)/$(TARGET)_gz.img $(FIRMWAREDIR)/$(TARGET)/$(TARGET)_ota.img
+	@echo "build finished!"
+
+bin/build/w801/obj//ICESX/workSpaceC/IC/workspace_w80x_vsc/wm-sdk-w80x/%.o: %.c
+#  recipe to execute (from 'tools/w800/rules.mk', line 177):
+	@mkdir -p $(OBJODIR)/$(subdir_path)
+	$(CC) $(if $(findstring $<,$(DSRCS)),$(DFLAGS),$(CFLAGS)) $(COPTS_$(*F)) $(INCLUDES) $(CMACRO) -c "$<" -o "$@" -MMD -MD -MF "$(@:$(OBJODIR)/$(subdir_path)/%.o=$(OBJODIR)/$(subdir_path)/%.o.d)" -MT "$(@)"
+
+bin/build/w801/obj//ICESX/workSpaceC/IC/workspace_w80x_vsc/wm-sdk-w80x/%.o: %.S
+#  recipe to execute (from 'tools/w800/rules.mk', line 181):
+	@mkdir -p $(OBJODIR)/$(subdir_path)
+	$(ASM) $(ASMFLAGS) $(INCLUDES) $(CMACRO) -c "$<" -o "$@"
+
+# 3 implicit rules, 0 (0.0%) terminal.
+# Files
+
+# Not a target:
+tools/w800/rules.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.323906093
+#  File has been updated.
+#  Successfully updated.
+
+FORCE:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+distclean: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'tools/w800/rules.mk', line 142):
+	$(RM) -r $(FIRMWAREDIR)/$(CONFIG_ARCH_TYPE)
+	$(RM) -r $(SDK_TOOLS)/.config.old
+
+# Not a target:
+tools/w800/inc.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.319906117
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.099907441
+#  File has been updated.
+#  Successfully updated.
+
+lib: .subdirs
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'tools/w800/rules.mk', line 125):
+	@cp $(LIBODIR)/libapp$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@cp $(LIBODIR)/libwmarch$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@cp $(LIBODIR)/libwmcommon$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@cp $(LIBODIR)/libdrivers$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@cp $(LIBODIR)/libnetwork$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@cp $(LIBODIR)/libos$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@cp $(LIBODIR)/libwmsys$(LIB_EXT) $(TOP_DIR)/lib/$(CONFIG_ARCH_TYPE)
+	@echo "libs has been updated."
+
+w801.elf: .subdirs bin/build/w801/image/w801.elf
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+flash: all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'tools/w800/rules.mk', line 158):
+	@$(WM_TOOL) -c $(DL_PORT) -rs at -ds $(DL_BAUD) -dl $(FIRMWAREDIR)/$(TARGET)/$(TARGET).fls
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'tools/w800/rules.mk', line 139):
+	$(RM) -r $(ODIR)
+
+.subdirs:
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  Modification time never checked.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := .subdirs
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=3/18=17%
+#  recipe to execute (from 'tools/w800/rules.mk', line 164):
+	@set -e; $(foreach d, $(SUBDIRS), $(MAKE) -C $(d);)
+
+menuconfig:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'tools/w800/rules.mk', line 135):
+	@$(SDK_TOOLS)/mconfig.sh
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: .subdirs bin/build/w801/image/w801.elf bin/build/w801/bin/w801.bin
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/10=0%
+
+run: all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'tools/w800/rules.mk', line 146):
+	@$(WM_TOOL) -c $(DL_PORT) -rs at -ds $(DL_BAUD) -dl $(FIRMWAREDIR)/$(TARGET)/$(TARGET).fls -sl str -ws 115200
+
+help:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'tools/w800/rules.mk', line 102):
+	@echo  'Cleaning targets:'
+	@echo  '  clean      - Remove most generated files'
+	@echo  '  distclean  - Remove all generated files'
+	@echo  ''
+	@echo  'Configuration targets:'
+	@echo  '  menuconfig - Update current config utilising a menu based program'
+	@echo  ''
+	@echo  'Compiling targets:'
+	@echo  '  all	     - Build firmware'
+	@echo  '  lib	     - Build library'
+	@echo  ''
+	@echo  'Programming targets:'
+	@echo  '  image	     - Flash img firmware to device'
+	@echo  '  flash      - Flash fls firmware to the device'
+	@echo  '  erase      - Erase device flash'
+	@echo  '  down       - Flash fls firmware to the device (without compile)'
+	@echo  ''
+	@echo  'Other targets:'
+	@echo  '  list       - List locally available serial ports'
+	@echo  '  run        - Flash the firmware to the device after compilation'
+	@echo  '               and capture the log output by the device'
+
+# Not a target:
+tools/w800/conf.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:01:45.319906117
+#  File has been updated.
+#  Successfully updated.
+
+image: all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'tools/w800/rules.mk', line 155):
+	@$(WM_TOOL) -c $(DL_PORT) -rs at -ds $(DL_BAUD) -dl $(FIRMWAREDIR)/$(TARGET)/$(TARGET).img
+
+bin/build/w801/image/w801.elf: bin/build/w801/lib/libuser.a bin/build/w801/lib/libdemo.a
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'tools/w800/rules.mk', line 192):
+	@mkdir -p $(IMAGEODIR)
+	@echo "LINK     w801.elf"; /TOOLS/SDK/csky/csky-elfabiv2-tools-x86_64-minilibc-20210423/bin/"csky-abiv2-elf"-gcc -Wl,--gc-sections -Wl,-zmax-page-size=1024 -Wl,--whole-archive $(OBJS) $(DEP_OBJS_w801) $(DEP_LIBS_w801) $(if $(LINKFLAGS_w801),$(LINKFLAGS_w801)) -Wl,--no-whole-archive -mcpu=ck804ef -nostartfiles -mhard-float -lm -Wl,-T./ld/w800/gcc_csky.ld -Wl,-ckmap=./bin/build/w801/image/w801.map -o $@
+
+list:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'tools/w800/rules.mk', line 149):
+	@$(WM_TOOL) -l
+
+# Not a target:
+tools/w800/.config:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-12 21:03:18.019348575
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+bin/build/w801/lib/libuser.a:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+erase:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'tools/w800/rules.mk', line 161):
+	@$(WM_TOOL) -c $(DL_PORT) -rs at -eo all
+
+# Not a target:
+bin/build/w801/bin/w801.bin:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: FORCE
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+w801.bin: .subdirs bin/build/w801/bin/w801.bin
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+down:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'tools/w800/rules.mk', line 152):
+	@$(WM_TOOL) -c $(DL_PORT) -rs at -ds $(DL_BAUD) -dl $(FIRMWAREDIR)/$(TARGET)/$(TARGET).fls
+
+# Not a target:
+bin/build/w801/lib/libdemo.a:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=28/1024=3%, Rehash=0, Collisions=0/63=0%
+# VPATH Search Paths
+ 
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 186 / storage = 1519 B / avg = 8 B
+# current buf: size = 8162 B / used = 1519 B / count = 186 / avg = 8 B
+
+# strcache performance: lookups = 228 / hit rate = 18%
+# hash-table stats:
+# Load=186/8192=2%, Rehash=0, Collisions=5/228=2%
+# Finished Make data base on Tue Apr 12 08:53:24 2022
+
+ 

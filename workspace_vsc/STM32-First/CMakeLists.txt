@@ -1,20 +1,24 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(auth-face VERSION 0.1.0)
-set(CMAKE_VERBOSE_MAKEFILE on )
-set(CMAKE_C_COMPILER /TOOLS/GCC/gcc-arm-none-eabi-7-2018-q2-update/bin/arm-none-eabi-gcc)
-set(CMAKE_CXX_COMPILER /TOOLS/GCC/gcc-arm-none-eabi-7-2018-q2-update/bin/arm-none-eabi-g++)
-set(CMAKE_CXX_FLAGS "-O2 -Wwrite-strings -std=gnu++11")
+project(stm32proj C CXX ASM)
 
-INCLUDE_DIRECTORIES(
-    ${CMAKE_CURRENT_LIST_DIR}/include
-    )
+# adjust project folder name if necessary
+set(STM32_PROJ_FOLDER stm32proj)
 
-set(subs "blink;timer")
-foreach(sub IN LISTS subs)
-    message("config subdirectory::: ${sub}")
-    add_subdirectory("src/${sub}")
-    link_directories(${PROJECT_BINARY_DIR}/src/${sub})
-    target_link_libraries(${sub})
-endforeach (sub)
-set(MAIN_SRC main.cpp)
-ADD_LIBRARY(${PROJECT_NAME} SHARED ${MAIN_SRC})
+message(STATUS "Building project: ${PROJECT_NAME}")
+set(STM32_CMAKE_DIR "${CMAKE_SOURCE_DIR}")
+
+# set the default build type
+if(NOT CMAKE_BUILD_TYPE) 
+    set(CMAKE_BUILD_TYPE Debug)
+endif(NOT CMAKE_BUILD_TYPE)
+
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+  message(STATUS "Build type: Debug")
+elseif(CMAKE_BUILD_TYPE MATCHES Release)
+  message(STATUS "Build type: Release")
+endif()
+
+# add support
+add_subdirectory(support/src)
+# add source folder
+add_subdirectory(src)
