@@ -1,17 +1,17 @@
 #include "main.h"
 #include "blink.h"
 void SystemClock_Config(void);
+
 int main(void)
 {
-
 	HAL_Init();
 	SystemClock_Config();
-	MX_GPIO_Init();
+	blink_init();
 	static unsigned short pin_state = 0;
 	while (1)
 	{
 		pin_state = !pin_state;
-		blink(100, pin_state);
+		blink(500, pin_state);
 	}
 }
 

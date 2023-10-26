@@ -1,4 +1,3 @@
-set(subs "blink")
 foreach(sub IN LISTS subs)
     message("config subdirectory::: ${sub}")
     add_subdirectory("${sub}")
